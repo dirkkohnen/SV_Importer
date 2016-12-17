@@ -4,11 +4,16 @@ import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Properties;
 
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JToolBar;
 import java.awt.BorderLayout;
@@ -35,6 +40,7 @@ public class SV_ImporterGUI implements ActionListener{
 	private JButton openButton;
 	private JFileChooser fc = new JFileChooser();;
 	public File fileCSV;
+	public Properties prop;
 
 	/**
 	 * Create the application.
@@ -140,6 +146,46 @@ public class SV_ImporterGUI implements ActionListener{
             log.setCaretPosition(log.getDocument().getLength());
  
         //Handle save button action.
+        } else if (e.getSource() == this.propertiesMenuItem || e.getSource() == this.propertiesToolbarButton) {
+    		JTextField kundennummerTextField = new JTextField(this.prop.getProperty("customer"));
+    		JTextField benutzernameTextField = new JTextField(this.prop.getProperty("user"));
+    		JTextField passwortTextField = new JTextField(this.prop.getProperty("pass"));
+    		JTextField spracheTextField = new JTextField(this.prop.getProperty("language"));
+    		JTextField gesellschaftTextField = new JTextField(this.prop.getProperty("organisation"));
+                   Object[] message = {"Kundennummer", kundennummerTextField, "Benutzername", benutzernameTextField, "Passwort", passwortTextField, "Sprache", spracheTextField, "Gesellschaft", gesellschaftTextField};
+
+                    JOptionPane pane = new JOptionPane( message, 
+                                                    JOptionPane.PLAIN_MESSAGE, 
+                                                    JOptionPane.OK_CANCEL_OPTION);
+                    pane.createDialog(null, "Einstellungen").setVisible(true);
+
+                    Object selectedValue = pane.getValue();
+                    int n = -1;
+
+
+                    if(selectedValue == null)
+                        n = JOptionPane.CLOSED_OPTION;      
+                    else
+                        n = Integer.parseInt(selectedValue.toString());
+
+
+                    
+                    if (n == JOptionPane.OK_OPTION){
+                    	this.prop.setProperty("customer", kundennummerTextField.getText());
+                    	this.prop.setProperty("user", benutzernameTextField.getText());
+                    	this.prop.setProperty("pass", passwortTextField.getText());
+                    	this.prop.setProperty("language", spracheTextField.getText());
+                    	this.prop.setProperty("organisation", gesellschaftTextField.getText());
+                    	FileOutputStream out;
+						try {
+							out = new FileOutputStream("config.properties");
+							this.prop.store(out, null);
+							log.append("Einstellungen gespeichert" + newline);
+						} catch (IOException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+                    } 
         } else if (e.getSource() == this.exitMenuItem) {
             System.exit(0);
         }
