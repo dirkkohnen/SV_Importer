@@ -26,7 +26,7 @@ public class SV_Importer {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					SV_ImporterGUI window = new SV_ImporterGUI();
+					ImporterGui window = new ImporterGui();
 					loadProperties();
 					window.prop = properties;
 					window.frame.setVisible(true);

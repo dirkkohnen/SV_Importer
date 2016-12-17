@@ -25,7 +25,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
 
-public class SV_ImporterGUI implements ActionListener{
+public class ImporterGui implements ActionListener{
 
     static private final String newline = "\n";
 	public JFrame frame;
@@ -45,7 +45,7 @@ public class SV_ImporterGUI implements ActionListener{
 	/**
 	 * Create the application.
 	 */
-	public SV_ImporterGUI() {
+	public ImporterGui() {
 		initialize();
 	}
 
@@ -64,17 +64,17 @@ public class SV_ImporterGUI implements ActionListener{
 		this.menuBar.add(this.mnDatei);
 		
 		this.openMenuItem = new JMenuItem("\u00D6ffnen");
-		this.openMenuItem.setIcon(new ImageIcon(SV_ImporterGUI.class.getResource("/de/scopevisio/importer/images/folder_page.png")));
+		this.openMenuItem.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/folder_page.png")));
 		this.openMenuItem.addActionListener(this);
 		this.mnDatei.add(this.openMenuItem);
 		
 		this.startMenuItem = new JMenuItem("Start");
-		this.startMenuItem.setIcon(new ImageIcon(SV_ImporterGUI.class.getResource("/de/scopevisio/importer/images/control_play_blue.png")));
+		this.startMenuItem.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/control_play_blue.png")));
 		this.startMenuItem.addActionListener(this);
 		this.mnDatei.add(this.startMenuItem);
 		
 		this.exitMenuItem = new JMenuItem("Beenden");
-		this.exitMenuItem.setIcon(new ImageIcon(SV_ImporterGUI.class.getResource("/de/scopevisio/importer/images/door_in.png")));
+		this.exitMenuItem.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/door_in.png")));
 		this.exitMenuItem.addActionListener(this);
 		this.mnDatei.add(this.exitMenuItem);
 		
@@ -82,12 +82,12 @@ public class SV_ImporterGUI implements ActionListener{
 		this.menuBar.add(this.mnScopevisio);
 		
 		this.propertiesMenuItem = new JMenuItem("Einstellungen");
-		this.propertiesMenuItem.setIcon(new ImageIcon(SV_ImporterGUI.class.getResource("/de/scopevisio/importer/images/information.png")));
+		this.propertiesMenuItem.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/information.png")));
 		this.propertiesMenuItem.addActionListener(this);
 		this.mnScopevisio.add(this.propertiesMenuItem);
 		
 		this.connectMenuItem = new JMenuItem("Verbinden");
-		this.connectMenuItem.setIcon(new ImageIcon(SV_ImporterGUI.class.getResource("/de/scopevisio/importer/images/database_connect.png")));
+		this.connectMenuItem.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/database_connect.png")));
 		this.connectMenuItem.addActionListener(this);
 		this.mnScopevisio.add(this.connectMenuItem);
 		this.frame.getContentPane().setLayout(new MigLayout("", "[434px,grow]", "[25px][][grow][][][][][]"));
@@ -96,22 +96,22 @@ public class SV_ImporterGUI implements ActionListener{
 		this.frame.getContentPane().add(toolBar, "cell 0 0,growx,aligny top");
 		
 		this.propertiesToolbarButton = new JButton("");
-		this.propertiesToolbarButton.setIcon(new ImageIcon(SV_ImporterGUI.class.getResource("/de/scopevisio/importer/images/information.png")));
+		this.propertiesToolbarButton.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/information.png")));
 		this.propertiesToolbarButton.addActionListener(this);
 		this.toolBar.add(this.propertiesToolbarButton);
 		
 		this.connectToolbarButton = new JButton("");
-		this.connectToolbarButton.setIcon(new ImageIcon(SV_ImporterGUI.class.getResource("/de/scopevisio/importer/images/database_connect.png")));
+		this.connectToolbarButton.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/database_connect.png")));
 		this.connectToolbarButton.addActionListener(this);
 		this.toolBar.add(this.connectToolbarButton);
 				
 		this.openToolbarButton = new JButton("");
-		this.openToolbarButton.setIcon(new ImageIcon(SV_ImporterGUI.class.getResource("/de/scopevisio/importer/images/folder_page.png")));
+		this.openToolbarButton.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/folder_page.png")));
 		this.openToolbarButton.addActionListener(this);
 		this.toolBar.add(this.openToolbarButton);
 		
 		this.startToolbarButton = new JButton("");
-		this.startToolbarButton.setIcon(new ImageIcon(SV_ImporterGUI.class.getResource("/de/scopevisio/importer/images/control_play_blue.png")));
+		this.startToolbarButton.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/control_play_blue.png")));
 		this.startToolbarButton.addActionListener(this);
 		this.toolBar.add(this.startToolbarButton);
 		
