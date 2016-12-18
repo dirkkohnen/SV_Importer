@@ -25,10 +25,18 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
 
+import javax.xml.soap.MessageFactory;
+import javax.xml.soap.SOAPBody;
+import javax.xml.soap.SOAPElement;
+import javax.xml.soap.SOAPMessage;
+
+import de.scopevisio.importer.URLPost.PostResult;
+
+
 public class ImporterGui implements ActionListener{
 
     static private final String newline = "\n";
-	public JFrame frame;
+	public JFrame frmScopevisioImporter;
 	private JTextField textField;
 	private JMenuBar menuBar;
 	private JMenu mnDatei, mnScopevisio;
@@ -41,6 +49,7 @@ public class ImporterGui implements ActionListener{
 	private JFileChooser fc = new JFileChooser();;
 	public File fileCSV;
 	public Properties prop;
+	private String url = "https://appload.scopevisio.com/api/soap/accounting/Ping.ping";
 
 	/**
 	 * Create the application.
@@ -53,12 +62,13 @@ public class ImporterGui implements ActionListener{
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmScopevisioImporter = new JFrame();
+		frmScopevisioImporter.setTitle("Scopevisio Importer");
+		frmScopevisioImporter.setBounds(100, 100, 450, 300);
+		frmScopevisioImporter.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		this.menuBar = new JMenuBar();
-		this.frame.setJMenuBar(this.menuBar);
+		this.frmScopevisioImporter.setJMenuBar(this.menuBar);
 		
 		this.mnDatei = new JMenu("Datei");
 		this.menuBar.add(this.mnDatei);
@@ -90,10 +100,10 @@ public class ImporterGui implements ActionListener{
 		this.connectMenuItem.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/database_connect.png")));
 		this.connectMenuItem.addActionListener(this);
 		this.mnScopevisio.add(this.connectMenuItem);
-		this.frame.getContentPane().setLayout(new MigLayout("", "[434px,grow]", "[25px][][grow][][][][][]"));
+		this.frmScopevisioImporter.getContentPane().setLayout(new MigLayout("", "[434px,grow]", "[25px][][grow][][][][][]"));
 		
 		this.toolBar = new JToolBar();
-		this.frame.getContentPane().add(toolBar, "cell 0 0,growx,aligny top");
+		this.frmScopevisioImporter.getContentPane().add(toolBar, "cell 0 0,growx,aligny top");
 		
 		this.propertiesToolbarButton = new JButton("");
 		this.propertiesToolbarButton.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/information.png")));
@@ -116,36 +126,36 @@ public class ImporterGui implements ActionListener{
 		this.toolBar.add(this.startToolbarButton);
 		
 		this.textField = new JTextField();
-		this.frame.getContentPane().add(this.textField, "flowx,cell 0 1,growx");
+		this.frmScopevisioImporter.getContentPane().add(this.textField, "flowx,cell 0 1,growx");
 		this.textField.setColumns(10);
 		
 		this.log = new JTextArea();
-		this.frame.getContentPane().add(this.log, "cell 0 2 1 5,grow");
+		this.frmScopevisioImporter.getContentPane().add(this.log, "cell 0 2 1 5,grow");
 		
 		this.lblStatus = new JLabel("Status ...");
-		this.frame.getContentPane().add(this.lblStatus, "cell 0 7,growx,aligny bottom");
+		this.frmScopevisioImporter.getContentPane().add(this.lblStatus, "cell 0 7,growx,aligny bottom");
 		
 		this.openButton = new JButton("\u00D6ffnen");
 		this.openButton.addActionListener(this);
-		this.frame.getContentPane().add(this.openButton, "cell 0 1");
+		this.frmScopevisioImporter.getContentPane().add(this.openButton, "cell 0 1");
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
         //Handle open button action.
         if (e.getSource() == this.openButton || e.getSource() == this.openMenuItem || e.getSource() == this.openToolbarButton) {
-            int returnVal = fc.showOpenDialog(this.frame);
+            int returnVal = fc.showOpenDialog(this.frmScopevisioImporter);
  
             if (returnVal == JFileChooser.APPROVE_OPTION) {
                 fileCSV = fc.getSelectedFile();
                 //This is where a real application would open the file.
-                log.append("Opening: " + fileCSV.getName() + "." + newline);
+                log.append("Opening: " + fileCSV.getAbsolutePath() + "." + newline);
             } else {
                 log.append("Open command cancelled by user." + newline);
             }
             log.setCaretPosition(log.getDocument().getLength());
  
-        //Handle save button action.
+        //Handle properties button action.
         } else if (e.getSource() == this.propertiesMenuItem || e.getSource() == this.propertiesToolbarButton) {
     		JTextField kundennummerTextField = new JTextField(this.prop.getProperty("customer"));
     		JTextField benutzernameTextField = new JTextField(this.prop.getProperty("user"));
@@ -188,6 +198,46 @@ public class ImporterGui implements ActionListener{
                     } 
         } else if (e.getSource() == this.exitMenuItem) {
             System.exit(0);
+        } else if (e.getSource() == this.connectMenuItem || e.getSource() == this.connectToolbarButton){
+		    try {
+	
+		        // prepare SOAP
+		        MessageFactory mf = MessageFactory.newInstance();
+		        SOAPMessage request = mf.createMessage();
+		        SOAPBody body = request.getSOAPBody();
+		        SOAPElement requestElement = body.addChildElement("req", "ns1", "http://www.scopevisio.com/");
+	
+		        // authorization tag
+		        SOAPElement authnElement = requestElement.addChildElement("authn");
+		        authnElement.addChildElement("customer").setTextContent(this.prop.getProperty("customer"));
+		        authnElement.addChildElement("user").setTextContent(this.prop.getProperty("user"));
+		        authnElement.addChildElement("pass").setTextContent(this.prop.getProperty("pass"));
+		        authnElement.addChildElement("language").setTextContent(this.prop.getProperty("language"));
+		        authnElement.addChildElement("organisation").setTextContent(this.prop.getProperty("organisation"));
+		        SOAPElement req = (SOAPElement) body.getChildElements().next();
+	
+		        // post SOAP
+		        PostResult result = new URLPost().postSoap(url, request);
+		        String reply = result.getReply();
+		        if(reply.contains("pong")){
+		        	this.log.append("Connect erfolgreich" + newline);
+		        }
+//		        this.log.append("responseCode: " + result.getResponseCode() + newline);
+//		        this.log.append("reply: " + reply + newline);
+		        
+		    } catch (Exception e2) {
+		        // handle error
+		        e2.printStackTrace();
+		    }
+
+        } else if (e.getSource() == this.startMenuItem || e.getSource() == this.startToolbarButton){
+        	if (this.fileCSV == null){
+	        	this.log.append("Fehler: Keine CSV-Datei ausgewählt" + newline);
+        		return;
+        	} else {
+        		ReadContactFromCSV rcfc = new ReadContactFromCSV(this.fileCSV);
+        	}
+        	
         }
 	}
 

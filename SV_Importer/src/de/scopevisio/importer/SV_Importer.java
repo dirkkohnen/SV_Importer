@@ -29,7 +29,7 @@ public class SV_Importer {
 					ImporterGui window = new ImporterGui();
 					loadProperties();
 					window.prop = properties;
-					window.frame.setVisible(true);
+					window.frmScopevisioImporter.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
