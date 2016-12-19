@@ -16,7 +16,8 @@ import java.util.Properties;
  *
  */
 public class SV_Importer {
-	
+	// Debuglevel: 0=Fehler, 1=Warnungen, 2=Meldungen
+	public static final int debugLevel = 2;
 	private static Properties properties;
 
 	/**

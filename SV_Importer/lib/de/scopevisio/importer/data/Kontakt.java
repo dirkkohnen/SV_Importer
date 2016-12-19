@@ -1,14 +1,27 @@
-/**
- * 
- */
 package de.scopevisio.importer.data;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
+ * <b>Datenklasse Kontakt</b></br>
+ * Stell einen Kontakt in Scopevisio dar. Die Klasse beinhaltet alle Argumente in Scopevisio.
+ * Bietet die Mˆglichkeit Argumente einzeln ¸ber Getter und Setter zu setzen oder mit der Mehtode setAttribute einzelne Attribute zu setzen.</br>
+ * Bietet die Mˆglichkeit einen Kontakt in CSV-Format f¸r den Webservice "Contact.importExtendedCsv" aufzubereiten.</br>
+ * </br>
+ * <i>Beispiel:</i></br>
+ * {@code Kontakt k = new Kontakt()}
+ * 
+ * @see {@link https://www.openscope.de/api.html#importieren-von-kontakten}
+ *  
  * @author dirk.kohnen
- *
+ * @version 0.1
+ * 
  */
 public class Kontakt {
-	
+
+	// {{  Variablen
+	private List<Object> attributeList = new ArrayList<Object>();
 	private String Ist_Firmenkontakt;
 	private String Vorname;
 	private String Name_Gesellschaftsname;
@@ -61,42 +74,42 @@ public class Kontakt {
 	private String Abteilung;
 	private String Notiz;
 	private String Position;
-	private String Straﬂe_1;
+	private String Strasse_1;
 	private String Stadt_1;
 	private String Postleitzahl_1;
 	private String Bundesland_1;
 	private String Land_1;
 	private String Zeitzone_1;
 	private String Adresszeile_co_1;
-	private String Straﬂe_2;
+	private String Strasse_2;
 	private String Stadt_2;
 	private String Postleitzahl_2;
 	private String Bundesland_2;
 	private String Land_2;
 	private String Zeitzone_2;
 	private String Adresszeile_co_2;
-	private String Straﬂe_3;
+	private String Strasse_3;
 	private String Stadt_3;
 	private String Postleitzahl_3;
 	private String Bundesland_3;
 	private String Land_3;
 	private String Zeitzone_3;
 	private String Adresszeile_co_3;
-	private String Straﬂe_4;
+	private String Strasse_4;
 	private String Stadt_4;
 	private String Postleitzahl_4;
 	private String Bundesland_4;
 	private String Land_4;
 	private String Zeitzone_4;
 	private String Adresszeile_co_4;
-	private String Straﬂe_5;
+	private String Strasse_5;
 	private String Stadt_5;
 	private String Postleitzahl_5;
 	private String Bundesland_5;
 	private String Land_5;
 	private String Zeitzone_5;
 	private String Adresszeile_co_5;
-	private String Straﬂe_6;
+	private String Strasse_6;
 	private String Stadt_6;
 	private String Postleitzahl_6;
 	private String Bundesland_6;
@@ -146,7 +159,7 @@ public class Kontakt {
 	private String Waehrung;
 	private String Gemeinnuetzigkeit;
 	private String Art_der_Gemeinnuetzigkeit;
-	private String Fˆrderzweck;
+	private String Foerderzweck;
 	private String VIP;
 	private String Kurzname;
 	private String Nationalitaet;
@@ -186,11 +199,20 @@ public class Kontakt {
 	private String Benutzerfeld_8;
 	private String Benutzerfeld_9;
 	private String Benutzerfeld_10;
-
+// }}
+	
+	
+	// {{ Konstruktor
+	/**
+	 * Kontruktor
+	 */
 	public Kontakt() {
-		
+		this.initalize();
 	}
+	// }}
 
+	
+	// {{ Getter und Setter
 	/**
 	 * @return the ist_Firmenkontakt
 	 */
@@ -199,7 +221,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param ist_Firmenkontakt the ist_Firmenkontakt to set
+	 * @param ist_Firmenkontakt
+	 *            the ist_Firmenkontakt to set
 	 */
 	public void setIst_Firmenkontakt(String ist_Firmenkontakt) {
 		Ist_Firmenkontakt = ist_Firmenkontakt;
@@ -213,7 +236,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param vorname the vorname to set
+	 * @param vorname
+	 *            the vorname to set
 	 */
 	public void setVorname(String vorname) {
 		Vorname = vorname;
@@ -227,7 +251,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param name_Gesellschaftsname the name_Gesellschaftsname to set
+	 * @param name_Gesellschaftsname
+	 *            the name_Gesellschaftsname to set
 	 */
 	public void setName_Gesellschaftsname(String name_Gesellschaftsname) {
 		Name_Gesellschaftsname = name_Gesellschaftsname;
@@ -241,7 +266,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param interessent the interessent to set
+	 * @param interessent
+	 *            the interessent to set
 	 */
 	public void setInteressent(String interessent) {
 		Interessent = interessent;
@@ -255,7 +281,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param lead the lead to set
+	 * @param lead
+	 *            the lead to set
 	 */
 	public void setLead(String lead) {
 		Lead = lead;
@@ -269,7 +296,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param kunde the kunde to set
+	 * @param kunde
+	 *            the kunde to set
 	 */
 	public void setKunde(String kunde) {
 		Kunde = kunde;
@@ -283,7 +311,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param anrede the anrede to set
+	 * @param anrede
+	 *            the anrede to set
 	 */
 	public void setAnrede(String anrede) {
 		Anrede = anrede;
@@ -297,7 +326,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param telefon_1 the telefon_1 to set
+	 * @param telefon_1
+	 *            the telefon_1 to set
 	 */
 	public void setTelefon_1(String telefon_1) {
 		Telefon_1 = telefon_1;
@@ -311,7 +341,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param telefon_2 the telefon_2 to set
+	 * @param telefon_2
+	 *            the telefon_2 to set
 	 */
 	public void setTelefon_2(String telefon_2) {
 		Telefon_2 = telefon_2;
@@ -325,7 +356,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param telefon_3 the telefon_3 to set
+	 * @param telefon_3
+	 *            the telefon_3 to set
 	 */
 	public void setTelefon_3(String telefon_3) {
 		Telefon_3 = telefon_3;
@@ -339,7 +371,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param telefon_4 the telefon_4 to set
+	 * @param telefon_4
+	 *            the telefon_4 to set
 	 */
 	public void setTelefon_4(String telefon_4) {
 		Telefon_4 = telefon_4;
@@ -353,7 +386,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param telefon_5 the telefon_5 to set
+	 * @param telefon_5
+	 *            the telefon_5 to set
 	 */
 	public void setTelefon_5(String telefon_5) {
 		Telefon_5 = telefon_5;
@@ -367,7 +401,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param telefon_6 the telefon_6 to set
+	 * @param telefon_6
+	 *            the telefon_6 to set
 	 */
 	public void setTelefon_6(String telefon_6) {
 		Telefon_6 = telefon_6;
@@ -381,7 +416,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param mobiltelefon_1 the mobiltelefon_1 to set
+	 * @param mobiltelefon_1
+	 *            the mobiltelefon_1 to set
 	 */
 	public void setMobiltelefon_1(String mobiltelefon_1) {
 		Mobiltelefon_1 = mobiltelefon_1;
@@ -395,7 +431,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param mobiltelefon_2 the mobiltelefon_2 to set
+	 * @param mobiltelefon_2
+	 *            the mobiltelefon_2 to set
 	 */
 	public void setMobiltelefon_2(String mobiltelefon_2) {
 		Mobiltelefon_2 = mobiltelefon_2;
@@ -409,7 +446,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param mobiltelefon_3 the mobiltelefon_3 to set
+	 * @param mobiltelefon_3
+	 *            the mobiltelefon_3 to set
 	 */
 	public void setMobiltelefon_3(String mobiltelefon_3) {
 		Mobiltelefon_3 = mobiltelefon_3;
@@ -423,7 +461,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param mobiltelefon_4 the mobiltelefon_4 to set
+	 * @param mobiltelefon_4
+	 *            the mobiltelefon_4 to set
 	 */
 	public void setMobiltelefon_4(String mobiltelefon_4) {
 		Mobiltelefon_4 = mobiltelefon_4;
@@ -437,7 +476,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param mobiltelefon_5 the mobiltelefon_5 to set
+	 * @param mobiltelefon_5
+	 *            the mobiltelefon_5 to set
 	 */
 	public void setMobiltelefon_5(String mobiltelefon_5) {
 		Mobiltelefon_5 = mobiltelefon_5;
@@ -451,7 +491,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param mobiltelefon_6 the mobiltelefon_6 to set
+	 * @param mobiltelefon_6
+	 *            the mobiltelefon_6 to set
 	 */
 	public void setMobiltelefon_6(String mobiltelefon_6) {
 		Mobiltelefon_6 = mobiltelefon_6;
@@ -465,7 +506,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param e_Mail_1 the e_Mail_1 to set
+	 * @param e_Mail_1
+	 *            the e_Mail_1 to set
 	 */
 	public void setE_Mail_1(String e_Mail_1) {
 		E_Mail_1 = e_Mail_1;
@@ -479,7 +521,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param e_Mail_2 the e_Mail_2 to set
+	 * @param e_Mail_2
+	 *            the e_Mail_2 to set
 	 */
 	public void setE_Mail_2(String e_Mail_2) {
 		E_Mail_2 = e_Mail_2;
@@ -493,7 +536,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param e_Mail_3 the e_Mail_3 to set
+	 * @param e_Mail_3
+	 *            the e_Mail_3 to set
 	 */
 	public void setE_Mail_3(String e_Mail_3) {
 		E_Mail_3 = e_Mail_3;
@@ -507,7 +551,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param e_Mail_4 the e_Mail_4 to set
+	 * @param e_Mail_4
+	 *            the e_Mail_4 to set
 	 */
 	public void setE_Mail_4(String e_Mail_4) {
 		E_Mail_4 = e_Mail_4;
@@ -521,7 +566,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param e_Mail_5 the e_Mail_5 to set
+	 * @param e_Mail_5
+	 *            the e_Mail_5 to set
 	 */
 	public void setE_Mail_5(String e_Mail_5) {
 		E_Mail_5 = e_Mail_5;
@@ -535,7 +581,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param e_Mail_6 the e_Mail_6 to set
+	 * @param e_Mail_6
+	 *            the e_Mail_6 to set
 	 */
 	public void setE_Mail_6(String e_Mail_6) {
 		E_Mail_6 = e_Mail_6;
@@ -549,7 +596,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param webseite the webseite to set
+	 * @param webseite
+	 *            the webseite to set
 	 */
 	public void setWebseite(String webseite) {
 		Webseite = webseite;
@@ -563,7 +611,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param fax_1 the fax_1 to set
+	 * @param fax_1
+	 *            the fax_1 to set
 	 */
 	public void setFax_1(String fax_1) {
 		Fax_1 = fax_1;
@@ -577,7 +626,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param fax_2 the fax_2 to set
+	 * @param fax_2
+	 *            the fax_2 to set
 	 */
 	public void setFax_2(String fax_2) {
 		Fax_2 = fax_2;
@@ -591,7 +641,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param fax_3 the fax_3 to set
+	 * @param fax_3
+	 *            the fax_3 to set
 	 */
 	public void setFax_3(String fax_3) {
 		Fax_3 = fax_3;
@@ -605,7 +656,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param fax_4 the fax_4 to set
+	 * @param fax_4
+	 *            the fax_4 to set
 	 */
 	public void setFax_4(String fax_4) {
 		Fax_4 = fax_4;
@@ -619,7 +671,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param fax_5 the fax_5 to set
+	 * @param fax_5
+	 *            the fax_5 to set
 	 */
 	public void setFax_5(String fax_5) {
 		Fax_5 = fax_5;
@@ -633,7 +686,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param fax_6 the fax_6 to set
+	 * @param fax_6
+	 *            the fax_6 to set
 	 */
 	public void setFax_6(String fax_6) {
 		Fax_6 = fax_6;
@@ -647,7 +701,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param kundennummer the kundennummer to set
+	 * @param kundennummer
+	 *            the kundennummer to set
 	 */
 	public void setKundennummer(String kundennummer) {
 		Kundennummer = kundennummer;
@@ -661,7 +716,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param gesetzlicher_Vertreter the gesetzlicher_Vertreter to set
+	 * @param gesetzlicher_Vertreter
+	 *            the gesetzlicher_Vertreter to set
 	 */
 	public void setGesetzlicher_Vertreter(String gesetzlicher_Vertreter) {
 		Gesetzlicher_Vertreter = gesetzlicher_Vertreter;
@@ -675,7 +731,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param gesetzlicher_Vertreter_2 the gesetzlicher_Vertreter_2 to set
+	 * @param gesetzlicher_Vertreter_2
+	 *            the gesetzlicher_Vertreter_2 to set
 	 */
 	public void setGesetzlicher_Vertreter_2(String gesetzlicher_Vertreter_2) {
 		Gesetzlicher_Vertreter_2 = gesetzlicher_Vertreter_2;
@@ -689,7 +746,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param gesetzlicher_Vertreter_3 the gesetzlicher_Vertreter_3 to set
+	 * @param gesetzlicher_Vertreter_3
+	 *            the gesetzlicher_Vertreter_3 to set
 	 */
 	public void setGesetzlicher_Vertreter_3(String gesetzlicher_Vertreter_3) {
 		Gesetzlicher_Vertreter_3 = gesetzlicher_Vertreter_3;
@@ -703,7 +761,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param gesetzlicher_Vertreter_4 the gesetzlicher_Vertreter_4 to set
+	 * @param gesetzlicher_Vertreter_4
+	 *            the gesetzlicher_Vertreter_4 to set
 	 */
 	public void setGesetzlicher_Vertreter_4(String gesetzlicher_Vertreter_4) {
 		Gesetzlicher_Vertreter_4 = gesetzlicher_Vertreter_4;
@@ -717,7 +776,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param gesetzlicher_Vertreter_5 the gesetzlicher_Vertreter_5 to set
+	 * @param gesetzlicher_Vertreter_5
+	 *            the gesetzlicher_Vertreter_5 to set
 	 */
 	public void setGesetzlicher_Vertreter_5(String gesetzlicher_Vertreter_5) {
 		Gesetzlicher_Vertreter_5 = gesetzlicher_Vertreter_5;
@@ -731,7 +791,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param gesetzlicher_Vertreter_6 the gesetzlicher_Vertreter_6 to set
+	 * @param gesetzlicher_Vertreter_6
+	 *            the gesetzlicher_Vertreter_6 to set
 	 */
 	public void setGesetzlicher_Vertreter_6(String gesetzlicher_Vertreter_6) {
 		Gesetzlicher_Vertreter_6 = gesetzlicher_Vertreter_6;
@@ -745,7 +806,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param ansprechpartner_1 the ansprechpartner_1 to set
+	 * @param ansprechpartner_1
+	 *            the ansprechpartner_1 to set
 	 */
 	public void setAnsprechpartner_1(String ansprechpartner_1) {
 		Ansprechpartner_1 = ansprechpartner_1;
@@ -759,7 +821,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param ansprechpartner_2 the ansprechpartner_2 to set
+	 * @param ansprechpartner_2
+	 *            the ansprechpartner_2 to set
 	 */
 	public void setAnsprechpartner_2(String ansprechpartner_2) {
 		Ansprechpartner_2 = ansprechpartner_2;
@@ -773,7 +836,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param ansprechpartner_3 the ansprechpartner_3 to set
+	 * @param ansprechpartner_3
+	 *            the ansprechpartner_3 to set
 	 */
 	public void setAnsprechpartner_3(String ansprechpartner_3) {
 		Ansprechpartner_3 = ansprechpartner_3;
@@ -787,7 +851,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param ansprechpartner_4 the ansprechpartner_4 to set
+	 * @param ansprechpartner_4
+	 *            the ansprechpartner_4 to set
 	 */
 	public void setAnsprechpartner_4(String ansprechpartner_4) {
 		Ansprechpartner_4 = ansprechpartner_4;
@@ -801,7 +866,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param ansprechpartner_5 the ansprechpartner_5 to set
+	 * @param ansprechpartner_5
+	 *            the ansprechpartner_5 to set
 	 */
 	public void setAnsprechpartner_5(String ansprechpartner_5) {
 		Ansprechpartner_5 = ansprechpartner_5;
@@ -815,7 +881,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param ansprechpartner_6 the ansprechpartner_6 to set
+	 * @param ansprechpartner_6
+	 *            the ansprechpartner_6 to set
 	 */
 	public void setAnsprechpartner_6(String ansprechpartner_6) {
 		Ansprechpartner_6 = ansprechpartner_6;
@@ -829,7 +896,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param titel the titel to set
+	 * @param titel
+	 *            the titel to set
 	 */
 	public void setTitel(String titel) {
 		Titel = titel;
@@ -843,7 +911,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param alt_Klassifikation the alt_Klassifikation to set
+	 * @param alt_Klassifikation
+	 *            the alt_Klassifikation to set
 	 */
 	public void setAlt_Klassifikation(String alt_Klassifikation) {
 		Alt_Klassifikation = alt_Klassifikation;
@@ -857,7 +926,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param stelle the stelle to set
+	 * @param stelle
+	 *            the stelle to set
 	 */
 	public void setStelle(String stelle) {
 		Stelle = stelle;
@@ -871,7 +941,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param geburtsdatum the geburtsdatum to set
+	 * @param geburtsdatum
+	 *            the geburtsdatum to set
 	 */
 	public void setGeburtsdatum(String geburtsdatum) {
 		Geburtsdatum = geburtsdatum;
@@ -885,7 +956,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param abteilung the abteilung to set
+	 * @param abteilung
+	 *            the abteilung to set
 	 */
 	public void setAbteilung(String abteilung) {
 		Abteilung = abteilung;
@@ -899,7 +971,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param notiz the notiz to set
+	 * @param notiz
+	 *            the notiz to set
 	 */
 	public void setNotiz(String notiz) {
 		Notiz = notiz;
@@ -913,24 +986,26 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param position the position to set
+	 * @param position
+	 *            the position to set
 	 */
 	public void setPosition(String position) {
 		Position = position;
 	}
 
 	/**
-	 * @return the straﬂe_1
+	 * @return the strasse_1
 	 */
-	public String getStraﬂe_1() {
-		return Straﬂe_1;
+	public String getStrasse_1() {
+		return Strasse_1;
 	}
 
 	/**
-	 * @param straﬂe_1 the straﬂe_1 to set
+	 * @param strasse_1
+	 *            the strasse_1 to set
 	 */
-	public void setStraﬂe_1(String straﬂe_1) {
-		Straﬂe_1 = straﬂe_1;
+	public void setStrasse_1(String strasse_1) {
+		Strasse_1 = strasse_1;
 	}
 
 	/**
@@ -941,7 +1016,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param stadt_1 the stadt_1 to set
+	 * @param stadt_1
+	 *            the stadt_1 to set
 	 */
 	public void setStadt_1(String stadt_1) {
 		Stadt_1 = stadt_1;
@@ -955,7 +1031,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param postleitzahl_1 the postleitzahl_1 to set
+	 * @param postleitzahl_1
+	 *            the postleitzahl_1 to set
 	 */
 	public void setPostleitzahl_1(String postleitzahl_1) {
 		Postleitzahl_1 = postleitzahl_1;
@@ -969,7 +1046,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param bundesland_1 the bundesland_1 to set
+	 * @param bundesland_1
+	 *            the bundesland_1 to set
 	 */
 	public void setBundesland_1(String bundesland_1) {
 		Bundesland_1 = bundesland_1;
@@ -983,7 +1061,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param land_1 the land_1 to set
+	 * @param land_1
+	 *            the land_1 to set
 	 */
 	public void setLand_1(String land_1) {
 		Land_1 = land_1;
@@ -997,7 +1076,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param zeitzone_1 the zeitzone_1 to set
+	 * @param zeitzone_1
+	 *            the zeitzone_1 to set
 	 */
 	public void setZeitzone_1(String zeitzone_1) {
 		Zeitzone_1 = zeitzone_1;
@@ -1011,24 +1091,26 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param adresszeile_co_1 the adresszeile_co_1 to set
+	 * @param adresszeile_co_1
+	 *            the adresszeile_co_1 to set
 	 */
 	public void setAdresszeile_co_1(String adresszeile_co_1) {
 		Adresszeile_co_1 = adresszeile_co_1;
 	}
 
 	/**
-	 * @return the straﬂe_2
+	 * @return the strasse_2
 	 */
-	public String getStraﬂe_2() {
-		return Straﬂe_2;
+	public String getStrasse_2() {
+		return Strasse_2;
 	}
 
 	/**
-	 * @param straﬂe_2 the straﬂe_2 to set
+	 * @param strasse_2
+	 *            the strasse_2 to set
 	 */
-	public void setStraﬂe_2(String straﬂe_2) {
-		Straﬂe_2 = straﬂe_2;
+	public void setStrasse_2(String strasse_2) {
+		Strasse_2 = strasse_2;
 	}
 
 	/**
@@ -1039,7 +1121,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param stadt_2 the stadt_2 to set
+	 * @param stadt_2
+	 *            the stadt_2 to set
 	 */
 	public void setStadt_2(String stadt_2) {
 		Stadt_2 = stadt_2;
@@ -1053,7 +1136,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param postleitzahl_2 the postleitzahl_2 to set
+	 * @param postleitzahl_2
+	 *            the postleitzahl_2 to set
 	 */
 	public void setPostleitzahl_2(String postleitzahl_2) {
 		Postleitzahl_2 = postleitzahl_2;
@@ -1067,7 +1151,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param bundesland_2 the bundesland_2 to set
+	 * @param bundesland_2
+	 *            the bundesland_2 to set
 	 */
 	public void setBundesland_2(String bundesland_2) {
 		Bundesland_2 = bundesland_2;
@@ -1081,7 +1166,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param land_2 the land_2 to set
+	 * @param land_2
+	 *            the land_2 to set
 	 */
 	public void setLand_2(String land_2) {
 		Land_2 = land_2;
@@ -1095,7 +1181,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param zeitzone_2 the zeitzone_2 to set
+	 * @param zeitzone_2
+	 *            the zeitzone_2 to set
 	 */
 	public void setZeitzone_2(String zeitzone_2) {
 		Zeitzone_2 = zeitzone_2;
@@ -1109,24 +1196,26 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param adresszeile_co_2 the adresszeile_co_2 to set
+	 * @param adresszeile_co_2
+	 *            the adresszeile_co_2 to set
 	 */
 	public void setAdresszeile_co_2(String adresszeile_co_2) {
 		Adresszeile_co_2 = adresszeile_co_2;
 	}
 
 	/**
-	 * @return the straﬂe_3
+	 * @return the strasse_3
 	 */
-	public String getStraﬂe_3() {
-		return Straﬂe_3;
+	public String getStrasse_3() {
+		return Strasse_3;
 	}
 
 	/**
-	 * @param straﬂe_3 the straﬂe_3 to set
+	 * @param strasse_3
+	 *            the strasse_3 to set
 	 */
-	public void setStraﬂe_3(String straﬂe_3) {
-		Straﬂe_3 = straﬂe_3;
+	public void setStrasse_3(String strasse_3) {
+		Strasse_3 = strasse_3;
 	}
 
 	/**
@@ -1137,7 +1226,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param stadt_3 the stadt_3 to set
+	 * @param stadt_3
+	 *            the stadt_3 to set
 	 */
 	public void setStadt_3(String stadt_3) {
 		Stadt_3 = stadt_3;
@@ -1151,7 +1241,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param postleitzahl_3 the postleitzahl_3 to set
+	 * @param postleitzahl_3
+	 *            the postleitzahl_3 to set
 	 */
 	public void setPostleitzahl_3(String postleitzahl_3) {
 		Postleitzahl_3 = postleitzahl_3;
@@ -1165,7 +1256,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param bundesland_3 the bundesland_3 to set
+	 * @param bundesland_3
+	 *            the bundesland_3 to set
 	 */
 	public void setBundesland_3(String bundesland_3) {
 		Bundesland_3 = bundesland_3;
@@ -1179,7 +1271,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param land_3 the land_3 to set
+	 * @param land_3
+	 *            the land_3 to set
 	 */
 	public void setLand_3(String land_3) {
 		Land_3 = land_3;
@@ -1193,7 +1286,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param zeitzone_3 the zeitzone_3 to set
+	 * @param zeitzone_3
+	 *            the zeitzone_3 to set
 	 */
 	public void setZeitzone_3(String zeitzone_3) {
 		Zeitzone_3 = zeitzone_3;
@@ -1207,24 +1301,26 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param adresszeile_co_3 the adresszeile_co_3 to set
+	 * @param adresszeile_co_3
+	 *            the adresszeile_co_3 to set
 	 */
 	public void setAdresszeile_co_3(String adresszeile_co_3) {
 		Adresszeile_co_3 = adresszeile_co_3;
 	}
 
 	/**
-	 * @return the straﬂe_4
+	 * @return the strasse_4
 	 */
-	public String getStraﬂe_4() {
-		return Straﬂe_4;
+	public String getStrasse_4() {
+		return Strasse_4;
 	}
 
 	/**
-	 * @param straﬂe_4 the straﬂe_4 to set
+	 * @param strasse_4
+	 *            the strasse_4 to set
 	 */
-	public void setStraﬂe_4(String straﬂe_4) {
-		Straﬂe_4 = straﬂe_4;
+	public void setStrasse_4(String strasse_4) {
+		Strasse_4 = strasse_4;
 	}
 
 	/**
@@ -1235,7 +1331,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param stadt_4 the stadt_4 to set
+	 * @param stadt_4
+	 *            the stadt_4 to set
 	 */
 	public void setStadt_4(String stadt_4) {
 		Stadt_4 = stadt_4;
@@ -1249,7 +1346,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param postleitzahl_4 the postleitzahl_4 to set
+	 * @param postleitzahl_4
+	 *            the postleitzahl_4 to set
 	 */
 	public void setPostleitzahl_4(String postleitzahl_4) {
 		Postleitzahl_4 = postleitzahl_4;
@@ -1263,7 +1361,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param bundesland_4 the bundesland_4 to set
+	 * @param bundesland_4
+	 *            the bundesland_4 to set
 	 */
 	public void setBundesland_4(String bundesland_4) {
 		Bundesland_4 = bundesland_4;
@@ -1277,7 +1376,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param land_4 the land_4 to set
+	 * @param land_4
+	 *            the land_4 to set
 	 */
 	public void setLand_4(String land_4) {
 		Land_4 = land_4;
@@ -1291,7 +1391,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param zeitzone_4 the zeitzone_4 to set
+	 * @param zeitzone_4
+	 *            the zeitzone_4 to set
 	 */
 	public void setZeitzone_4(String zeitzone_4) {
 		Zeitzone_4 = zeitzone_4;
@@ -1305,24 +1406,26 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param adresszeile_co_4 the adresszeile_co_4 to set
+	 * @param adresszeile_co_4
+	 *            the adresszeile_co_4 to set
 	 */
 	public void setAdresszeile_co_4(String adresszeile_co_4) {
 		Adresszeile_co_4 = adresszeile_co_4;
 	}
 
 	/**
-	 * @return the straﬂe_5
+	 * @return the strasse_5
 	 */
-	public String getStraﬂe_5() {
-		return Straﬂe_5;
+	public String getStrasse_5() {
+		return Strasse_5;
 	}
 
 	/**
-	 * @param straﬂe_5 the straﬂe_5 to set
+	 * @param strasse_5
+	 *            the strasse_5 to set
 	 */
-	public void setStraﬂe_5(String straﬂe_5) {
-		Straﬂe_5 = straﬂe_5;
+	public void setStrasse_5(String strasse_5) {
+		Strasse_5 = strasse_5;
 	}
 
 	/**
@@ -1333,7 +1436,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param stadt_5 the stadt_5 to set
+	 * @param stadt_5
+	 *            the stadt_5 to set
 	 */
 	public void setStadt_5(String stadt_5) {
 		Stadt_5 = stadt_5;
@@ -1347,7 +1451,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param postleitzahl_5 the postleitzahl_5 to set
+	 * @param postleitzahl_5
+	 *            the postleitzahl_5 to set
 	 */
 	public void setPostleitzahl_5(String postleitzahl_5) {
 		Postleitzahl_5 = postleitzahl_5;
@@ -1361,7 +1466,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param bundesland_5 the bundesland_5 to set
+	 * @param bundesland_5
+	 *            the bundesland_5 to set
 	 */
 	public void setBundesland_5(String bundesland_5) {
 		Bundesland_5 = bundesland_5;
@@ -1375,7 +1481,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param land_5 the land_5 to set
+	 * @param land_5
+	 *            the land_5 to set
 	 */
 	public void setLand_5(String land_5) {
 		Land_5 = land_5;
@@ -1389,7 +1496,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param zeitzone_5 the zeitzone_5 to set
+	 * @param zeitzone_5
+	 *            the zeitzone_5 to set
 	 */
 	public void setZeitzone_5(String zeitzone_5) {
 		Zeitzone_5 = zeitzone_5;
@@ -1403,24 +1511,26 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param adresszeile_co_5 the adresszeile_co_5 to set
+	 * @param adresszeile_co_5
+	 *            the adresszeile_co_5 to set
 	 */
 	public void setAdresszeile_co_5(String adresszeile_co_5) {
 		Adresszeile_co_5 = adresszeile_co_5;
 	}
 
 	/**
-	 * @return the straﬂe_6
+	 * @return the strasse_6
 	 */
-	public String getStraﬂe_6() {
-		return Straﬂe_6;
+	public String getStrasse_6() {
+		return Strasse_6;
 	}
 
 	/**
-	 * @param straﬂe_6 the straﬂe_6 to set
+	 * @param strasse_6
+	 *            the strasse_6 to set
 	 */
-	public void setStraﬂe_6(String straﬂe_6) {
-		Straﬂe_6 = straﬂe_6;
+	public void setStrasse_6(String strasse_6) {
+		Strasse_6 = strasse_6;
 	}
 
 	/**
@@ -1431,7 +1541,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param stadt_6 the stadt_6 to set
+	 * @param stadt_6
+	 *            the stadt_6 to set
 	 */
 	public void setStadt_6(String stadt_6) {
 		Stadt_6 = stadt_6;
@@ -1445,7 +1556,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param postleitzahl_6 the postleitzahl_6 to set
+	 * @param postleitzahl_6
+	 *            the postleitzahl_6 to set
 	 */
 	public void setPostleitzahl_6(String postleitzahl_6) {
 		Postleitzahl_6 = postleitzahl_6;
@@ -1459,7 +1571,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param bundesland_6 the bundesland_6 to set
+	 * @param bundesland_6
+	 *            the bundesland_6 to set
 	 */
 	public void setBundesland_6(String bundesland_6) {
 		Bundesland_6 = bundesland_6;
@@ -1473,7 +1586,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param land_6 the land_6 to set
+	 * @param land_6
+	 *            the land_6 to set
 	 */
 	public void setLand_6(String land_6) {
 		Land_6 = land_6;
@@ -1487,7 +1601,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param zeitzone_6 the zeitzone_6 to set
+	 * @param zeitzone_6
+	 *            the zeitzone_6 to set
 	 */
 	public void setZeitzone_6(String zeitzone_6) {
 		Zeitzone_6 = zeitzone_6;
@@ -1501,7 +1616,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param adresszeile_co_6 the adresszeile_co_6 to set
+	 * @param adresszeile_co_6
+	 *            the adresszeile_co_6 to set
 	 */
 	public void setAdresszeile_co_6(String adresszeile_co_6) {
 		Adresszeile_co_6 = adresszeile_co_6;
@@ -1515,7 +1631,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param aktiv the aktiv to set
+	 * @param aktiv
+	 *            the aktiv to set
 	 */
 	public void setAktiv(String aktiv) {
 		Aktiv = aktiv;
@@ -1529,7 +1646,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param kontaktinhaber the kontaktinhaber to set
+	 * @param kontaktinhaber
+	 *            the kontaktinhaber to set
 	 */
 	public void setKontaktinhaber(String kontaktinhaber) {
 		Kontaktinhaber = kontaktinhaber;
@@ -1543,7 +1661,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param zahlungsart the zahlungsart to set
+	 * @param zahlungsart
+	 *            the zahlungsart to set
 	 */
 	public void setZahlungsart(String zahlungsart) {
 		Zahlungsart = zahlungsart;
@@ -1557,7 +1676,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param branche the branche to set
+	 * @param branche
+	 *            the branche to set
 	 */
 	public void setBranche(String branche) {
 		Branche = branche;
@@ -1571,7 +1691,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param rechtsform_der_Organisation the rechtsform_der_Organisation to set
+	 * @param rechtsform_der_Organisation
+	 *            the rechtsform_der_Organisation to set
 	 */
 	public void setRechtsform_der_Organisation(String rechtsform_der_Organisation) {
 		Rechtsform_der_Organisation = rechtsform_der_Organisation;
@@ -1585,7 +1706,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param art_der_Organisation the art_der_Organisation to set
+	 * @param art_der_Organisation
+	 *            the art_der_Organisation to set
 	 */
 	public void setArt_der_Organisation(String art_der_Organisation) {
 		Art_der_Organisation = art_der_Organisation;
@@ -1599,7 +1721,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param standardwaehrung the standardwaehrung to set
+	 * @param standardwaehrung
+	 *            the standardwaehrung to set
 	 */
 	public void setStandardwaehrung(String standardwaehrung) {
 		Standardwaehrung = standardwaehrung;
@@ -1613,7 +1736,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param mitarbeiteranzahl_circa the mitarbeiteranzahl_circa to set
+	 * @param mitarbeiteranzahl_circa
+	 *            the mitarbeiteranzahl_circa to set
 	 */
 	public void setMitarbeiteranzahl_circa(String mitarbeiteranzahl_circa) {
 		Mitarbeiteranzahl_circa = mitarbeiteranzahl_circa;
@@ -1627,7 +1751,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param jahresumsatz_Euro_circa the jahresumsatz_Euro_circa to set
+	 * @param jahresumsatz_Euro_circa
+	 *            the jahresumsatz_Euro_circa to set
 	 */
 	public void setJahresumsatz_Euro_circa(String jahresumsatz_Euro_circa) {
 		Jahresumsatz_Euro_circa = jahresumsatz_Euro_circa;
@@ -1641,7 +1766,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param marktanteil_circa the marktanteil_circa to set
+	 * @param marktanteil_circa
+	 *            the marktanteil_circa to set
 	 */
 	public void setMarktanteil_circa(String marktanteil_circa) {
 		Marktanteil_circa = marktanteil_circa;
@@ -1655,7 +1781,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param geschlecht the geschlecht to set
+	 * @param geschlecht
+	 *            the geschlecht to set
 	 */
 	public void setGeschlecht(String geschlecht) {
 		Geschlecht = geschlecht;
@@ -1669,7 +1796,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param geburtsname the geburtsname to set
+	 * @param geburtsname
+	 *            the geburtsname to set
 	 */
 	public void setGeburtsname(String geburtsname) {
 		Geburtsname = geburtsname;
@@ -1683,7 +1811,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param familienstatus the familienstatus to set
+	 * @param familienstatus
+	 *            the familienstatus to set
 	 */
 	public void setFamilienstatus(String familienstatus) {
 		Familienstatus = familienstatus;
@@ -1697,7 +1826,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param anzahl_Kinder the anzahl_Kinder to set
+	 * @param anzahl_Kinder
+	 *            the anzahl_Kinder to set
 	 */
 	public void setAnzahl_Kinder(String anzahl_Kinder) {
 		Anzahl_Kinder = anzahl_Kinder;
@@ -1711,7 +1841,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param beruf the beruf to set
+	 * @param beruf
+	 *            the beruf to set
 	 */
 	public void setBeruf(String beruf) {
 		Beruf = beruf;
@@ -1725,7 +1856,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param arbeitgeber the arbeitgeber to set
+	 * @param arbeitgeber
+	 *            the arbeitgeber to set
 	 */
 	public void setArbeitgeber(String arbeitgeber) {
 		Arbeitgeber = arbeitgeber;
@@ -1739,7 +1871,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param dienststelle the dienststelle to set
+	 * @param dienststelle
+	 *            the dienststelle to set
 	 */
 	public void setDienststelle(String dienststelle) {
 		Dienststelle = dienststelle;
@@ -1753,7 +1886,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param ansprechpartner the ansprechpartner to set
+	 * @param ansprechpartner
+	 *            the ansprechpartner to set
 	 */
 	public void setAnsprechpartner(String ansprechpartner) {
 		Ansprechpartner = ansprechpartner;
@@ -1767,7 +1901,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param hauspostadresse the hauspostadresse to set
+	 * @param hauspostadresse
+	 *            the hauspostadresse to set
 	 */
 	public void setHauspostadresse(String hauspostadresse) {
 		Hauspostadresse = hauspostadresse;
@@ -1781,7 +1916,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param aBC_Kunde the aBC_Kunde to set
+	 * @param aBC_Kunde
+	 *            the aBC_Kunde to set
 	 */
 	public void setABC_Kunde(String aBC_Kunde) {
 		ABC_Kunde = aBC_Kunde;
@@ -1795,7 +1931,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param kundengruppe the kundengruppe to set
+	 * @param kundengruppe
+	 *            the kundengruppe to set
 	 */
 	public void setKundengruppe(String kundengruppe) {
 		Kundengruppe = kundengruppe;
@@ -1809,7 +1946,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param kundenstatus the kundenstatus to set
+	 * @param kundenstatus
+	 *            the kundenstatus to set
 	 */
 	public void setKundenstatus(String kundenstatus) {
 		Kundenstatus = kundenstatus;
@@ -1823,7 +1961,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param sprache the sprache to set
+	 * @param sprache
+	 *            the sprache to set
 	 */
 	public void setSprache(String sprache) {
 		Sprache = sprache;
@@ -1837,7 +1976,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param iMEI the iMEI to set
+	 * @param iMEI
+	 *            the iMEI to set
 	 */
 	public void setIMEI(String iMEI) {
 		IMEI = iMEI;
@@ -1851,7 +1991,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param bevorzugte_Kontaktart the bevorzugte_Kontaktart to set
+	 * @param bevorzugte_Kontaktart
+	 *            the bevorzugte_Kontaktart to set
 	 */
 	public void setBevorzugte_Kontaktart(String bevorzugte_Kontaktart) {
 		Bevorzugte_Kontaktart = bevorzugte_Kontaktart;
@@ -1865,7 +2006,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param iM_Adresse the iM_Adresse to set
+	 * @param iM_Adresse
+	 *            the iM_Adresse to set
 	 */
 	public void setIM_Adresse(String iM_Adresse) {
 		IM_Adresse = iM_Adresse;
@@ -1879,7 +2021,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param skype_ID the skype_ID to set
+	 * @param skype_ID
+	 *            the skype_ID to set
 	 */
 	public void setSkype_ID(String skype_ID) {
 		Skype_ID = skype_ID;
@@ -1893,7 +2036,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param xing the xing to set
+	 * @param xing
+	 *            the xing to set
 	 */
 	public void setXing(String xing) {
 		Xing = xing;
@@ -1907,7 +2051,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param linkedIn the linkedIn to set
+	 * @param linkedIn
+	 *            the linkedIn to set
 	 */
 	public void setLinkedIn(String linkedIn) {
 		LinkedIn = linkedIn;
@@ -1921,7 +2066,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param link_Map the link_Map to set
+	 * @param link_Map
+	 *            the link_Map to set
 	 */
 	public void setLink_Map(String link_Map) {
 		Link_Map = link_Map;
@@ -1935,7 +2081,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param bundesanzeiger the bundesanzeiger to set
+	 * @param bundesanzeiger
+	 *            the bundesanzeiger to set
 	 */
 	public void setBundesanzeiger(String bundesanzeiger) {
 		Bundesanzeiger = bundesanzeiger;
@@ -1949,7 +2096,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param handelsregister the handelsregister to set
+	 * @param handelsregister
+	 *            the handelsregister to set
 	 */
 	public void setHandelsregister(String handelsregister) {
 		Handelsregister = handelsregister;
@@ -1963,7 +2111,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param handelsregisternummer the handelsregisternummer to set
+	 * @param handelsregisternummer
+	 *            the handelsregisternummer to set
 	 */
 	public void setHandelsregisternummer(String handelsregisternummer) {
 		Handelsregisternummer = handelsregisternummer;
@@ -1977,7 +2126,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param unternehmensgegenstand the unternehmensgegenstand to set
+	 * @param unternehmensgegenstand
+	 *            the unternehmensgegenstand to set
 	 */
 	public void setUnternehmensgegenstand(String unternehmensgegenstand) {
 		Unternehmensgegenstand = unternehmensgegenstand;
@@ -1991,7 +2141,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param betriebsnummer the betriebsnummer to set
+	 * @param betriebsnummer
+	 *            the betriebsnummer to set
 	 */
 	public void setBetriebsnummer(String betriebsnummer) {
 		Betriebsnummer = betriebsnummer;
@@ -2005,7 +2156,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param berufsgenossenschaft the berufsgenossenschaft to set
+	 * @param berufsgenossenschaft
+	 *            the berufsgenossenschaft to set
 	 */
 	public void setBerufsgenossenschaft(String berufsgenossenschaft) {
 		Berufsgenossenschaft = berufsgenossenschaft;
@@ -2019,7 +2171,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param eBay_ID the eBay_ID to set
+	 * @param eBay_ID
+	 *            the eBay_ID to set
 	 */
 	public void seteBay_ID(String eBay_ID) {
 		this.eBay_ID = eBay_ID;
@@ -2033,7 +2186,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param finanzamt the finanzamt to set
+	 * @param finanzamt
+	 *            the finanzamt to set
 	 */
 	public void setFinanzamt(String finanzamt) {
 		Finanzamt = finanzamt;
@@ -2047,7 +2201,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param steuernummer the steuernummer to set
+	 * @param steuernummer
+	 *            the steuernummer to set
 	 */
 	public void setSteuernummer(String steuernummer) {
 		Steuernummer = steuernummer;
@@ -2061,7 +2216,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param uSt_IdNr the uSt_IdNr to set
+	 * @param uSt_IdNr
+	 *            the uSt_IdNr to set
 	 */
 	public void setUSt_IdNr(String uSt_IdNr) {
 		USt_IdNr = uSt_IdNr;
@@ -2075,7 +2231,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param waehrung the waehrung to set
+	 * @param waehrung
+	 *            the waehrung to set
 	 */
 	public void setWaehrung(String waehrung) {
 		Waehrung = waehrung;
@@ -2089,7 +2246,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param gemeinnuetzigkeit the gemeinnuetzigkeit to set
+	 * @param gemeinnuetzigkeit
+	 *            the gemeinnuetzigkeit to set
 	 */
 	public void setGemeinnuetzigkeit(String gemeinnuetzigkeit) {
 		Gemeinnuetzigkeit = gemeinnuetzigkeit;
@@ -2103,24 +2261,26 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param art_der_Gemeinnuetzigkeit the art_der_Gemeinnuetzigkeit to set
+	 * @param art_der_Gemeinnuetzigkeit
+	 *            the art_der_Gemeinnuetzigkeit to set
 	 */
 	public void setArt_der_Gemeinnuetzigkeit(String art_der_Gemeinnuetzigkeit) {
 		Art_der_Gemeinnuetzigkeit = art_der_Gemeinnuetzigkeit;
 	}
 
 	/**
-	 * @return the fˆrderzweck
+	 * @return the foerderzweck
 	 */
-	public String getFˆrderzweck() {
-		return Fˆrderzweck;
+	public String getFoerderzweck() {
+		return Foerderzweck;
 	}
 
 	/**
-	 * @param fˆrderzweck the fˆrderzweck to set
+	 * @param foerderzweck
+	 *            the foerderzweck to set
 	 */
-	public void setFˆrderzweck(String fˆrderzweck) {
-		Fˆrderzweck = fˆrderzweck;
+	public void setFoerderzweck(String foerderzweck) {
+		Foerderzweck = foerderzweck;
 	}
 
 	/**
@@ -2131,7 +2291,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param vIP the vIP to set
+	 * @param vIP
+	 *            the vIP to set
 	 */
 	public void setVIP(String vIP) {
 		VIP = vIP;
@@ -2145,7 +2306,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param kurzname the kurzname to set
+	 * @param kurzname
+	 *            the kurzname to set
 	 */
 	public void setKurzname(String kurzname) {
 		Kurzname = kurzname;
@@ -2159,7 +2321,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param nationalitaet the nationalitaet to set
+	 * @param nationalitaet
+	 *            the nationalitaet to set
 	 */
 	public void setNationalitaet(String nationalitaet) {
 		Nationalitaet = nationalitaet;
@@ -2173,7 +2336,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param zielgruppe the zielgruppe to set
+	 * @param zielgruppe
+	 *            the zielgruppe to set
 	 */
 	public void setZielgruppe(String zielgruppe) {
 		Zielgruppe = zielgruppe;
@@ -2187,7 +2351,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param bildungsstand the bildungsstand to set
+	 * @param bildungsstand
+	 *            the bildungsstand to set
 	 */
 	public void setBildungsstand(String bildungsstand) {
 		Bildungsstand = bildungsstand;
@@ -2201,7 +2366,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param einkommensklasse the einkommensklasse to set
+	 * @param einkommensklasse
+	 *            the einkommensklasse to set
 	 */
 	public void setEinkommensklasse(String einkommensklasse) {
 		Einkommensklasse = einkommensklasse;
@@ -2215,7 +2381,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param einstellung the einstellung to set
+	 * @param einstellung
+	 *            the einstellung to set
 	 */
 	public void setEinstellung(String einstellung) {
 		Einstellung = einstellung;
@@ -2229,7 +2396,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param arbeitstyp the arbeitstyp to set
+	 * @param arbeitstyp
+	 *            the arbeitstyp to set
 	 */
 	public void setArbeitstyp(String arbeitstyp) {
 		Arbeitstyp = arbeitstyp;
@@ -2243,7 +2411,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param kaufverhalten the kaufverhalten to set
+	 * @param kaufverhalten
+	 *            the kaufverhalten to set
 	 */
 	public void setKaufverhalten(String kaufverhalten) {
 		Kaufverhalten = kaufverhalten;
@@ -2257,7 +2426,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param lebensstil the lebensstil to set
+	 * @param lebensstil
+	 *            the lebensstil to set
 	 */
 	public void setLebensstil(String lebensstil) {
 		Lebensstil = lebensstil;
@@ -2271,7 +2441,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param risikoeinstellung the risikoeinstellung to set
+	 * @param risikoeinstellung
+	 *            the risikoeinstellung to set
 	 */
 	public void setRisikoeinstellung(String risikoeinstellung) {
 		Risikoeinstellung = risikoeinstellung;
@@ -2285,7 +2456,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param kaeuferloyalitaet the kaeuferloyalitaet to set
+	 * @param kaeuferloyalitaet
+	 *            the kaeuferloyalitaet to set
 	 */
 	public void setKaeuferloyalitaet(String kaeuferloyalitaet) {
 		Kaeuferloyalitaet = kaeuferloyalitaet;
@@ -2299,7 +2471,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param vertriebsquelle the vertriebsquelle to set
+	 * @param vertriebsquelle
+	 *            the vertriebsquelle to set
 	 */
 	public void setVertriebsquelle(String vertriebsquelle) {
 		Vertriebsquelle = vertriebsquelle;
@@ -2313,7 +2486,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param vertriebsweg the vertriebsweg to set
+	 * @param vertriebsweg
+	 *            the vertriebsweg to set
 	 */
 	public void setVertriebsweg(String vertriebsweg) {
 		Vertriebsweg = vertriebsweg;
@@ -2327,7 +2501,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param vertriebsbeauftragter the vertriebsbeauftragter to set
+	 * @param vertriebsbeauftragter
+	 *            the vertriebsbeauftragter to set
 	 */
 	public void setVertriebsbeauftragter(String vertriebsbeauftragter) {
 		Vertriebsbeauftragter = vertriebsbeauftragter;
@@ -2341,7 +2516,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param vertriebsorganisation the vertriebsorganisation to set
+	 * @param vertriebsorganisation
+	 *            the vertriebsorganisation to set
 	 */
 	public void setVertriebsorganisation(String vertriebsorganisation) {
 		Vertriebsorganisation = vertriebsorganisation;
@@ -2355,7 +2531,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param nielsenbezirke the nielsenbezirke to set
+	 * @param nielsenbezirke
+	 *            the nielsenbezirke to set
 	 */
 	public void setNielsenbezirke(String nielsenbezirke) {
 		Nielsenbezirke = nielsenbezirke;
@@ -2369,7 +2546,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param vertriebsregionen the vertriebsregionen to set
+	 * @param vertriebsregionen
+	 *            the vertriebsregionen to set
 	 */
 	public void setVertriebsregionen(String vertriebsregionen) {
 		Vertriebsregionen = vertriebsregionen;
@@ -2383,7 +2561,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param vertriebsrisiko the vertriebsrisiko to set
+	 * @param vertriebsrisiko
+	 *            the vertriebsrisiko to set
 	 */
 	public void setVertriebsrisiko(String vertriebsrisiko) {
 		Vertriebsrisiko = vertriebsrisiko;
@@ -2397,7 +2576,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param vertriebsprioritaet the vertriebsprioritaet to set
+	 * @param vertriebsprioritaet
+	 *            the vertriebsprioritaet to set
 	 */
 	public void setVertriebsprioritaet(String vertriebsprioritaet) {
 		Vertriebsprioritaet = vertriebsprioritaet;
@@ -2411,7 +2591,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param nachfrageverhalten the nachfrageverhalten to set
+	 * @param nachfrageverhalten
+	 *            the nachfrageverhalten to set
 	 */
 	public void setNachfrageverhalten(String nachfrageverhalten) {
 		Nachfrageverhalten = nachfrageverhalten;
@@ -2425,7 +2606,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param vertriebsstatus the vertriebsstatus to set
+	 * @param vertriebsstatus
+	 *            the vertriebsstatus to set
 	 */
 	public void setVertriebsstatus(String vertriebsstatus) {
 		Vertriebsstatus = vertriebsstatus;
@@ -2439,7 +2621,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param kundengruppe2 the kundengruppe2 to set
+	 * @param kundengruppe2
+	 *            the kundengruppe2 to set
 	 */
 	public void setKundengruppe2(String kundengruppe2) {
 		Kundengruppe2 = kundengruppe2;
@@ -2453,7 +2636,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param auslieferprioritaet the auslieferprioritaet to set
+	 * @param auslieferprioritaet
+	 *            the auslieferprioritaet to set
 	 */
 	public void setAuslieferprioritaet(String auslieferprioritaet) {
 		Auslieferprioritaet = auslieferprioritaet;
@@ -2467,7 +2651,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param komplettlieferung the komplettlieferung to set
+	 * @param komplettlieferung
+	 *            the komplettlieferung to set
 	 */
 	public void setKomplettlieferung(String komplettlieferung) {
 		Komplettlieferung = komplettlieferung;
@@ -2481,7 +2666,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param incoterms the incoterms to set
+	 * @param incoterms
+	 *            the incoterms to set
 	 */
 	public void setIncoterms(String incoterms) {
 		Incoterms = incoterms;
@@ -2495,7 +2681,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param incoterms_Ort the incoterms_Ort to set
+	 * @param incoterms_Ort
+	 *            the incoterms_Ort to set
 	 */
 	public void setIncoterms_Ort(String incoterms_Ort) {
 		Incoterms_Ort = incoterms_Ort;
@@ -2509,7 +2696,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param schlagworte the schlagworte to set
+	 * @param schlagworte
+	 *            the schlagworte to set
 	 */
 	public void setSchlagworte(String schlagworte) {
 		Schlagworte = schlagworte;
@@ -2523,7 +2711,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param iD_Vorsystem the iD_Vorsystem to set
+	 * @param iD_Vorsystem
+	 *            the iD_Vorsystem to set
 	 */
 	public void setID_Vorsystem(String iD_Vorsystem) {
 		ID_Vorsystem = iD_Vorsystem;
@@ -2537,7 +2726,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param benutzerfeld_1 the benutzerfeld_1 to set
+	 * @param benutzerfeld_1
+	 *            the benutzerfeld_1 to set
 	 */
 	public void setBenutzerfeld_1(String benutzerfeld_1) {
 		Benutzerfeld_1 = benutzerfeld_1;
@@ -2551,7 +2741,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param benutzerfeld_2 the benutzerfeld_2 to set
+	 * @param benutzerfeld_2
+	 *            the benutzerfeld_2 to set
 	 */
 	public void setBenutzerfeld_2(String benutzerfeld_2) {
 		Benutzerfeld_2 = benutzerfeld_2;
@@ -2565,7 +2756,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param benutzerfeld_3 the benutzerfeld_3 to set
+	 * @param benutzerfeld_3
+	 *            the benutzerfeld_3 to set
 	 */
 	public void setBenutzerfeld_3(String benutzerfeld_3) {
 		Benutzerfeld_3 = benutzerfeld_3;
@@ -2579,7 +2771,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param benutzerfeld_4 the benutzerfeld_4 to set
+	 * @param benutzerfeld_4
+	 *            the benutzerfeld_4 to set
 	 */
 	public void setBenutzerfeld_4(String benutzerfeld_4) {
 		Benutzerfeld_4 = benutzerfeld_4;
@@ -2593,7 +2786,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param benutzerfeld_5 the benutzerfeld_5 to set
+	 * @param benutzerfeld_5
+	 *            the benutzerfeld_5 to set
 	 */
 	public void setBenutzerfeld_5(String benutzerfeld_5) {
 		Benutzerfeld_5 = benutzerfeld_5;
@@ -2607,7 +2801,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param benutzerfeld_6 the benutzerfeld_6 to set
+	 * @param benutzerfeld_6
+	 *            the benutzerfeld_6 to set
 	 */
 	public void setBenutzerfeld_6(String benutzerfeld_6) {
 		Benutzerfeld_6 = benutzerfeld_6;
@@ -2621,7 +2816,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param benutzerfeld_7 the benutzerfeld_7 to set
+	 * @param benutzerfeld_7
+	 *            the benutzerfeld_7 to set
 	 */
 	public void setBenutzerfeld_7(String benutzerfeld_7) {
 		Benutzerfeld_7 = benutzerfeld_7;
@@ -2635,7 +2831,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param benutzerfeld_8 the benutzerfeld_8 to set
+	 * @param benutzerfeld_8
+	 *            the benutzerfeld_8 to set
 	 */
 	public void setBenutzerfeld_8(String benutzerfeld_8) {
 		Benutzerfeld_8 = benutzerfeld_8;
@@ -2649,7 +2846,8 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param benutzerfeld_9 the benutzerfeld_9 to set
+	 * @param benutzerfeld_9
+	 *            the benutzerfeld_9 to set
 	 */
 	public void setBenutzerfeld_9(String benutzerfeld_9) {
 		Benutzerfeld_9 = benutzerfeld_9;
@@ -2663,14 +2861,745 @@ public class Kontakt {
 	}
 
 	/**
-	 * @param benutzerfeld_10 the benutzerfeld_10 to set
+	 * @param benutzerfeld_10
+	 *            the benutzerfeld_10 to set
 	 */
 	public void setBenutzerfeld_10(String benutzerfeld_10) {
 		Benutzerfeld_10 = benutzerfeld_10;
 	}
+	//}}
+
 	
-	
-	
-	
-	
+	// {{ Methoden
+	/**
+	 * Methode zur Initialisierung der Klasse. Wird im Konstruktor aufgerufen
+	 * @return void
+	 */
+	private void initalize() {
+		this.attributeList.add(this.Ist_Firmenkontakt);
+		this.attributeList.add(this.Vorname);
+		this.attributeList.add(this.Name_Gesellschaftsname);
+		this.attributeList.add(this.Interessent);
+		this.attributeList.add(this.Lead);
+		this.attributeList.add(this.Kunde);
+		this.attributeList.add(this.Anrede);
+		this.attributeList.add(this.Telefon_1);
+		this.attributeList.add(this.Telefon_2);
+		this.attributeList.add(this.Telefon_3);
+		this.attributeList.add(this.Telefon_4);
+		this.attributeList.add(this.Telefon_5);
+		this.attributeList.add(this.Telefon_6);
+		this.attributeList.add(this.Mobiltelefon_1);
+		this.attributeList.add(this.Mobiltelefon_2);
+		this.attributeList.add(this.Mobiltelefon_3);
+		this.attributeList.add(this.Mobiltelefon_4);
+		this.attributeList.add(this.Mobiltelefon_5);
+		this.attributeList.add(this.Mobiltelefon_6);
+		this.attributeList.add(this.E_Mail_1);
+		this.attributeList.add(this.E_Mail_2);
+		this.attributeList.add(this.E_Mail_3);
+		this.attributeList.add(this.E_Mail_4);
+		this.attributeList.add(this.E_Mail_5);
+		this.attributeList.add(this.E_Mail_6);
+		this.attributeList.add(this.Webseite);
+		this.attributeList.add(this.Fax_1);
+		this.attributeList.add(this.Fax_2);
+		this.attributeList.add(this.Fax_3);
+		this.attributeList.add(this.Fax_4);
+		this.attributeList.add(this.Fax_5);
+		this.attributeList.add(this.Fax_6);
+		this.attributeList.add(this.Kundennummer);
+		this.attributeList.add(this.Gesetzlicher_Vertreter);
+		this.attributeList.add(this.Gesetzlicher_Vertreter_2);
+		this.attributeList.add(this.Gesetzlicher_Vertreter_3);
+		this.attributeList.add(this.Gesetzlicher_Vertreter_4);
+		this.attributeList.add(this.Gesetzlicher_Vertreter_5);
+		this.attributeList.add(this.Gesetzlicher_Vertreter_6);
+		this.attributeList.add(this.Ansprechpartner_1);
+		this.attributeList.add(this.Ansprechpartner_2);
+		this.attributeList.add(this.Ansprechpartner_3);
+		this.attributeList.add(this.Ansprechpartner_4);
+		this.attributeList.add(this.Ansprechpartner_5);
+		this.attributeList.add(this.Ansprechpartner_6);
+		this.attributeList.add(this.Titel);
+		this.attributeList.add(this.Alt_Klassifikation);
+		this.attributeList.add(this.Stelle);
+		this.attributeList.add(this.Geburtsdatum);
+		this.attributeList.add(this.Abteilung);
+		this.attributeList.add(this.Notiz);
+		this.attributeList.add(this.Position);
+		this.attributeList.add(this.Strasse_1);
+		this.attributeList.add(this.Stadt_1);
+		this.attributeList.add(this.Postleitzahl_1);
+		this.attributeList.add(this.Bundesland_1);
+		this.attributeList.add(this.Land_1);
+		this.attributeList.add(this.Zeitzone_1);
+		this.attributeList.add(this.Adresszeile_co_1);
+		this.attributeList.add(this.Strasse_2);
+		this.attributeList.add(this.Stadt_2);
+		this.attributeList.add(this.Postleitzahl_2);
+		this.attributeList.add(this.Bundesland_2);
+		this.attributeList.add(this.Land_2);
+		this.attributeList.add(this.Zeitzone_2);
+		this.attributeList.add(this.Adresszeile_co_2);
+		this.attributeList.add(this.Strasse_3);
+		this.attributeList.add(this.Stadt_3);
+		this.attributeList.add(this.Postleitzahl_3);
+		this.attributeList.add(this.Bundesland_3);
+		this.attributeList.add(this.Land_3);
+		this.attributeList.add(this.Zeitzone_3);
+		this.attributeList.add(this.Adresszeile_co_3);
+		this.attributeList.add(this.Strasse_4);
+		this.attributeList.add(this.Stadt_4);
+		this.attributeList.add(this.Postleitzahl_4);
+		this.attributeList.add(this.Bundesland_4);
+		this.attributeList.add(this.Land_4);
+		this.attributeList.add(this.Zeitzone_4);
+		this.attributeList.add(this.Adresszeile_co_4);
+		this.attributeList.add(this.Strasse_5);
+		this.attributeList.add(this.Stadt_5);
+		this.attributeList.add(this.Postleitzahl_5);
+		this.attributeList.add(this.Bundesland_5);
+		this.attributeList.add(this.Land_5);
+		this.attributeList.add(this.Zeitzone_5);
+		this.attributeList.add(this.Adresszeile_co_5);
+		this.attributeList.add(this.Strasse_6);
+		this.attributeList.add(this.Stadt_6);
+		this.attributeList.add(this.Postleitzahl_6);
+		this.attributeList.add(this.Bundesland_6);
+		this.attributeList.add(this.Land_6);
+		this.attributeList.add(this.Zeitzone_6);
+		this.attributeList.add(this.Adresszeile_co_6);
+		this.attributeList.add(this.Aktiv);
+		this.attributeList.add(this.Kontaktinhaber);
+		this.attributeList.add(this.Zahlungsart);
+		this.attributeList.add(this.Branche);
+		this.attributeList.add(this.Rechtsform_der_Organisation);
+		this.attributeList.add(this.Art_der_Organisation);
+		this.attributeList.add(this.Standardwaehrung);
+		this.attributeList.add(this.Mitarbeiteranzahl_circa);
+		this.attributeList.add(this.Jahresumsatz_Euro_circa);
+		this.attributeList.add(this.Marktanteil_circa);
+		this.attributeList.add(this.Geschlecht);
+		this.attributeList.add(this.Geburtsname);
+		this.attributeList.add(this.Familienstatus);
+		this.attributeList.add(this.Anzahl_Kinder);
+		this.attributeList.add(this.Beruf);
+		this.attributeList.add(this.Arbeitgeber);
+		this.attributeList.add(this.Dienststelle);
+		this.attributeList.add(this.Ansprechpartner);
+		this.attributeList.add(this.Hauspostadresse);
+		this.attributeList.add(this.ABC_Kunde);
+		this.attributeList.add(this.Kundengruppe);
+		this.attributeList.add(this.Kundenstatus);
+		this.attributeList.add(this.Sprache);
+		this.attributeList.add(this.IMEI);
+		this.attributeList.add(this.Bevorzugte_Kontaktart);
+		this.attributeList.add(this.IM_Adresse);
+		this.attributeList.add(this.Skype_ID);
+		this.attributeList.add(this.Xing);
+		this.attributeList.add(this.LinkedIn);
+		this.attributeList.add(this.Link_Map);
+		this.attributeList.add(this.Bundesanzeiger);
+		this.attributeList.add(this.Handelsregister);
+		this.attributeList.add(this.Handelsregisternummer);
+		this.attributeList.add(this.Unternehmensgegenstand);
+		this.attributeList.add(this.Betriebsnummer);
+		this.attributeList.add(this.Berufsgenossenschaft);
+		this.attributeList.add(this.eBay_ID);
+		this.attributeList.add(this.Finanzamt);
+		this.attributeList.add(this.Steuernummer);
+		this.attributeList.add(this.USt_IdNr);
+		this.attributeList.add(this.Waehrung);
+		this.attributeList.add(this.Gemeinnuetzigkeit);
+		this.attributeList.add(this.Art_der_Gemeinnuetzigkeit);
+		this.attributeList.add(this.Foerderzweck);
+		this.attributeList.add(this.VIP);
+		this.attributeList.add(this.Kurzname);
+		this.attributeList.add(this.Nationalitaet);
+		this.attributeList.add(this.Zielgruppe);
+		this.attributeList.add(this.Bildungsstand);
+		this.attributeList.add(this.Einkommensklasse);
+		this.attributeList.add(this.Einstellung);
+		this.attributeList.add(this.Arbeitstyp);
+		this.attributeList.add(this.Kaufverhalten);
+		this.attributeList.add(this.Lebensstil);
+		this.attributeList.add(this.Risikoeinstellung);
+		this.attributeList.add(this.Kaeuferloyalitaet);
+		this.attributeList.add(this.Vertriebsquelle);
+		this.attributeList.add(this.Vertriebsweg);
+		this.attributeList.add(this.Vertriebsbeauftragter);
+		this.attributeList.add(this.Vertriebsorganisation);
+		this.attributeList.add(this.Nielsenbezirke);
+		this.attributeList.add(this.Vertriebsregionen);
+		this.attributeList.add(this.Vertriebsrisiko);
+		this.attributeList.add(this.Vertriebsprioritaet);
+		this.attributeList.add(this.Nachfrageverhalten);
+		this.attributeList.add(this.Vertriebsstatus);
+		this.attributeList.add(this.Kundengruppe2);
+		this.attributeList.add(this.Auslieferprioritaet);
+		this.attributeList.add(this.Komplettlieferung);
+		this.attributeList.add(this.Incoterms);
+		this.attributeList.add(this.Incoterms_Ort);
+		this.attributeList.add(this.Schlagworte);
+		this.attributeList.add(this.ID_Vorsystem);
+		this.attributeList.add(this.Benutzerfeld_1);
+		this.attributeList.add(this.Benutzerfeld_2);
+		this.attributeList.add(this.Benutzerfeld_3);
+		this.attributeList.add(this.Benutzerfeld_4);
+		this.attributeList.add(this.Benutzerfeld_5);
+		this.attributeList.add(this.Benutzerfeld_6);
+		this.attributeList.add(this.Benutzerfeld_7);
+		this.attributeList.add(this.Benutzerfeld_8);
+		this.attributeList.add(this.Benutzerfeld_9);
+		this.attributeList.add(this.Benutzerfeld_10);
+
+	}
+
+	/**
+	 * Methode zum Setzen eines Attributes eines Kontaktes.
+	 * @param attr Name des Attributs
+	 * @param value Wert des Attributs
+	 */
+	public void setAttribute(String attr, String value) {
+		switch (attr) {
+			case "Ist_Firmenkontakt":
+				this.setIst_Firmenkontakt(value);
+				break;
+			case "Vorname":
+				this.setVorname(value);
+				break;
+			case "Name_Gesellschaftsname":
+				this.setName_Gesellschaftsname(value);
+				break;
+			case "Interessent":
+				this.setInteressent(value);
+				break;
+			case "Lead":
+				this.setLead(value);
+				break;
+			case "Kunde":
+				this.setKunde(value);
+				break;
+			case "Anrede":
+				this.setAnrede(value);
+				break;
+			case "Telefon_1":
+				this.setTelefon_1(value);
+				break;
+			case "Telefon_2":
+				this.setTelefon_2(value);
+				break;
+			case "Telefon_3":
+				this.setTelefon_3(value);
+				break;
+			case "Telefon_4":
+				this.setTelefon_4(value);
+				break;
+			case "Telefon_5":
+				this.setTelefon_5(value);
+				break;
+			case "Telefon_6":
+				this.setTelefon_6(value);
+				break;
+			case "Mobiltelefon_1":
+				this.setMobiltelefon_1(value);
+				break;
+			case "Mobiltelefon_2":
+				this.setMobiltelefon_2(value);
+				break;
+			case "Mobiltelefon_3":
+				this.setMobiltelefon_3(value);
+				break;
+			case "Mobiltelefon_4":
+				this.setMobiltelefon_4(value);
+				break;
+			case "Mobiltelefon_5":
+				this.setMobiltelefon_5(value);
+				break;
+			case "Mobiltelefon_6":
+				this.setMobiltelefon_6(value);
+				break;
+			case "E_Mail_1":
+				this.setE_Mail_1(value);
+				break;
+			case "E_Mail_2":
+				this.setE_Mail_2(value);
+				break;
+			case "E_Mail_3":
+				this.setE_Mail_3(value);
+				break;
+			case "E_Mail_4":
+				this.setE_Mail_4(value);
+				break;
+			case "E_Mail_5":
+				this.setE_Mail_5(value);
+				break;
+			case "E_Mail_6":
+				this.setE_Mail_6(value);
+				break;
+			case "Webseite":
+				this.setWebseite(value);
+				break;
+			case "Fax_1":
+				this.setFax_1(value);
+				break;
+			case "Fax_2":
+				this.setFax_2(value);
+				break;
+			case "Fax_3":
+				this.setFax_3(value);
+				break;
+			case "Fax_4":
+				this.setFax_4(value);
+				break;
+			case "Fax_5":
+				this.setFax_5(value);
+				break;
+			case "Fax_6":
+				this.setFax_6(value);
+				break;
+			case "Kundennummer":
+				this.setKundennummer(value);
+				break;
+			case "Gesetzlicher_Vertreter":
+				this.setGesetzlicher_Vertreter(value);
+				break;
+			case "Gesetzlicher_Vertreter_2":
+				this.setGesetzlicher_Vertreter_2(value);
+				break;
+			case "Gesetzlicher_Vertreter_3":
+				this.setGesetzlicher_Vertreter_3(value);
+				break;
+			case "Gesetzlicher_Vertreter_4":
+				this.setGesetzlicher_Vertreter_4(value);
+				break;
+			case "Gesetzlicher_Vertreter_5":
+				this.setGesetzlicher_Vertreter_5(value);
+				break;
+			case "Gesetzlicher_Vertreter_6":
+				this.setGesetzlicher_Vertreter_6(value);
+				break;
+			case "Ansprechpartner_1":
+				this.setAnsprechpartner_1(value);
+				break;
+			case "Ansprechpartner_2":
+				this.setAnsprechpartner_2(value);
+				break;
+			case "Ansprechpartner_3":
+				this.setAnsprechpartner_3(value);
+				break;
+			case "Ansprechpartner_4":
+				this.setAnsprechpartner_4(value);
+				break;
+			case "Ansprechpartner_5":
+				this.setAnsprechpartner_5(value);
+				break;
+			case "Ansprechpartner_6":
+				this.setAnsprechpartner_6(value);
+				break;
+			case "Titel":
+				this.setTitel(value);
+				break;
+			case "Alt_Klassifikation":
+				this.setAlt_Klassifikation(value);
+				break;
+			case "Stelle":
+				this.setStelle(value);
+				break;
+			case "Geburtsdatum":
+				this.setGeburtsdatum(value);
+				break;
+			case "Abteilung":
+				this.setAbteilung(value);
+				break;
+			case "Notiz":
+				this.setNotiz(value);
+				break;
+			case "Position":
+				this.setPosition(value);
+				break;
+			case "Strasse_1":
+				this.setStrasse_1(value);
+				break;
+			case "Stadt_1":
+				this.setStadt_1(value);
+				break;
+			case "Postleitzahl_1":
+				this.setPostleitzahl_1(value);
+				break;
+			case "Bundesland_1":
+				this.setBundesland_1(value);
+				break;
+			case "Land_1":
+				this.setLand_1(value);
+				break;
+			case "Zeitzone_1":
+				this.setZeitzone_1(value);
+				break;
+			case "Adresszeile_co_1":
+				this.setAdresszeile_co_1(value);
+				break;
+			case "Strasse_2":
+				this.setStrasse_2(value);
+				break;
+			case "Stadt_2":
+				this.setStadt_2(value);
+				break;
+			case "Postleitzahl_2":
+				this.setPostleitzahl_2(value);
+				break;
+			case "Bundesland_2":
+				this.setBundesland_2(value);
+				break;
+			case "Land_2":
+				this.setLand_2(value);
+				break;
+			case "Zeitzone_2":
+				this.setZeitzone_2(value);
+				break;
+			case "Adresszeile_co_2":
+				this.setAdresszeile_co_2(value);
+				break;
+			case "Strasse_3":
+				this.setStrasse_3(value);
+				break;
+			case "Stadt_3":
+				this.setStadt_3(value);
+				break;
+			case "Postleitzahl_3":
+				this.setPostleitzahl_3(value);
+				break;
+			case "Bundesland_3":
+				this.setBundesland_3(value);
+				break;
+			case "Land_3":
+				this.setLand_3(value);
+				break;
+			case "Zeitzone_3":
+				this.setZeitzone_3(value);
+				break;
+			case "Adresszeile_co_3":
+				this.setAdresszeile_co_3(value);
+				break;
+			case "Strasse_4":
+				this.setStrasse_4(value);
+				break;
+			case "Stadt_4":
+				this.setStadt_4(value);
+				break;
+			case "Postleitzahl_4":
+				this.setPostleitzahl_4(value);
+				break;
+			case "Bundesland_4":
+				this.setBundesland_4(value);
+				break;
+			case "Land_4":
+				this.setLand_4(value);
+				break;
+			case "Zeitzone_4":
+				this.setZeitzone_4(value);
+				break;
+			case "Adresszeile_co_4":
+				this.setAdresszeile_co_4(value);
+				break;
+			case "Strasse_5":
+				this.setStrasse_5(value);
+				break;
+			case "Stadt_5":
+				this.setStadt_5(value);
+				break;
+			case "Postleitzahl_5":
+				this.setPostleitzahl_5(value);
+				break;
+			case "Bundesland_5":
+				this.setBundesland_5(value);
+				break;
+			case "Land_5":
+				this.setLand_5(value);
+				break;
+			case "Zeitzone_5":
+				this.setZeitzone_5(value);
+				break;
+			case "Adresszeile_co_5":
+				this.setAdresszeile_co_5(value);
+				break;
+			case "Strasse_6":
+				this.setStrasse_6(value);
+				break;
+			case "Stadt_6":
+				this.setStadt_6(value);
+				break;
+			case "Postleitzahl_6":
+				this.setPostleitzahl_6(value);
+				break;
+			case "Bundesland_6":
+				this.setBundesland_6(value);
+				break;
+			case "Land_6":
+				this.setLand_6(value);
+				break;
+			case "Zeitzone_6":
+				this.setZeitzone_6(value);
+				break;
+			case "Adresszeile_co_6":
+				this.setAdresszeile_co_6(value);
+				break;
+			case "Aktiv":
+				this.setAktiv(value);
+				break;
+			case "Kontaktinhaber":
+				this.setKontaktinhaber(value);
+				break;
+			case "Zahlungsart":
+				this.setZahlungsart(value);
+				break;
+			case "Branche":
+				this.setBranche(value);
+				break;
+			case "Rechtsform_der_Organisation":
+				this.setRechtsform_der_Organisation(value);
+				break;
+			case "Art_der_Organisation":
+				this.setArt_der_Organisation(value);
+				break;
+			case "Standardwaehrung":
+				this.setStandardwaehrung(value);
+				break;
+			case "Mitarbeiteranzahl_circa":
+				this.setMitarbeiteranzahl_circa(value);
+				break;
+			case "Jahresumsatz_Euro_circa":
+				this.setJahresumsatz_Euro_circa(value);
+				break;
+			case "Marktanteil_circa":
+				this.setMarktanteil_circa(value);
+				break;
+			case "Geschlecht":
+				this.setGeschlecht(value);
+				break;
+			case "Geburtsname":
+				this.setGeburtsname(value);
+				break;
+			case "Familienstatus":
+				this.setFamilienstatus(value);
+				break;
+			case "Anzahl_Kinder":
+				this.setAnzahl_Kinder(value);
+				break;
+			case "Beruf":
+				this.setBeruf(value);
+				break;
+			case "Arbeitgeber":
+				this.setArbeitgeber(value);
+				break;
+			case "Dienststelle":
+				this.setDienststelle(value);
+				break;
+			case "Ansprechpartner":
+				this.setAnsprechpartner(value);
+				break;
+			case "Hauspostadresse":
+				this.setHauspostadresse(value);
+				break;
+			case "ABC_Kunde":
+				this.setABC_Kunde(value);
+				break;
+			case "Kundengruppe":
+				this.setKundengruppe(value);
+				break;
+			case "Kundenstatus":
+				this.setKundenstatus(value);
+				break;
+			case "Sprache":
+				this.setSprache(value);
+				break;
+			case "IMEI":
+				this.setIMEI(value);
+				break;
+			case "Bevorzugte_Kontaktart":
+				this.setBevorzugte_Kontaktart(value);
+				break;
+			case "IM_Adresse":
+				this.setIM_Adresse(value);
+				break;
+			case "Skype_ID":
+				this.setSkype_ID(value);
+				break;
+			case "Xing":
+				this.setXing(value);
+				break;
+			case "LinkedIn":
+				this.setLinkedIn(value);
+				break;
+			case "Link_Map":
+				this.setLink_Map(value);
+				break;
+			case "Bundesanzeiger":
+				this.setBundesanzeiger(value);
+				break;
+			case "Handelsregister":
+				this.setHandelsregister(value);
+				break;
+			case "Handelsregisternummer":
+				this.setHandelsregisternummer(value);
+				break;
+			case "Unternehmensgegenstand":
+				this.setUnternehmensgegenstand(value);
+				break;
+			case "Betriebsnummer":
+				this.setBetriebsnummer(value);
+				break;
+			case "Berufsgenossenschaft":
+				this.setBerufsgenossenschaft(value);
+				break;
+			case "eBay_ID":
+				this.seteBay_ID(value);
+				break;
+			case "Finanzamt":
+				this.setFinanzamt(value);
+				break;
+			case "Steuernummer":
+				this.setSteuernummer(value);
+				break;
+			case "USt_IdNr":
+				this.setUSt_IdNr(value);
+				break;
+			case "Waehrung":
+				this.setWaehrung(value);
+				break;
+			case "Gemeinnuetzigkeit":
+				this.setGemeinnuetzigkeit(value);
+				break;
+			case "Art_der_Gemeinnuetzigkeit":
+				this.setArt_der_Gemeinnuetzigkeit(value);
+				break;
+			case "Foerderzweck":
+				this.setFoerderzweck(value);
+				break;
+			case "VIP":
+				this.setVIP(value);
+				break;
+			case "Kurzname":
+				this.setKurzname(value);
+				break;
+			case "Nationalitaet":
+				this.setNationalitaet(value);
+				break;
+			case "Zielgruppe":
+				this.setZielgruppe(value);
+				break;
+			case "Bildungsstand":
+				this.setBildungsstand(value);
+				break;
+			case "Einkommensklasse":
+				this.setEinkommensklasse(value);
+				break;
+			case "Einstellung":
+				this.setEinstellung(value);
+				break;
+			case "Arbeitstyp":
+				this.setArbeitstyp(value);
+				break;
+			case "Kaufverhalten":
+				this.setKaufverhalten(value);
+				break;
+			case "Lebensstil":
+				this.setLebensstil(value);
+				break;
+			case "Risikoeinstellung":
+				this.setRisikoeinstellung(value);
+				break;
+			case "Kaeuferloyalitaet":
+				this.setKaeuferloyalitaet(value);
+				break;
+			case "Vertriebsquelle":
+				this.setVertriebsquelle(value);
+				break;
+			case "Vertriebsweg":
+				this.setVertriebsweg(value);
+				break;
+			case "Vertriebsbeauftragter":
+				this.setVertriebsbeauftragter(value);
+				break;
+			case "Vertriebsorganisation":
+				this.setVertriebsorganisation(value);
+				break;
+			case "Nielsenbezirke":
+				this.setNielsenbezirke(value);
+				break;
+			case "Vertriebsregionen":
+				this.setVertriebsregionen(value);
+				break;
+			case "Vertriebsrisiko":
+				this.setVertriebsrisiko(value);
+				break;
+			case "Vertriebsprioritaet":
+				this.setVertriebsprioritaet(value);
+				break;
+			case "Nachfrageverhalten":
+				this.setNachfrageverhalten(value);
+				break;
+			case "Vertriebsstatus":
+				this.setVertriebsstatus(value);
+				break;
+			case "Kundengruppe2":
+				this.setKundengruppe2(value);
+				break;
+			case "Auslieferprioritaet":
+				this.setAuslieferprioritaet(value);
+				break;
+			case "Komplettlieferung":
+				this.setKomplettlieferung(value);
+				break;
+			case "Incoterms":
+				this.setIncoterms(value);
+				break;
+			case "Incoterms_Ort":
+				this.setIncoterms_Ort(value);
+				break;
+			case "Schlagworte":
+				this.setSchlagworte(value);
+				break;
+			case "ID_Vorsystem":
+				this.setID_Vorsystem(value);
+				break;
+			case "setBenutzerfeld_1":
+				this.setIst_Firmenkontakt(value);
+				break;
+			case "setBenutzerfeld_2":
+				this.setIst_Firmenkontakt(value);
+				break;
+			case "setBenutzerfeld_3":
+				this.setIst_Firmenkontakt(value);
+				break;
+			case "setBenutzerfeld_4":
+				this.setIst_Firmenkontakt(value);
+				break;
+			case "setBenutzerfeld_5":
+				this.setIst_Firmenkontakt(value);
+				break;
+			case "setBenutzerfeld_6":
+				this.setIst_Firmenkontakt(value);
+				break;
+			case "setBenutzerfeld_7":
+				this.setIst_Firmenkontakt(value);
+				break;
+			case "setBenutzerfeld_8":
+				this.setIst_Firmenkontakt(value);
+				break;
+			case "setBenutzerfeld_9":
+				this.setIst_Firmenkontakt(value);
+				break;
+			case "Benutzerfeld_10":
+				this.setBenutzerfeld_10(value);
+				break;
+			case "unused":
+				break;
+			default:
+				System.out.println("Attribut nicht gefunden: " + attr);
+		}
+	}
+	// }}
+
 }
