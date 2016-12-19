@@ -5,4 +5,4 @@
  * @author dirk.kohnen
  *
  */
-package de.scopevisio.gui;
+package de.scopevisio.importer.gui;
