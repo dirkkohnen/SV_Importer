@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 import de.scopevisio.importer.data.Kontakt;
+import de.scopevisio.importer.data.Kontakt2;
 
 /**
  * @author dirk.kohnen
@@ -36,27 +37,36 @@ public class ReadContactFromCSV {
 			inputStream = new FileInputStream(csv);
 			final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
 			String current = reader.readLine();
-			StringTokenizer firstRow = new StringTokenizer(current, ";");
-			while (firstRow.hasMoreTokens()){
-				cols.add(firstRow.nextToken());
+			//System.out.println(current);
+			String[] firstRow = current.split(";");
+			for (int i = 0 ; i < firstRow.length ; i++){
+				cols.add(firstRow[i]);
 			}
 			int z = 1;
 	        current = reader.readLine();
+        	//System.out.println(current);
+
 	        while (current != null) {
-	            final StringTokenizer st = new StringTokenizer(current, ";");
-	            if (st.countTokens() > 2){
+	            String[] fields = current.split(";");
+	            if (fields.length > 1){
 		            Kontakt k = new Kontakt();
 	
-		            for ( int i = 0; i < st.countTokens() ; i++) {
-		                k.setAttribute(cols.get(i), st.nextToken());
+		            for ( int i = 0; i < fields.length ; i++) {
+		            	//System.out.println(cols.get(i) + " = " + fields[i]);
+		                k.setAttribute(cols.get(i),fields[i]);
 		            }
+		            
 		            this.contacts.add(k);
 		            if (SV_Importer.debugLevel > 1){
-		            	System.out.println(z + ". Kontakt hinzugefügt");
+		            	//System.out.println(z + ". Kontakt hinzugefügt");
 		            }		            
 		            z++;
 		            current = reader.readLine();
 	            }
+	        }
+	        //System.out.println(this.contacts.size());
+	        for (Kontakt k : this.contacts){
+	        	//System.out.println(k.getCSV());
 	        }
 	        reader.close();
 		} catch (Exception e1) {
