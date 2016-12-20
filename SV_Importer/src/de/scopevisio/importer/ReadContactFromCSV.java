@@ -10,10 +10,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.StringTokenizer;
-
 import de.scopevisio.importer.data.Kontakt;
-import de.scopevisio.importer.data.Kontakt2;
 
 /**
  * @author dirk.kohnen
@@ -66,7 +63,7 @@ public class ReadContactFromCSV {
 	        }
 	        //System.out.println(this.contacts.size());
 	        for (Kontakt k : this.contacts){
-	        	//System.out.println(k.getCSV());
+	        	System.out.println(k.getCSV());
 	        }
 	        reader.close();
 		} catch (Exception e1) {
