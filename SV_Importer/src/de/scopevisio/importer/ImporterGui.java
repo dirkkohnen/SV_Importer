@@ -21,15 +21,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
 
-import javax.xml.soap.MessageFactory;
-import javax.xml.soap.SOAPBody;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPMessage;
 
-import de.scopevisio.importer.URLPost.PostResult;
-
-
-public class ImporterGui implements ActionListener{
+public class ImporterGui implements ActionListener {
 
     static private final String newline = "\n";
 	public JFrame frmScopevisioImporter;
@@ -45,7 +38,7 @@ public class ImporterGui implements ActionListener{
 	private JFileChooser fc = new JFileChooser();;
 	public File fileCSV;
 	public Properties prop;
-	private String url = "https://appload.scopevisio.com/api/soap/accounting/Ping.ping";
+	private String reply;
 
 	/**
 	 * Create the application.
@@ -195,43 +188,23 @@ public class ImporterGui implements ActionListener{
         } else if (e.getSource() == this.exitMenuItem) {
             System.exit(0);
         } else if (e.getSource() == this.connectMenuItem || e.getSource() == this.connectToolbarButton){
-		    try {
-	
-		        // prepare SOAP
-		        MessageFactory mf = MessageFactory.newInstance();
-		        SOAPMessage request = mf.createMessage();
-		        SOAPBody body = request.getSOAPBody();
-		        SOAPElement requestElement = body.addChildElement("req", "ns1", "http://www.scopevisio.com/");
-	
-		        // authorization tag
-		        SOAPElement authnElement = requestElement.addChildElement("authn");
-		        authnElement.addChildElement("customer").setTextContent(this.prop.getProperty("customer"));
-		        authnElement.addChildElement("user").setTextContent(this.prop.getProperty("user"));
-		        authnElement.addChildElement("pass").setTextContent(this.prop.getProperty("pass"));
-		        authnElement.addChildElement("language").setTextContent(this.prop.getProperty("language"));
-		        authnElement.addChildElement("organisation").setTextContent(this.prop.getProperty("organisation"));
-		        SOAPElement req = (SOAPElement) body.getChildElements().next();
-	
-		        // post SOAP
-		        PostResult result = new URLPost().postSoap(url, request);
-		        String reply = result.getReply();
-		        if(reply.contains("pong")){
+        		PingPong p = new PingPong(this.prop);
+        		reply = p.postSoap();
+        		if(reply.contains("pong")){
 		        	this.log.append("Connect erfolgreich" + newline);
 		        }
 //		        this.log.append("responseCode: " + result.getResponseCode() + newline);
 //		        this.log.append("reply: " + reply + newline);
-		        
-		    } catch (Exception e2) {
-		        // handle error
-		        e2.printStackTrace();
-		    }
-
         } else if (e.getSource() == this.startMenuItem || e.getSource() == this.startToolbarButton){
         	if (this.fileCSV == null){
 	        	this.log.append("Fehler: Keine CSV-Datei ausgewählt" + newline);
         		return;
         	} else {
         		ReadContactFromCSV rcfc = new ReadContactFromCSV(this.fileCSV);
+        		WriteContactToScopevisio wcts = new WriteContactToScopevisio(this.prop);
+        		wcts.setContacts(rcfc.getContacts());
+        		reply = wcts.postSoap();
+        		System.out.println(reply);
         	}
         	
         }

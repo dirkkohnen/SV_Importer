@@ -6,8 +6,6 @@ package de.scopevisio.importer;
 import java.awt.EventQueue;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -15,7 +13,7 @@ import java.util.Properties;
  * @author dirk.kohnen
  *
  */
-public class SV_Importer {
+public class SV_Importer{
 	// Debuglevel: 0=Fehler, 1=Warnungen, 2=Meldungen
 	public static final int debugLevel = 2;
 	private static Properties properties;
@@ -51,5 +49,4 @@ public class SV_Importer {
 
 		}
 	}
-
 }
