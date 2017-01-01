@@ -23,6 +23,7 @@ import de.scopevisio.importer.data.Kontakt;
  */
 public class WriteContactToScopevisio implements Service{
 
+    static private final String newline = "\n";
 	private final String url = "https://appload.scopevisio.com/api/soap/contact/Contact.importExtendedCSV";
 	public Properties prop;
 	private MessageFactory mf;
@@ -31,6 +32,8 @@ public class WriteContactToScopevisio implements Service{
 	private  SOAPElement requestElement, authnElement, configElement, req;
 	private PostResult result;
 	private List<Kontakt> contacts;
+	private String data = "";
+
 	
 
 	
@@ -72,13 +75,14 @@ public class WriteContactToScopevisio implements Service{
 	public void setContacts(List<Kontakt> c){
 		this.contacts = c;
         for (Kontakt k : this.contacts){
+        	this.data = this.data + k.getCSV() + newline;
+        }
 	        try {
-				this.configElement.addChildElement("data").setTextContent(k.getCSV());
+				this.configElement.addChildElement("data").setTextContent(data);
 			} catch (DOMException | SOAPException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-        }
 
 	}
 	
