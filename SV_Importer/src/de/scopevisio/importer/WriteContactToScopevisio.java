@@ -63,8 +63,12 @@ public class WriteContactToScopevisio implements Service{
 	        
 	        // args/data tag
 	        this.configElement = req.addChildElement("args");
-	        this.configElement.addChildElement("conflictDetectionByEmail").setTextContent("true");
-	        this.configElement.addChildElement("conflictAction").setTextContent("skip");
+        	if (this.prop.getProperty("conflictDetectionByName").compareTo("true") == 0)  this.configElement.addChildElement("conflictDetectionByName").setTextContent("true");
+        	if (this.prop.getProperty("conflictDetectionByEmail").compareTo("true") == 0)  this.configElement.addChildElement("conflictDetectionByEmail").setTextContent("true");
+        	if (this.prop.getProperty("conflictDetectionByType").compareTo("true") == 0)  this.configElement.addChildElement("conflictDetectionByType").setTextContent("true");
+        	if (this.prop.getProperty("conflictDetectionByLegacyId").compareTo("true") == 0)  this.configElement.addChildElement("conflictDetectionByLegacyId").setTextContent("true");
+	        String tmp = this.prop.getProperty("conflictAction");
+	        this.configElement.addChildElement("conflictAction").setTextContent(tmp);
 	    } catch (Exception e2) {
 	        // handle error
 	        e2.printStackTrace();
