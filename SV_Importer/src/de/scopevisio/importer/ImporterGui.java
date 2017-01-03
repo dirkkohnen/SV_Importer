@@ -166,7 +166,6 @@ public class ImporterGui implements ActionListener {
         //Handle properties button action.
         } else if (e.getSource() == this.propertiesContactToolbarButton || e.getSource() == this.propertiesContactMenuItem) {
         	JCheckBox detectNameCheckBox = new JCheckBox("Name");
-        	System.out.println(this.prop.getProperty("conflictDetectionByName"));
         	if (this.prop.getProperty("conflictDetectionByName").compareTo("true") == 0)  detectNameCheckBox.setSelected(true);
         	JCheckBox detectEmailCheckBox = new JCheckBox("E-Mail");
         	if (this.prop.getProperty("conflictDetectionByEmail").compareTo("true") == 0)  detectEmailCheckBox.setSelected(true);
@@ -205,17 +204,17 @@ public class ImporterGui implements ActionListener {
             	} else {
             		this.prop.setProperty("conflictDetectionByName", "false");
             	}
-            	if (detectNameCheckBox.isSelected()){
+            	if (detectEmailCheckBox.isSelected()){
             		this.prop.setProperty("conflictDetectionByEmail", "true");
             	} else {
             		this.prop.setProperty("conflictDetectionByEmail", "false");
             	}
-            	if (detectNameCheckBox.isSelected()){
+            	if (detectTypeCheckBox.isSelected()){
             		this.prop.setProperty("conflictDetectionByType", "true");
             	} else {
             		this.prop.setProperty("conflictDetectionByType", "false");
             	}
-            	if (detectNameCheckBox.isSelected()){
+            	if (detectLegacyIDCheckBox.isSelected()){
             		this.prop.setProperty("conflictDetectionByLegacyId", "true");
             	} else {
             		this.prop.setProperty("conflictDetectionByLegacyId", "false");

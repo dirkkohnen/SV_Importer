@@ -1,6 +1,6 @@
 package de.scopevisio.importer;
 
-public interface Service {
+public interface IService {
 		
 	public String postSoap();
 	

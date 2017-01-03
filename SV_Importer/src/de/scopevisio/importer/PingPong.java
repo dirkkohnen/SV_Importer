@@ -16,7 +16,7 @@ import de.scopevisio.importer.URLPost.PostResult;
  * @author dirk.kohnen
  *
  */
-public class PingPong implements Service{
+public class PingPong implements IService{
 	
 	private final String url = "https://appload.scopevisio.com/api/soap/accounting/Ping.ping";
 	public Properties prop;
