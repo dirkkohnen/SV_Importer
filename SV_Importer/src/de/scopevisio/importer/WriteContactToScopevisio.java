@@ -90,6 +90,11 @@ public class WriteContactToScopevisio implements IService{
 
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see de.scopevisio.importer.IService#postSoap()
+	 */
+	
 	@Override
 	public String postSoap(){
 		String msg = "Fehler";
