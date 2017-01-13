@@ -16,28 +16,29 @@ import org.w3c.dom.DOMException;
 
 import de.scopevisio.importer.URLPost.PostResult;
 import de.scopevisio.importer.data.Contact;
+import de.scopevisio.importer.data.ContactRelation;
 
 /**
  * @author dirk.kohnen
  *
  */
-public class WriteContactToScopevisio implements IService{
+public class WriteContactRelationToScopevisio implements IService{
 
     static private final String newline = "\n";
-	private final String url = "https://appload.scopevisio.com/api/soap/contact/Contact.importExtendedCSV";
+	private final String url = "https://appload.scopevisio.com/api/soap/contact/Contact.importRelation";
 	public Properties prop;
 	private MessageFactory mf;
 	private SOAPMessage request;
 	private SOAPBody body;
 	private  SOAPElement requestElement, authnElement, configElement, req;
 	private PostResult result;
-	private List<Contact> contacts;
+	private List<ContactRelation> relations;
 	private String data = "";
 
 	
 
 	
-	public WriteContactToScopevisio(Properties p){
+	public WriteContactRelationToScopevisio(Properties p){
 		this.prop = p;
 		initialize();
 	}
@@ -76,10 +77,10 @@ public class WriteContactToScopevisio implements IService{
 		
 	}
 	
-	public void setContacts(List<Contact> c){
-		this.contacts = c;
-        for (Contact k : this.contacts){
-        	this.data = this.data + k.getCSV() + newline;
+	public void setContactRelations(List<ContactRelation> r){
+		this.relations = r;
+        for (ContactRelation cr : this.relations){
+        	this.data = this.data + cr.getCSV() + newline;
         }
 	        try {
 				this.configElement.addChildElement("data").setTextContent(data);

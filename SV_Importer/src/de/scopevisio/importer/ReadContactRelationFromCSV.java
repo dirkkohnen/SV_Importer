@@ -10,18 +10,18 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
 import java.util.ArrayList;
-import de.scopevisio.importer.data.Contact;
+import de.scopevisio.importer.data.ContactRelation;
 
 /**
  * @author dirk.kohnen
  *
  */
-public class ReadContactFromCSV {
+public class ReadContactRelationFromCSV {
 	
 	private List<String> cols = new ArrayList<String>();
-	private List<Contact> contacts = new ArrayList<Contact>();
+	private List<ContactRelation> relations = new ArrayList<ContactRelation>();
 	
-	public ReadContactFromCSV(File csv){
+	public ReadContactRelationFromCSV(File csv){
 		this.parseCsvFile(csv);
 	}
 	
@@ -46,22 +46,22 @@ public class ReadContactFromCSV {
 	        while (current != null) {
 	            String[] fields = current.split(";");
 	            if (fields.length > 1){
-		            Contact k = new Contact();
+		            ContactRelation cr = new ContactRelation();
 	
 		            for ( int i = 0; i < fields.length ; i++) {
 		            	//System.out.println(cols.get(i) + " = " + fields[i]);
-		                k.setAttribute(cols.get(i),fields[i]);
+		                cr.setAttribute(cols.get(i),fields[i]);
 		            }
 		            
-		            this.contacts.add(k);
+		            this.relations.add(cr);
 		            if (SV_Importer.debugLevel > 1){
-		            	//System.out.println(z + ". Kontakt hinzugefügt");
+		            	//System.out.println(z + ". Kontaktbeziehung hinzugefügt");
 		            }		            
 		            z++;
 		            current = reader.readLine();
 	            }
 	        }
-	        System.out.println(this.contacts.size());
+	        System.out.println(this.relations.size());
 	        reader.close();
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
@@ -70,11 +70,11 @@ public class ReadContactFromCSV {
     }
     
     public int countKontakte(){
-    	return this.contacts.size();
+    	return this.relations.size();
     }
     
-    public List<Contact> getContacts(){
-    	return this.contacts;
+    public List<ContactRelation> getContactRelations(){
+    	return this.relations;
     }
 
 }

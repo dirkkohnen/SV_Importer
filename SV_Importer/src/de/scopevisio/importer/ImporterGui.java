@@ -22,20 +22,19 @@ import javax.swing.ImageIcon;
 import net.miginfocom.swing.MigLayout;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import javax.swing.JToggleButton;
 import javax.swing.JTextArea;
-
 
 public class ImporterGui implements ActionListener {
 
-    static private final String newline = "\n";
+    private Importart art = Importart.KONTAKT;
+	static private final String newline = "\n";
 	public JFrame frmScopevisioImporter;
 	private JTextField textField;
 	private JMenuBar menuBar;
 	private JMenu mnDatei, mnScopevisio;
 	private JMenuItem openMenuItem, startMenuItem, exitMenuItem, propertiesConnectMenuItem, connectMenuItem;
 	private JToolBar toolBar;
-	private JButton propertiesConnectToolbarButton, connectToolbarButton, openToolbarButton, startToolbarButton;
+	private JButton connectToolbarButton, openToolbarButton, startToolbarButton;
 	private JTextArea log;
 	private JLabel lblStatus;
 	private JButton openButton;
@@ -44,7 +43,8 @@ public class ImporterGui implements ActionListener {
 	public Properties prop;
 	private String reply;
 	private JMenuItem propertiesContactMenuItem;
-	private JButton propertiesContactToolbarButton;
+	private JMenuItem propertiesContactRelationMenuItem;
+	private JMenuItem propertiesGeneralMenuItem;
 
 	/**
 	 * Create the application.
@@ -94,32 +94,31 @@ public class ImporterGui implements ActionListener {
 		this.propertiesConnectMenuItem = new JMenuItem("Verbindung");
 		this.propertiesConnectMenuItem.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/cog_edit.png")));
 		this.propertiesConnectMenuItem.addActionListener(this);
+		
+		this.propertiesGeneralMenuItem = new JMenuItem("Allgemein");
+		this.propertiesGeneralMenuItem.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/database_edit.png")));
+		this.propertiesGeneralMenuItem.addActionListener(this);
+		this.mnScopevisio.add(this.propertiesGeneralMenuItem);
 		this.mnScopevisio.add(this.propertiesConnectMenuItem);
 		
 		this.propertiesContactMenuItem = new JMenuItem("Kontaktimport");
 		this.propertiesContactMenuItem.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/vcard_edit.png")));
 		this.propertiesContactMenuItem.addActionListener(this);
 		this.mnScopevisio.add(propertiesContactMenuItem);
+		
+		this.propertiesContactRelationMenuItem = new JMenuItem("Kontaktbeziehungsimport");
+		this.propertiesContactRelationMenuItem.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/group_edit.png")));
+		this.propertiesContactRelationMenuItem.addActionListener(this);
+		this.mnScopevisio.add(propertiesContactRelationMenuItem);
 		this.frmScopevisioImporter.getContentPane().setLayout(new MigLayout("", "[434px,grow]", "[25px][][grow][][][][][]"));
 		
 		this.toolBar = new JToolBar();
 		this.frmScopevisioImporter.getContentPane().add(toolBar, "cell 0 0,growx,aligny top");
 		
-		this.propertiesConnectToolbarButton = new JButton("");
-		this.propertiesConnectToolbarButton.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/cog_edit.png")));
-		this.propertiesConnectToolbarButton.addActionListener(this);
-		this.toolBar.add(this.propertiesConnectToolbarButton);
-		
 		this.connectToolbarButton = new JButton("");
 		this.connectToolbarButton.setToolTipText("Verbindung testen");
 		this.connectToolbarButton.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/database_connect.png")));
 		this.connectToolbarButton.addActionListener(this);
-		
-		this.propertiesContactToolbarButton = new JButton("");
-		this.propertiesContactToolbarButton.setToolTipText("Einstellungen Kontaktimport");
-		this.propertiesContactToolbarButton.setIcon(new ImageIcon(ImporterGui.class.getResource("/de/scopevisio/importer/images/vcard_edit.png")));
-		this.propertiesContactToolbarButton.addActionListener(this);
-		this.toolBar.add(propertiesContactToolbarButton);
 		this.toolBar.add(this.connectToolbarButton);
 				
 		this.openToolbarButton = new JButton("");
@@ -163,8 +162,42 @@ public class ImporterGui implements ActionListener {
             }
             log.setCaretPosition(log.getDocument().getLength());
  
-        //Handle properties button action.
-        } else if (e.getSource() == this.propertiesContactToolbarButton || e.getSource() == this.propertiesContactMenuItem) {
+         }
+        //Handle General properties button action.
+        else if (e.getSource() == this.propertiesGeneralMenuItem) {
+        	ButtonGroup group = new ButtonGroup();
+        	JRadioButton contactRadioButton = new JRadioButton("Kontakte");
+        	if (this.art == Importart.KONTAKT)  contactRadioButton.setSelected(true);
+        	group.add(contactRadioButton);
+        	JRadioButton contactRelationRadioButton = new JRadioButton("Kontaktbeziehung");
+        	if (this.art == Importart.KONTAKTBEZIEHUNG)  contactRelationRadioButton.setSelected(true);
+        	group.add(contactRelationRadioButton);
+        	
+    		Object[] message = {"Zu importierende Daten ...", contactRadioButton, contactRelationRadioButton};
+
+            JOptionPane pane = new JOptionPane( message, JOptionPane.PLAIN_MESSAGE, JOptionPane.OK_CANCEL_OPTION);
+            pane.createDialog(null, "Einstellungen").setVisible(true);
+
+            Object selectedValue = pane.getValue();
+            int n = -1;
+
+            if(selectedValue == null) {
+                n = JOptionPane.CLOSED_OPTION;      
+            } else {
+                n = Integer.parseInt(selectedValue.toString());
+            }
+            
+            if (n == JOptionPane.OK_OPTION){
+            	if (contactRadioButton.isSelected()){
+            		this.art = Importart.KONTAKT;
+            	} else if (contactRelationRadioButton.isSelected()){
+            		this.art = Importart.KONTAKTBEZIEHUNG;
+            	}
+            } 
+
+        }
+        //Handle Contact properties button action.
+        else if (e.getSource() == this.propertiesContactMenuItem) {
         	JCheckBox detectNameCheckBox = new JCheckBox("Name");
         	if (this.prop.getProperty("conflictDetectionByName").compareTo("true") == 0)  detectNameCheckBox.setSelected(true);
         	JCheckBox detectEmailCheckBox = new JCheckBox("E-Mail");
@@ -239,7 +272,93 @@ public class ImporterGui implements ActionListener {
 				}
             } 
 
-        } else if (e.getSource() == this.propertiesConnectMenuItem || e.getSource() == this.propertiesConnectToolbarButton) {
+        }
+        //Handle Contactrelation properties button action.
+        else if (e.getSource() == this.propertiesContactRelationMenuItem) {
+        	ButtonGroup typeGroup = new ButtonGroup();
+        	JRadioButton employeeRadioButton = new JRadioButton("Mitarbeiter");
+        	if (this.prop.getProperty("type").compareTo("employee") == 0)  employeeRadioButton.setSelected(true);
+        	typeGroup.add(employeeRadioButton);
+        	JRadioButton parentcompanyRadioButton = new JRadioButton("Mutterunternehmen");
+        	if (this.prop.getProperty("type").compareTo("parentcompany") == 0)  parentcompanyRadioButton.setSelected(true);
+        	typeGroup.add(parentcompanyRadioButton);
+        	JRadioButton childcompanyRadioButton = new JRadioButton("Tochterunternehmen");
+        	if (this.prop.getProperty("type").compareTo("childcompany") == 0)  childcompanyRadioButton.setSelected(true);
+        	typeGroup.add(childcompanyRadioButton);
+        	JRadioButton bosscontactRadioButton = new JRadioButton("Gesellsch.Vertreter");
+        	if (this.prop.getProperty("type").compareTo("employee") == 0)  bosscontactRadioButton.setSelected(true);
+        	typeGroup.add(bosscontactRadioButton);
+        	JRadioButton salescontactRadioButton = new JRadioButton("Ansprechpartner");
+        	if (this.prop.getProperty("type").compareTo("parentcompany") == 0)  salescontactRadioButton.setSelected(true);
+        	typeGroup.add(bosscontactRadioButton);
+        	JRadioButton partnerRadioButton = new JRadioButton("Gesellschafter");
+        	if (this.prop.getProperty("type").compareTo("childcompany") == 0)  partnerRadioButton.setSelected(true);
+        	typeGroup.add(partnerRadioButton);
+
+        	ButtonGroup idtypeGroup = new ButtonGroup();
+        	JRadioButton idRadioButton = new JRadioButton("Master-ID");
+        	if (this.prop.getProperty("idtype").compareTo("id") == 0)  idRadioButton.setSelected(true);
+        	idtypeGroup.add(idRadioButton);
+        	JRadioButton legacyRadioButton = new JRadioButton("Vorsystem-ID");
+        	if (this.prop.getProperty("idtype").compareTo("legacy") == 0)  legacyRadioButton.setSelected(true);
+        	idtypeGroup.add(legacyRadioButton);
+        	
+        	JCheckBox incrementalCheckBox = new JCheckBox("");
+        	if (this.prop.getProperty("incremental").compareTo("true") == 0)  incrementalCheckBox.setSelected(true);
+        	
+    		Object[] message = {"Typ der Beziehungen  ...", employeeRadioButton, parentcompanyRadioButton, childcompanyRadioButton, bosscontactRadioButton, bosscontactRadioButton, partnerRadioButton, 
+    				"Art der IDs ", idRadioButton, legacyRadioButton, "Inkrementeller Import", incrementalCheckBox};
+
+            JOptionPane pane = new JOptionPane( message, JOptionPane.PLAIN_MESSAGE, JOptionPane.OK_CANCEL_OPTION);
+            pane.createDialog(null, "Einstellungen").setVisible(true);
+
+            Object selectedValue = pane.getValue();
+            int n = -1;
+
+            if(selectedValue == null) {
+                n = JOptionPane.CLOSED_OPTION;      
+            } else {
+                n = Integer.parseInt(selectedValue.toString());
+            }
+            
+            if (n == JOptionPane.OK_OPTION){
+            	if (incrementalCheckBox.isSelected()){
+            		this.prop.setProperty("incremental", "true");
+            	} else {
+            		this.prop.setProperty("incremental", "false");
+            	}
+
+            	if (employeeRadioButton.isSelected()){
+            		this.prop.setProperty("type", "employee");
+            	} else if (parentcompanyRadioButton.isSelected()){
+            		this.prop.setProperty("type", "parentcompany");
+               	} else if (childcompanyRadioButton.isSelected()){
+            		this.prop.setProperty("type", "childcompany");
+            	} else if (bosscontactRadioButton.isSelected()){
+            		this.prop.setProperty("type", "fillin");
+               	} else if (partnerRadioButton.isSelected()){
+            		this.prop.setProperty("type", "skip");
+               	}
+
+            	if (idRadioButton.isSelected()){
+            		this.prop.setProperty("idtype", "id");
+            	} else if (legacyRadioButton.isSelected()){
+            		this.prop.setProperty("idtype", "legacy");
+              	}
+            	FileOutputStream out;
+				try {
+					out = new FileOutputStream("config.properties");
+					this.prop.store(out, null);
+					log.append("Einstellungen gespeichert" + newline);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+            }
+
+        }
+        //Handle Connect properties button action.
+        else if (e.getSource() == this.propertiesConnectMenuItem) {
     		JTextField kundennummerTextField = new JTextField(this.prop.getProperty("customer"));
     		JTextField benutzernameTextField = new JTextField(this.prop.getProperty("user"));
     		JTextField passwortTextField = new JTextField(this.prop.getProperty("pass"));
@@ -276,9 +395,13 @@ public class ImporterGui implements ActionListener {
 					e1.printStackTrace();
 				}
             } 
-        } else if (e.getSource() == this.exitMenuItem) {
+        }
+        //Handle Exit button action.
+        else if (e.getSource() == this.exitMenuItem) {
             System.exit(0);
-        } else if (e.getSource() == this.connectMenuItem || e.getSource() == this.connectToolbarButton){
+        }
+        //Handle Connect button action.
+        else if (e.getSource() == this.connectMenuItem || e.getSource() == this.connectToolbarButton){
         		PingPong p = new PingPong(this.prop);
         		reply = p.postSoap();
         		if(reply.contains("pong")){
@@ -286,16 +409,29 @@ public class ImporterGui implements ActionListener {
 		        }
 //		        this.log.append("responseCode: " + result.getResponseCode() + newline);
 //		        this.log.append("reply: " + reply + newline);
-        } else if (e.getSource() == this.startMenuItem || e.getSource() == this.startToolbarButton){
+        }
+        //Handle Start button action.
+        else if (e.getSource() == this.startMenuItem || e.getSource() == this.startToolbarButton){
         	if (this.fileCSV == null){
 	        	this.log.append("Fehler: Keine CSV-Datei ausgewählt" + newline);
         		return;
         	} else {
-        		ReadContactFromCSV rcfc = new ReadContactFromCSV(this.fileCSV);
-        		WriteContactToScopevisio wcts = new WriteContactToScopevisio(this.prop);
-        		wcts.setContacts(rcfc.getContacts());
-        		reply = wcts.postSoap();
-        		System.out.println(reply);
+        		switch (this.art){
+        			case KONTAKT:
+		        		ReadContactFromCSV rcfc = new ReadContactFromCSV(this.fileCSV);
+		        		WriteContactToScopevisio wcts = new WriteContactToScopevisio(this.prop);
+		        		wcts.setContacts(rcfc.getContacts());
+		        		reply = wcts.postSoap();
+		        		System.out.println(reply);
+		        		break;
+        			case KONTAKTBEZIEHUNG:
+		        		ReadContactRelationFromCSV rcrfc = new ReadContactRelationFromCSV(this.fileCSV);
+		        		WriteContactRelationToScopevisio wcrts = new WriteContactRelationToScopevisio(this.prop);
+		        		wcrts.setContactRelations(rcrfc.getContactRelations());
+		        		reply = wcrts.postSoap();
+		        		System.out.println(reply);
+		        		break;
+        		}
         	}
         	
         }

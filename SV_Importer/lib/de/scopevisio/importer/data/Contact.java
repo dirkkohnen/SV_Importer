@@ -18,7 +18,7 @@ import java.util.List;
  * @version 0.1
  * 
  */
-public class Kontakt {
+public class Contact {
 
 	// {{  Variablen
 	private List<Object> attributesNameList = new ArrayList<Object>();
@@ -30,7 +30,7 @@ public class Kontakt {
 	/**
 	 * Kontruktor
 	 */
-	public Kontakt() {
+	public Contact() {
 		this.initalize();
 	}
 	// }}
