@@ -10,18 +10,19 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
 import java.util.ArrayList;
-import de.scopevisio.importer.data.ContactRelation;
+
+import de.scopevisio.importer.data.ContactProperty;
 
 /**
  * @author dirk.kohnen
  *
  */
-public class ReadContactRelationFromCSV {
+public class ReadContactPropertyFromCSV {
 	
 	private List<String> cols = new ArrayList<String>();
-	private List<ContactRelation> relations = new ArrayList<ContactRelation>();
+	private List<ContactProperty> relations = new ArrayList<ContactProperty>();
 	
-	public ReadContactRelationFromCSV(File csv){
+	public ReadContactPropertyFromCSV(File csv){
 		this.parseCsvFile(csv);
 	}
 	
@@ -46,14 +47,14 @@ public class ReadContactRelationFromCSV {
 	        while (current != null) {
 	            String[] fields = current.split(";");
 	            if (fields.length > 1){
-		            ContactRelation cr = new ContactRelation();
+	            	ContactProperty cp = new ContactProperty();
 	
 		            for ( int i = 0; i < fields.length ; i++) {
 		            	//System.out.println(cols.get(i) + " = " + fields[i]);
-		                cr.setAttribute(cols.get(i),fields[i]);
+		                cp.setAttribute(cols.get(i),fields[i]);
 		            }
 		            
-		            this.relations.add(cr);
+		            this.relations.add(cp);
 		            if (SV_Importer.debugLevel > 1){
 		            	//System.out.println(z + ". Kontaktbeziehung hinzugefügt");
 		            }		            
@@ -69,11 +70,11 @@ public class ReadContactRelationFromCSV {
 		}
     }
     
-    public int countContactRelations(){
+    public int countContactProperties(){
     	return this.relations.size();
     }
     
-    public List<ContactRelation> getContactRelations(){
+    public List<ContactProperty> getContactProperties(){
     	return this.relations;
     }
 

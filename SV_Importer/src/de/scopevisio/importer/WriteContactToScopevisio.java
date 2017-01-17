@@ -13,7 +13,6 @@ import javax.xml.soap.SOAPException;
 import javax.xml.soap.SOAPMessage;
 
 import org.w3c.dom.DOMException;
-
 import de.scopevisio.importer.URLPost.PostResult;
 import de.scopevisio.importer.data.Contact;
 
@@ -69,6 +68,8 @@ public class WriteContactToScopevisio implements IService{
         	if (this.prop.getProperty("conflictDetectionByLegacyId").compareTo("true") == 0)  this.configElement.addChildElement("conflictDetectionByLegacyId").setTextContent("true");
 	        String tmp = this.prop.getProperty("conflictAction");
 	        this.configElement.addChildElement("conflictAction").setTextContent(tmp);
+	        
+	        if (this.prop.getProperty("columns").length() > 0)  this.configElement.addChildElement("columns").setTextContent(this.prop.getProperty("columns"));
 	    } catch (Exception e2) {
 	        // handle error
 	        e2.printStackTrace();
@@ -79,7 +80,11 @@ public class WriteContactToScopevisio implements IService{
 	public void setContacts(List<Contact> c){
 		this.contacts = c;
         for (Contact k : this.contacts){
-        	this.data = this.data + k.getCSV() + newline;
+        	if (this.prop.getProperty("columns").length() > 1) {
+        		this.data = this.data + k.getCSVByColumns(this.prop.getProperty("columns")) + newline;
+        	} else {
+        		this.data = this.data + k.getCSV() + newline;
+        	}
         }
 	        try {
 				this.configElement.addChildElement("data").setTextContent(data);
@@ -99,6 +104,7 @@ public class WriteContactToScopevisio implements IService{
 	public String postSoap(){
 		String msg = "Fehler";
 		try {
+			request.writeTo(System.out);
 			result = new URLPost().postSoap(url, request);
 			msg = result.getReply();
 		} catch (Exception e) {

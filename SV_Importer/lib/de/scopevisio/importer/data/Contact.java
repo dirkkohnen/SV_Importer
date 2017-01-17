@@ -2877,6 +2877,8 @@ public class Contact {
 		this.attributesNameList.add("Benutzerfeld_8");
 		this.attributesNameList.add("Benutzerfeld_9");
 		this.attributesNameList.add("Benutzerfeld_10");
+		this.attributesNameList.add("Lieferant");
+		this.attributesNameList.add("ID Vorsystem");
 		//System.out.println(this.attributesNameList.size());
 		this.attributesList = new String[this.attributesNameList.size()];
 		//System.out.println(this.attributesList.length);
@@ -2897,6 +2899,22 @@ public class Contact {
 		return csvString;
 	}
 	
+
+	public String getCSVByColumns(String colList){
+		String[] cols = colList.split(",");
+		String csvString = "";
+			for (String str : cols){
+				if (str != null){
+					//System.out.println(str);
+					csvString = csvString + this.attributesList[this.attributesNameList.indexOf(str)] + ";";
+				} else {
+					//System.out.println("null");
+					csvString = csvString + ";";
+				}
+			}
+		return csvString;
+	}
+
 	
 	/**
 	 * Methode zum Setzen eines Attributes eines Kontaktes.
@@ -2905,7 +2923,11 @@ public class Contact {
 	 */
 	public void setAttribute(String attr, String value) {
 		if (attr.compareTo("unused") != 0){
-			this.attributesList[this.attributesNameList.indexOf(attr)] = value;
+			try{
+				this.attributesList[this.attributesNameList.indexOf(attr)] = value;
+			} catch  (Exception e) {
+				System.out.println("Kann Attribut " + attr + " nicht setzen.");
+			}
 		}
 	}
 	// }}

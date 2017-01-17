@@ -61,7 +61,7 @@ public class ReadContactFromCSV {
 		            current = reader.readLine();
 	            }
 	        }
-	        System.out.println(this.contacts.size());
+//	        System.out.println(this.contacts.size());
 	        reader.close();
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
@@ -69,7 +69,7 @@ public class ReadContactFromCSV {
 		}
     }
     
-    public int countKontakte(){
+    public int countContacts(){
     	return this.contacts.size();
     }
     
