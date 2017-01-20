@@ -23,7 +23,7 @@ import de.scopevisio.importer.data.ContactProperty;
 public class WriteContactPropertyToScopevisio implements IService{
 
     static private final String newline = "\n";
-	private final String url = "https://appload.scopevisio.com/api/soap/contact/Contact.importExtendedCSV";
+	private final String url = "https://appload.scopevisio.com/api/soap/accounting/ContactProperty.create";
 	public Properties prop;
 	private MessageFactory mf;
 	private SOAPMessage request;
@@ -79,19 +79,19 @@ public class WriteContactPropertyToScopevisio implements IService{
 	
 	public void setContactProperties(List<ContactProperty> p){
 		this.properties = p;
+		this.data = "{\"contactproperties\":[";
         for (ContactProperty cp : this.properties){
-        	if (this.prop.getProperty("columns").length() > 1) {
-        		this.data = this.data + cp.getCSVByColumns(this.prop.getProperty("columns")) + newline;
-        	} else {
-        		this.data = this.data + cp.getCSV() + newline;
-        	}
+        	this.data = this.data + cp.getJSON() + "," + newline;
         }
-	        try {
-				this.configElement.addChildElement("data").setTextContent(data);
-			} catch (DOMException | SOAPException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+        this.data = this.data.substring(0, this.data.length()-1);
+		this.data = this.data + "]}";
+
+        try {
+			this.configElement.addChildElement("data").setTextContent(data);
+		} catch (DOMException | SOAPException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 	

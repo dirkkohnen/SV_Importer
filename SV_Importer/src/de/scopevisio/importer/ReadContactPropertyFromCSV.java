@@ -50,13 +50,13 @@ public class ReadContactPropertyFromCSV {
 	            	ContactProperty cp = new ContactProperty();
 	
 		            for ( int i = 0; i < fields.length ; i++) {
-		            	//System.out.println(cols.get(i) + " = " + fields[i]);
+		            	System.out.println(cols.get(i) + " = " + fields[i]);
 		                cp.setAttribute(cols.get(i),fields[i]);
 		            }
 		            
 		            this.relations.add(cp);
 		            if (SV_Importer.debugLevel > 1){
-		            	//System.out.println(z + ". Kontaktbeziehung hinzugefügt");
+		            	// System.out.println(z + ". Allgemeine Information hinzugefügt");
 		            }		            
 		            z++;
 		            current = reader.readLine();

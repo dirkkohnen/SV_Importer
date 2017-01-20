@@ -61,37 +61,26 @@ public class ContactProperty {
 	}
 
 	
-	public String getCSV(){
-		String csvString = "";
-			for (String str : this.attributesList){
-				if (str != null){
-					//System.out.println(str);
-					csvString = csvString + str + ";";
-				} else {
-					//System.out.println("null");
-					csvString = csvString + ";";
-				}
-			}
-		return csvString;
+	public String getJSON(){
+		// 27722\"type\":\"Informationen zum Kontakt\",\"subtype\":\"a\",\"description\":\"abc\",\"validfrom\":\"23.05.2016\",\"spheres\":\"Kontakt\",\"employerids\":\"1009,1723\",\"employeedomain\":true},
+		String jsonString = "{";
+		if (this.attributesList[this.attributesNameList.indexOf("id")] != null) jsonString = jsonString + "\"id\":\"" + this.attributesList[this.attributesNameList.indexOf("id")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("contactid")] != null) jsonString = jsonString + "\"contactid\":\"" + this.attributesList[this.attributesNameList.indexOf("contactid")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("legacycontactid")] != null) jsonString = jsonString + "\"legacycontactid\":\"" + this.attributesList[this.attributesNameList.indexOf("legacycontactid")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("type")] != null) jsonString = jsonString + "\"type\":\"" + this.attributesList[this.attributesNameList.indexOf("type")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("subtype")] != null) jsonString = jsonString + "\"subtype\":\"" + this.attributesList[this.attributesNameList.indexOf("subtype")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("description")] != null) jsonString = jsonString + "\"description\":\"" + this.attributesList[this.attributesNameList.indexOf("description")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("validfrom")] != null) jsonString = jsonString + "\"validfrom\":\"" + this.attributesList[this.attributesNameList.indexOf("validfrom")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("validtill")] != null) jsonString = jsonString + "\"validtill\":\"" + this.attributesList[this.attributesNameList.indexOf("validtill")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("spheres")] != null) jsonString = jsonString + " spheres\":\"" + this.attributesList[this.attributesNameList.indexOf("spheres")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("employerids")] != null) jsonString = jsonString + "\"employerids\":\"" + this.attributesList[this.attributesNameList.indexOf("employerids")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("employeedomain")] != null) jsonString = jsonString + "\"employeedomain\":\"" + this.attributesList[this.attributesNameList.indexOf("employeedomain")] + "\",";
+		jsonString = jsonString.substring(0, jsonString.length()-1);
+		jsonString = jsonString +"}";
+		return jsonString;
 	}
 	
 
-	public String getCSVByColumns(String colList){
-		String[] cols = colList.split(",");
-		String csvString = "";
-			for (String str : cols){
-				if (str != null){
-					//System.out.println(str);
-					csvString = csvString + this.attributesList[this.attributesNameList.indexOf(str)] + ";";
-				} else {
-					//System.out.println("null");
-					csvString = csvString + ";";
-				}
-			}
-		return csvString;
-	}
-
-	
 	/**
 	 * Methode zum Setzen eines Attributes eines Kontaktes.
 	 * @param attr Name des Attributs
