@@ -9,8 +9,9 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
-
 import de.scopevisio.importer.data.ContactProperty;
 
 /**
@@ -21,6 +22,7 @@ public class ReadContactPropertyFromCSV {
 	
 	private List<String> cols = new ArrayList<String>();
 	private List<ContactProperty> relations = new ArrayList<ContactProperty>();
+	private static final Logger LOGGER = LogManager.getLogger(SV_Importer.class.getName());
 	
 	public ReadContactPropertyFromCSV(File csv){
 		this.parseCsvFile(csv);
@@ -50,14 +52,12 @@ public class ReadContactPropertyFromCSV {
 	            	ContactProperty cp = new ContactProperty();
 	
 		            for ( int i = 0; i < fields.length ; i++) {
-		            	System.out.println(cols.get(i) + " = " + fields[i]);
+		            	LOGGER.debug(cols.get(i) + " = " + fields[i]);
 		                cp.setAttribute(cols.get(i),fields[i]);
 		            }
 		            
 		            this.relations.add(cp);
-		            if (SV_Importer.debugLevel > 1){
-		            	// System.out.println(z + ". Allgemeine Information hinzugefügt");
-		            }		            
+		            LOGGER.debug(z + ". Allgemeine Information hinzugefügt");
 		            z++;
 		            current = reader.readLine();
 	            }

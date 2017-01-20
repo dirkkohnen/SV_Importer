@@ -9,6 +9,8 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 import de.scopevisio.importer.data.ContactRelation;
 
@@ -20,6 +22,7 @@ public class ReadContactRelationFromCSV {
 	
 	private List<String> cols = new ArrayList<String>();
 	private List<ContactRelation> relations = new ArrayList<ContactRelation>();
+	private static final Logger LOGGER = LogManager.getLogger(SV_Importer.class.getName());
 	
 	public ReadContactRelationFromCSV(File csv){
 		this.parseCsvFile(csv);
@@ -49,14 +52,12 @@ public class ReadContactRelationFromCSV {
 		            ContactRelation cr = new ContactRelation();
 	
 		            for ( int i = 0; i < fields.length ; i++) {
-		            	//System.out.println(cols.get(i) + " = " + fields[i]);
+		            	LOGGER.debug(cols.get(i) + " = " + fields[i]);
 		                cr.setAttribute(cols.get(i),fields[i]);
 		            }
 		            
 		            this.relations.add(cr);
-		            if (SV_Importer.debugLevel > 1){
-		            	//System.out.println(z + ". Kontaktbeziehung hinzugefügt");
-		            }		            
+		            LOGGER.debug(z + ". Kontaktbeziehung hinzugefügt");
 		            z++;
 		            current = reader.readLine();
 	            }

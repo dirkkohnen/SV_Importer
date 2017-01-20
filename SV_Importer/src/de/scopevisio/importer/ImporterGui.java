@@ -181,8 +181,12 @@ public class ImporterGui implements ActionListener {
         	JRadioButton contactPropertyRadioButton = new JRadioButton("Allgemeine Informationen");
         	if (this.art == Importart.ALLGEMEINE_INFORMATION)  contactPropertyRadioButton.setSelected(true);
         	group.add(contactPropertyRadioButton);
+
+        	JCheckBox journalCheckBox = new JCheckBox("Protokoll");
+        	if (this.prop.getProperty("protokoll").compareTo("true") == 0)  journalCheckBox.setSelected(true);
+
         	
-    		Object[] message = {"Zu importierende Daten ...", contactRadioButton, contactRelationRadioButton, contactPropertyRadioButton};
+    		Object[] message = {"Zu importierende Daten ...", contactRadioButton, contactRelationRadioButton, contactPropertyRadioButton, "Protokollierung ...", journalCheckBox};
 
             JOptionPane pane = new JOptionPane( message, JOptionPane.PLAIN_MESSAGE, JOptionPane.OK_CANCEL_OPTION);
             pane.createDialog(null, "Einstellungen").setVisible(true);

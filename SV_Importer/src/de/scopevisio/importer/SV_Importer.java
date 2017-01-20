@@ -8,15 +8,29 @@ import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.config.Configurator;
+import org.apache.logging.log4j.Level;
 
 /**
  * @author dirk.kohnen
  *
  */
 public class SV_Importer{
-	// Debuglevel: 0=Fehler, 1=Warnungen, 2=Meldungen
-	public static final int debugLevel = 2;
+	/*
+	 	Priorität	Beschreibung
+		FINEST		detailliertere Ausgabe als FINER (zum Beispiel Start und Ende jeder Methode)
+		FINER		detailliertere Ausgabe als FINE
+		FINE		Ausgabe von wichtigen Schritten im Programmfluss
+		CONFIG		Ausgabe von Information über eine Konfiguration (zum Beispiel die Art des Betriebssystems oder des CPU-Typs)
+		INFO		allgemeine Informationen (zum Beispiel wurde eine wichtige Aktion erfolgreich abgeschlossen)
+		WARNING		es ist ein Fehler aufgetreten (zum Beispiel wurde eine Exception gefangen und nun behandelt)
+		SEVERE		kritischer Fehler, der dazu führt, dass das Programm nicht ordnungsgemäß fortgesetzt werden kann, eventuell Programmabbruch
+	 */
+    private static final Logger LOGGER = LogManager.getLogger(SV_Importer.class.getName());
 	private static Properties properties;
+	private static String configDatei = "./config.properties";
 
 	/**
 	 * @param args
@@ -25,8 +39,10 @@ public class SV_Importer{
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
+					Configurator.setLevel(LOGGER.getName(), Level.INFO);
+					LOGGER.debug("Programm gestartet");
+					initProperties();
 					ImporterGui window = new ImporterGui();
-					loadProperties();
 					window.prop = properties;
 					window.frmScopevisioImporter.setVisible(true);
 				} catch (Exception e) {
@@ -36,17 +52,21 @@ public class SV_Importer{
 		});
 	}
 	
-	private static void loadProperties(){
+	private static void initProperties(){
+		LOGGER.info("Methode loadProperties() aufgerufen");
 		properties = new Properties();
 		BufferedInputStream stream;
 		try {
-			stream = new BufferedInputStream(new FileInputStream("./config.properties"));
+			LOGGER.info("Beginne Config-Datei einzulesen: " + configDatei);
+			stream = new BufferedInputStream(new FileInputStream(configDatei));
 			properties.load(stream);
 			stream.close();
+			LOGGER.info("Config-Datei erfolgreich eingelesen:" + configDatei);
 		} catch (IOException io) {
 			io.printStackTrace();
 		} finally {
 
 		}
 	}
+	
 }

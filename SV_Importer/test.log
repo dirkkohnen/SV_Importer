@@ -1,0 +1,8 @@
+Jan 20, 2017 12:39:16 PM de.scopevisio.importer.SV_Importer$1 run
+INFORMATION: Programm gestartet
+Jan 20, 2017 12:39:16 PM de.scopevisio.importer.SV_Importer initProperties
+INFORMATION: Methode loadProperties() aufgerufen
+Jan 20, 2017 12:39:17 PM de.scopevisio.importer.SV_Importer initProperties
+INFORMATION: Beginne Config-Datei einzulesen: ./config.properties
+Jan 20, 2017 12:39:17 PM de.scopevisio.importer.SV_Importer initProperties
+INFORMATION: Config-Datei erfolgreich eingelesen:./config.properties
