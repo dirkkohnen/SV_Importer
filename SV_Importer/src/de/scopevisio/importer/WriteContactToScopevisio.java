@@ -104,9 +104,9 @@ public class WriteContactToScopevisio implements IService{
 	public String postSoap(){
 		String msg = "Fehler";
 		try {
-			request.writeTo(System.out);
+//			request.writeTo(System.out);
 			result = new URLPost().postSoap(url, request);
-			msg = result.getReply();
+//			msg = result.getReply();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

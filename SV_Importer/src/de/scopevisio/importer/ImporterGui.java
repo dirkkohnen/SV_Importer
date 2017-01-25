@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.StringReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
@@ -16,10 +17,18 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JToolBar;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.CharacterData;
+import org.xml.sax.InputSource;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -208,6 +217,41 @@ public class ImporterGui implements ActionListener {
 				break;
 		}
 		
+	}
+
+	private void printJournalFooter(String reply){
+		 try{
+			LOGGER.log(Level.forName("JOURNAL", 50), "####################");
+			LOGGER.log(Level.forName("JOURNAL", 50), "# Egebnis:         #");
+			LOGGER.log(Level.forName("JOURNAL", 50), "####################");
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		 	DocumentBuilder db = dbf.newDocumentBuilder();
+		    InputSource is = new InputSource();
+		    is.setCharacterStream(new StringReader(reply));
+
+		    Document doc = db.parse(is);
+		    
+		    // get Insertcount
+		    NodeList nodes = doc.getElementsByTagName("insertCount");
+		    Element element = (Element) nodes.item(0);
+			LOGGER.log(Level.forName("JOURNAL", 50), "Anzahl Importierter Kontakte:\t" + getCharacterDataFromElement(element));
+			
+			// get Updatecount
+		    nodes = doc.getElementsByTagName("updateCount");
+		    element = (Element) nodes.item(0);
+			LOGGER.log(Level.forName("JOURNAL", 50), "Anzahl aktuallisierten Kontakte:\t" + getCharacterDataFromElement(element));
+		    
+			// get Errors
+		    nodes = doc.getElementsByTagName("error");
+			LOGGER.log(Level.forName("JOURNAL", 50), "Anzahl Fehler:\t" + nodes.getLength());
+	        for (int i = 0; i < nodes.getLength(); i++) {
+	        	element = (Element) nodes.item(i);
+				LOGGER.log(Level.forName("JOURNAL", 50), "Fehler " + i + " :\t" + getCharacterDataFromElement(element));
+	        }
+	    }
+	    catch (Exception e) {
+	        e.printStackTrace();
+	    }		
 	}
 	
 	@Override
@@ -541,7 +585,7 @@ public class ImporterGui implements ActionListener {
         		return;
         	} else {
         		if (this.prop.getProperty("protokoll").compareTo("true") == 0) this.printJournalHeader();
-/*        		switch (this.art){
+        		switch (this.art){
         			case KONTAKT:
 		        		ReadContactFromCSV rcfc = new ReadContactFromCSV(this.fileCSV);
 		        		WriteContactToScopevisio wcts = new WriteContactToScopevisio(this.prop);
@@ -565,11 +609,21 @@ public class ImporterGui implements ActionListener {
 		        		break;
 					default:
 						break;
-        		}*/
+        		}
+        		
           		JOptionPane.showMessageDialog(frmScopevisioImporter, "Import abgeschlossen");
-       	}
-        	
+        	}
+        	this.printJournalFooter(reply);
         }
 	}
 
+	
+	  public static String getCharacterDataFromElement(Element e) {
+	    Node child = e.getFirstChild();
+	    if (child instanceof CharacterData) {
+	       CharacterData cd = (CharacterData) child;
+	       return cd.getData();
+	    }
+	    return "?";
+	  }
 }
