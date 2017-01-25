@@ -39,7 +39,7 @@ public class SV_Importer{
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Configurator.setLevel(LOGGER.getName(), Level.INFO);
+					//Configurator.setLevel(LOGGER.getName(), Level.INFO);
 					LOGGER.debug("Programm gestartet");
 					initProperties();
 					ImporterGui window = new ImporterGui();

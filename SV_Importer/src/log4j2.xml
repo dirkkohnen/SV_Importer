@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration>
+<Configuration status="warn" name="MyApp" packages="">
+
+    <CustomLevels>
+        <CustomLevel name="JOURNAL" intLevel="50" />
+    </CustomLevels>
+
     <Appenders>
-        <RollingFile name="fileLogger" fileName="./log.html" filePattern="./log-%d{yyyy-MM-dd}.html" append="false">
-            <HTMLLayout charset="UTF-8" title="Scopevisio Importer Logs" locationInfo="true"/>
-            <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
-                <SizeBasedTriggeringPolicy size="10 MB" />
-            </Policies>
+		<RollingFile name="JOURNALFILE" fileName="./journal.log" filePattern="./journal-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout pattern="%m%n" />
+		    <Policies>
+		      <OnStartupTriggeringPolicy />
+		    </Policies>
         </RollingFile>
-        <Console name="console" target="SYSTEM_OUT">
-            <PatternLayout   pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+
+        <File name="FILE" fileName="./app.log">
+            <PatternLayout pattern="%d{HH:mm:ss dd.mm} [%t] [%-5level] %logger{36} - %msg %n" />
+            <Filters>
+                <!--Deny message logged under Analytics log level-->
+                <ThresholdFilter level="JOURNAL"  onMatch="DENY"   onMismatch="NEUTRAL"/>
+            </Filters>
+        </File>
+
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n"/>
         </Console>
+
+
     </Appenders>
     <Loggers>
-        <Logger name="de.scopevisio.importer" level="debug" additivity="false">
-            <appender-ref ref="fileLogger" level="debug" />
-        </Logger>
-        <Root level="debug" additivity="false">
-            <appender-ref ref="console" />
+        <Root level="TRACE">
+            <AppenderRef ref="FILE" level="TRACE"/>
+            <AppenderRef ref="JOURNALFILE" level="JOURNAL"/>
+            <AppenderRef ref="CONSOLE"/>
         </Root>
     </Loggers>
 </Configuration>

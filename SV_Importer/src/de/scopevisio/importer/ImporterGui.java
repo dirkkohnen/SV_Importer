@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 
 import javax.swing.JFrame;
@@ -14,6 +16,11 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JToolBar;
+
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFileChooser;
@@ -26,6 +33,7 @@ import javax.swing.JTextArea;
 
 public class ImporterGui implements ActionListener {
 
+    private static final Logger LOGGER = LogManager.getLogger(SV_Importer.class.getName());
     private Importart art = Importart.KONTAKT;
 	static private final String newline = "\n";
 	public JFrame frmScopevisioImporter;
@@ -153,6 +161,55 @@ public class ImporterGui implements ActionListener {
 		this.frmScopevisioImporter.getContentPane().add(this.openButton, "cell 0 1");
 	}
 
+	private void printJournalHeader(){
+		Date zeitstempel = new Date();
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+		LOGGER.log(Level.forName("JOURNAL", 50), "Import gestartet:");
+		LOGGER.log(Level.forName("JOURNAL", 50), "\t" + simpleDateFormat.format(zeitstempel));
+		LOGGER.log(Level.forName("JOURNAL", 50), "####################");
+		LOGGER.log(Level.forName("JOURNAL", 50), "# Quelle:          #");
+		LOGGER.log(Level.forName("JOURNAL", 50), "####################");
+		LOGGER.log(Level.forName("JOURNAL", 50), "\tDatei:" + this.fileCSV.getName()+"\n");
+		LOGGER.log(Level.forName("JOURNAL", 50), "####################");
+		LOGGER.log(Level.forName("JOURNAL", 50), "# Ziel             #");
+		LOGGER.log(Level.forName("JOURNAL", 50), "####################");
+		LOGGER.log(Level.forName("JOURNAL", 50), "\tKundennummer: " + this.prop.getProperty("customer"));
+		LOGGER.log(Level.forName("JOURNAL", 50), "\tGesellschaft: " + this.prop.getProperty("organisation"));
+		LOGGER.log(Level.forName("JOURNAL", 50), "\tBenutzername: " + this.prop.getProperty("user")+"\n");
+		LOGGER.log(Level.forName("JOURNAL", 50), "####################");
+		LOGGER.log(Level.forName("JOURNAL", 50), "# Einstellungen    #");
+		LOGGER.log(Level.forName("JOURNAL", 50), "####################");
+		switch (this.art){
+		 	case KONTAKT:
+				LOGGER.log(Level.forName("JOURNAL", 50), "Art der importierten Daten:\n");
+				LOGGER.log(Level.forName("JOURNAL", 50), "\tKontakte");
+				LOGGER.log(Level.forName("JOURNAL", 50), "Duplikatserkannung durch:");
+				if (this.prop.getProperty("conflictDetectionByName").compareTo("true") == 0)  LOGGER.log(Level.forName("JOURNAL", 50), "\tName");
+				if (this.prop.getProperty("conflictDetectionByEmail").compareTo("true") == 0)  LOGGER.log(Level.forName("JOURNAL", 50), "\tE-Mail");
+				if (this.prop.getProperty("conflictDetectionByType").compareTo("true") == 0)  LOGGER.log(Level.forName("JOURNAL", 50), "\tTyp");
+				if (this.prop.getProperty("conflictDetectionByLegacyId").compareTo("true") == 0)  LOGGER.log(Level.forName("JOURNAL", 50), "\tVorsystem-ID");
+				LOGGER.log(Level.forName("JOURNAL", 50), "Verhalten bei Duplikaten:");
+	        	if (this.prop.getProperty("conflictAction").compareTo("overwrite") == 0) LOGGER.log(Level.forName("JOURNAL", 50), "\tÜberschreiben");
+	        	if (this.prop.getProperty("conflictAction").compareTo("fillin") == 0) LOGGER.log(Level.forName("JOURNAL", 50), "\tAuffüllen");
+	        	if (this.prop.getProperty("conflictAction").compareTo("skip") == 0) LOGGER.log(Level.forName("JOURNAL", 50), "\tÜberspringen");
+				if (this.prop.getProperty("columns").length()>0){
+		        	LOGGER.log(Level.forName("JOURNAL", 50), "Spaltenkonfiguration:");
+					LOGGER.log(Level.forName("JOURNAL", 50), "\t" + this.prop.getProperty("columns"));
+				}
+				
+			break;
+			case KONTAKTBEZIEHUNG:
+				LOGGER.log(Level.forName("JOURNAL", 50), "Art der importierten Daten: Kontaktbeziehungen");
+				break;
+			case ALLGEMEINE_INFORMATION:
+				LOGGER.log(Level.forName("JOURNAL", 50), "Art der importierten Daten: Allgemeine Informationen");
+				break;
+			default:
+				break;
+		}
+		
+	}
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
         //Handle open button action.
@@ -208,6 +265,13 @@ public class ImporterGui implements ActionListener {
             	} else if (contactPropertyRadioButton.isSelected()){
             		this.art = Importart.ALLGEMEINE_INFORMATION;
             	}
+            	
+            	if (journalCheckBox.isSelected()){
+            		this.prop.setProperty("protokoll", "true");
+            	} else {
+            		this.prop.setProperty("protokoll", "false");
+            	}
+            	
             } 
 
         }
@@ -476,7 +540,8 @@ public class ImporterGui implements ActionListener {
 	        	this.log.append("Fehler: Keine CSV-Datei ausgewählt" + newline);
         		return;
         	} else {
-        		switch (this.art){
+        		if (this.prop.getProperty("protokoll").compareTo("true") == 0) this.printJournalHeader();
+/*        		switch (this.art){
         			case KONTAKT:
 		        		ReadContactFromCSV rcfc = new ReadContactFromCSV(this.fileCSV);
 		        		WriteContactToScopevisio wcts = new WriteContactToScopevisio(this.prop);
@@ -500,7 +565,7 @@ public class ImporterGui implements ActionListener {
 		        		break;
 					default:
 						break;
-        		}
+        		}*/
           		JOptionPane.showMessageDialog(frmScopevisioImporter, "Import abgeschlossen");
        	}
         	
