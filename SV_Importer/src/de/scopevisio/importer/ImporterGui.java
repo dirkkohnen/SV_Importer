@@ -222,7 +222,7 @@ public class ImporterGui implements ActionListener {
 	private void printJournalFooter(String reply){
 		 try{
 			LOGGER.log(Level.forName("JOURNAL", 50), "####################");
-			LOGGER.log(Level.forName("JOURNAL", 50), "# Egebnis:         #");
+			LOGGER.log(Level.forName("JOURNAL", 50), "# Ergebnis:         #");
 			LOGGER.log(Level.forName("JOURNAL", 50), "####################");
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		 	DocumentBuilder db = dbf.newDocumentBuilder();
@@ -575,8 +575,6 @@ public class ImporterGui implements ActionListener {
         		if(reply.contains("pong")){
 		        	this.log.append("Connect erfolgreich" + newline);
 		        }
-//		        this.log.append("responseCode: " + result.getResponseCode() + newline);
-//		        this.log.append("reply: " + reply + newline);
         }
         //Handle Start button action.
         else if (e.getSource() == this.startMenuItem || e.getSource() == this.startToolbarButton){

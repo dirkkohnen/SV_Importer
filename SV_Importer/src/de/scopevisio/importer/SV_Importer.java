@@ -10,8 +10,6 @@ import java.io.IOException;
 import java.util.Properties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.core.config.Configurator;
-import org.apache.logging.log4j.Level;
 
 /**
  * @author dirk.kohnen
@@ -42,6 +40,8 @@ public class SV_Importer{
 					//Configurator.setLevel(LOGGER.getName(), Level.INFO);
 					LOGGER.debug("Programm gestartet");
 					initProperties();
+//					Wizard wiz = new Wizard(properties);
+					
 					ImporterGui window = new ImporterGui();
 					window.prop = properties;
 					window.frmScopevisioImporter.setVisible(true);
