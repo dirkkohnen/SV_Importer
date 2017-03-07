@@ -35,7 +35,7 @@ public class ReadContactPropertyFromCSV {
     	InputStream inputStream;
 		try {
 			inputStream = new FileInputStream(csv);
-			final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
+			final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, "Cp1252"));
 			String current = reader.readLine();
 			//System.out.println(current);
 			String[] firstRow = current.split(";");

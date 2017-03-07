@@ -46,9 +46,9 @@ public class ContactRelation {
 	 * @return void
 	 */
 	private void initalize() {
-		this.attributesNameList.add("ID-Ursprung ");
+		this.attributesNameList.add("ID-Ursprung");
 		this.attributesNameList.add("ID-Ziel");
-		this.attributesNameList.add("Parameter");
+		//this.attributesNameList.add("Parameter");
 		//System.out.println(this.attributesNameList.size());
 		this.attributesList = new String[this.attributesNameList.size()];
 		//System.out.println(this.attributesList.length);

@@ -63,12 +63,9 @@ public class WriteContactRelationToScopevisio implements IService{
 	        
 	        // args/data tag
 	        this.configElement = req.addChildElement("args");
-        	if (this.prop.getProperty("conflictDetectionByName").compareTo("true") == 0)  this.configElement.addChildElement("conflictDetectionByName").setTextContent("true");
-        	if (this.prop.getProperty("conflictDetectionByEmail").compareTo("true") == 0)  this.configElement.addChildElement("conflictDetectionByEmail").setTextContent("true");
-        	if (this.prop.getProperty("conflictDetectionByType").compareTo("true") == 0)  this.configElement.addChildElement("conflictDetectionByType").setTextContent("true");
-        	if (this.prop.getProperty("conflictDetectionByLegacyId").compareTo("true") == 0)  this.configElement.addChildElement("conflictDetectionByLegacyId").setTextContent("true");
-	        String tmp = this.prop.getProperty("conflictAction");
-	        this.configElement.addChildElement("conflictAction").setTextContent(tmp);
+	        this.configElement.addChildElement("idtype").setTextContent(this.prop.getProperty("idtype"));
+	        this.configElement.addChildElement("type").setTextContent(this.prop.getProperty("type"));
+	        this.configElement.addChildElement("incremental").setTextContent(this.prop.getProperty("incremental"));
 	    } catch (Exception e2) {
 	        // handle error
 	        e2.printStackTrace();
