@@ -1,0 +1,27 @@
+Import gestartet:
+	26.01.2017 11:42:54
+####################
+# Quelle:          #
+####################
+	Datei:C0000001.001 - Kopie.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2028436
+	Gesellschaft: Progros Testimport
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Vorsystem-ID
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Egebnis:         #
+####################

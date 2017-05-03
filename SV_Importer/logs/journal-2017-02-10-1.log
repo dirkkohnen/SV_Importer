@@ -1,0 +1,96 @@
+Import gestartet:
+	10.02.2017 07:55:51
+####################
+# Quelle:          #
+####################
+	Datei:R0000001.001_20170113100633.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2028436
+	Gesellschaft: Progros Testimport
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Vorsystem-ID
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	0
+Anzahl aktuallisierten Kontakte:	0
+Anzahl Fehler:	35
+Fehler 0 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 1 Field: lastname
+Fehler 1 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 2 Field: lastname
+Fehler 2 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 3 Field: lastname
+Fehler 3 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 4 Field: lastname
+Fehler 4 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 5 Field: lastname
+Fehler 5 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 6 Field: lastname
+Fehler 6 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 7 Field: lastname
+Fehler 7 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 8 Field: lastname
+Fehler 8 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 9 Field: lastname
+Fehler 9 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 10 Field: lastname
+Fehler 10 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 11 Field: lastname
+Fehler 11 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 12 Field: lastname
+Fehler 12 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 13 Field: lastname
+Fehler 13 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 14 Field: lastname
+Fehler 14 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 15 Field: lastname
+Fehler 15 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 16 Field: lastname
+Fehler 16 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 17 Field: lastname
+Fehler 17 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 18 Field: lastname
+Fehler 18 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 19 Field: lastname
+Fehler 19 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 20 Field: lastname
+Fehler 20 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 21 Field: lastname
+Fehler 21 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 22 Field: lastname
+Fehler 22 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 23 Field: lastname
+Fehler 23 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 24 Field: lastname
+Fehler 24 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 25 Field: lastname
+Fehler 25 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 26 Field: lastname
+Fehler 26 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 27 Field: lastname
+Fehler 27 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 28 Field: lastname
+Fehler 28 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 29 Field: lastname
+Fehler 29 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 30 Field: lastname
+Fehler 30 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 31 Field: lastname
+Fehler 31 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 32 Field: lastname
+Fehler 32 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 33 Field: lastname
+Fehler 33 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 34 Field: lastname
+Fehler 34 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 35 Field: lastname
+Import gestartet:
+	10.02.2017 09:30:30
+####################
+# Quelle:          #
+####################
+	Datei:X0000001.001_20170113101119.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2028436
+	Gesellschaft: Progros Testimport
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Vorsystem-ID
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	514
+Anzahl aktuallisierten Kontakte:	0
+Anzahl Fehler:	1
+Fehler 0 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 294 Field: lastname

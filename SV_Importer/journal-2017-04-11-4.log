@@ -1,0 +1,62 @@
+Import gestartet:
+	11.04.2017 10:13:33
+####################
+# Quelle:          #
+####################
+	Datei:R0000001.001_20170113100633.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Vorsystem-ID
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	35
+Anzahl aktuallisierten Kontakte:	0
+Anzahl Fehler:	0
+Import gestartet:
+	11.04.2017 10:17:42
+####################
+# Quelle:          #
+####################
+	Datei:R0000001.001_20170113100633.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Vorsystem-ID
+Verhalten bei Duplikaten:
+	Auffüllen
+Spaltenkonfiguration:
+	addressExtra2,street2,postcode2,city2,country2,customText1,legacyNumber
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	0
+Anzahl aktuallisierten Kontakte:	35
+Anzahl Fehler:	0

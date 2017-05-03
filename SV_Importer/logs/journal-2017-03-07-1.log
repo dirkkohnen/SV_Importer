@@ -1,0 +1,112 @@
+Import gestartet:
+	07.03.2017 09:21:47
+####################
+# Quelle:          #
+####################
+	Datei:X0000001.001_20170113101119.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Vorsystem-ID
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	511
+Anzahl aktuallisierten Kontakte:	0
+Anzahl Fehler:	1
+Fehler 0 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 294 Field: lastname
+Import gestartet:
+	07.03.2017 09:22:48
+####################
+# Quelle:          #
+####################
+	Datei:Y0000001.001_20170113100346.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Vorsystem-ID
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	221
+Anzahl aktuallisierten Kontakte:	488
+Anzahl Fehler:	1
+Fehler 0 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 301 Field: lastname
+Import gestartet:
+	07.03.2017 09:23:46
+####################
+# Quelle:          #
+####################
+	Datei:X0000001.001_20170113101119_Bez.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten: Kontaktbeziehungen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	0
+Anzahl aktuallisierten Kontakte:	0
+Anzahl Fehler:	1
+Fehler 0 :	The relation type "null" is unknown. Valid values are: employee, parentcompany, childcompany, bosscontact, salescontact, partner
+Import gestartet:
+	07.03.2017 09:26:28
+####################
+# Quelle:          #
+####################
+	Datei:X0000001.001_20170113101119_Bez.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten: Kontaktbeziehungen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	0
+Anzahl aktuallisierten Kontakte:	0
+Anzahl Fehler:	1
+Fehler 0 :	The relation type "null" is unknown. Valid values are: employee, parentcompany, childcompany, bosscontact, salescontact, partner

@@ -1,0 +1,45 @@
+Import gestartet:
+	11.04.2017 09:52:32
+####################
+# Quelle:          #
+####################
+	Datei:R0000001.001_20170113100633.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Vorsystem-ID
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	20
+Anzahl aktuallisierten Kontakte:	0
+Anzahl Fehler:	15
+Fehler 0 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 1 Field: lastname
+Fehler 1 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 3 Field: lastname
+Fehler 2 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 10 Field: lastname
+Fehler 3 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 12 Field: lastname
+Fehler 4 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 13 Field: lastname
+Fehler 5 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 15 Field: lastname
+Fehler 6 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 17 Field: lastname
+Fehler 7 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 22 Field: lastname
+Fehler 8 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 23 Field: lastname
+Fehler 9 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 24 Field: lastname
+Fehler 10 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 28 Field: lastname
+Fehler 11 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 29 Field: lastname
+Fehler 12 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 30 Field: lastname
+Fehler 13 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 33 Field: lastname
+Fehler 14 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 35 Field: lastname

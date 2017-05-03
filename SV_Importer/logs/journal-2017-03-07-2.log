@@ -1,0 +1,25 @@
+Import gestartet:
+	07.03.2017 09:31:06
+####################
+# Quelle:          #
+####################
+	Datei:X0000001.001_20170113101119_Bez.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten: Kontaktbeziehungen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	0
+Anzahl aktuallisierten Kontakte:	0
+Anzahl Fehler:	1
+Fehler 0 :	The relation type "null" is unknown. Valid values are: employee, parentcompany, childcompany, bosscontact, salescontact, partner

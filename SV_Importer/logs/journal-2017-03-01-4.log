@@ -1,0 +1,24 @@
+Import gestartet:
+	01.03.2017 13:10:27
+####################
+# Quelle:          #
+####################
+	Datei:Adressen DWH bearbeitet Gesellschaften.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: Test Kontaktimport
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Vorsystem-ID
+Verhalten bei Duplikaten:
+	Auffüllen

@@ -1,0 +1,111 @@
+Import gestartet:
+	06.03.2017 08:23:22
+####################
+# Quelle:          #
+####################
+	Datei:C0000001.001_20170113100112.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Vorsystem-ID
+Verhalten bei Duplikaten:
+	Auff�llen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	35
+Anzahl aktuallisierten Kontakte:	0
+Anzahl Fehler:	0
+Import gestartet:
+	06.03.2017 08:23:42
+####################
+# Quelle:          #
+####################
+	Datei:K0000001.001_20170113100852.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Vorsystem-ID
+Verhalten bei Duplikaten:
+	Auff�llen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	3
+Anzahl aktuallisierten Kontakte:	18
+Anzahl Fehler:	5
+Fehler 0 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=Best Western) Record: 1 Field: customLong14
+Fehler 1 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=ohne Koop) Record: 3 Field: customLong14
+Fehler 2 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=Best Western) Record: 9 Field: customLong14
+Fehler 3 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=ohne Koop) Record: 11 Field: customLong14
+Fehler 4 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=Best Western) Record: 12 Field: customLong14
+Import gestartet:
+	06.03.2017 08:28:03
+####################
+# Quelle:          #
+####################
+	Datei:C0000001.001_20170113100112.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Vorsystem-ID
+Verhalten bei Duplikaten:
+	Auff�llen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	19
+Anzahl aktuallisierten Kontakte:	0
+Anzahl Fehler:	16
+Fehler 0 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=Best Western) Record: 1 Field: customLong14
+Fehler 1 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=ohne Koop) Record: 3 Field: customLong14
+Fehler 2 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=Best Western) Record: 7 Field: customLong14
+Fehler 3 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=ohne Koop) Record: 9 Field: customLong14
+Fehler 4 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=Best Western) Record: 11 Field: customLong14
+Fehler 5 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=ohne Koop) Record: 12 Field: customLong14
+Fehler 6 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=ohne Koop) Record: 13 Field: customLong14
+Fehler 7 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=Romantik Hotels) Record: 15 Field: customLong14
+Fehler 8 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=ohne Koop) Record: 22 Field: customLong14
+Fehler 9 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=ohne Koop) Record: 23 Field: customLong14
+Fehler 10 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=ohne Koop) Record: 24 Field: customLong14
+Fehler 11 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=ohne Koop) Record: 27 Field: customLong14
+Fehler 12 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=Best Western) Record: 29 Field: customLong14
+Fehler 13 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=ohne Koop) Record: 30 Field: customLong14
+Fehler 14 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=Best Western) Record: 33 Field: customLong14
+Fehler 15 :	Der angegebene Wert ist ungültig. Format Ganze Zahlen. (Wert=ohne Koop) Record: 35 Field: customLong14

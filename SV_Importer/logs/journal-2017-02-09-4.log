@@ -1,0 +1,64 @@
+Import gestartet:
+	09.02.2017 16:17:02
+####################
+# Quelle:          #
+####################
+	Datei:K0000001.001_20170113100852 - Kopie.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2028436
+	Gesellschaft: Progros Testimport
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Vorsystem-ID
+Verhalten bei Duplikaten:
+	Auffüllen
+Spaltenkonfiguration:
+	ID Vorsystem,Lieferant
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	26
+Anzahl aktuallisierten Kontakte:	0
+Anzahl Fehler:	0
+Import gestartet:
+	09.02.2017 16:20:44
+####################
+# Quelle:          #
+####################
+	Datei:K0000001.001_20170113100852 - Kopie.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2028436
+	Gesellschaft: Progros Testimport
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Vorsystem-ID
+Verhalten bei Duplikaten:
+	Auffüllen
+Spaltenkonfiguration:
+	ID Vorsystem,Lieferant
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	0
+Anzahl aktuallisierten Kontakte:	26
+Anzahl Fehler:	0

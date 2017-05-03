@@ -230,7 +230,7 @@ public class Contact {
 		this.attributesNameList.add("postcode2");
 		this.attributesNameList.add("city2");
 		this.attributesNameList.add("country2");
-		this.attributesNameList.add("email2");
+		this.attributesNameList.add("customText1");
 		this.attributesNameList.add("legacyNumber");
 		//System.out.println(this.attributesNameList.size());
 		this.attributesList = new String[this.attributesNameList.size()];

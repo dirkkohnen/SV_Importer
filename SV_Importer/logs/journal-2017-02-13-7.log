@@ -1,0 +1,283 @@
+Import gestartet:
+	13.02.2017 14:05:25
+####################
+# Quelle:          #
+####################
+	Datei:U0000001.001_20170113100503.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten: Allgemeine Informationen
+####################
+# Ergebnis:         #
+####################
+Import gestartet:
+	13.02.2017 14:08:27
+####################
+# Quelle:          #
+####################
+	Datei:U0000001.001_20170113100503.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten: Allgemeine Informationen
+####################
+# Ergebnis:         #
+####################
+Import gestartet:
+	13.02.2017 14:44:15
+####################
+# Quelle:          #
+####################
+	Datei:U0000001.001_20170113100503.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2028436
+	Gesellschaft: Progros Testimport
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten: Allgemeine Informationen
+####################
+# Ergebnis:         #
+####################
+Import gestartet:
+	13.02.2017 14:45:11
+####################
+# Quelle:          #
+####################
+	Datei:Y0000001.001_20170113100346.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2028436
+	Gesellschaft: Progros Testimport
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Vorsystem-ID
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	221
+Anzahl aktuallisierten Kontakte:	488
+Anzahl Fehler:	1
+Fehler 0 :	Leere Werte sind nicht erlaubt. (Feld Name/Gesellschaft) Record: 301 Field: lastname
+Import gestartet:
+	13.02.2017 14:47:13
+####################
+# Quelle:          #
+####################
+	Datei:U0000001.001_20170113100503.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2028436
+	Gesellschaft: Progros Testimport
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten: Allgemeine Informationen
+####################
+# Ergebnis:         #
+####################
+Import gestartet:
+	13.02.2017 14:47:54
+####################
+# Quelle:          #
+####################
+	Datei:U0000001.001_20170113100503.Plus.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2028436
+	Gesellschaft: Progros Testimport
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten: Allgemeine Informationen
+####################
+# Ergebnis:         #
+####################
+Import gestartet:
+	13.02.2017 14:48:33
+####################
+# Quelle:          #
+####################
+	Datei:V0000001.001_20170113101247.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2028436
+	Gesellschaft: Progros Testimport
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten: Allgemeine Informationen
+####################
+# Ergebnis:         #
+####################
+Import gestartet:
+	13.02.2017 14:57:33
+####################
+# Quelle:          #
+####################
+	Datei:V0000001.001_20170113101247.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2028436
+	Gesellschaft: Progros Testimport
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten: Allgemeine Informationen
+####################
+# Ergebnis:         #
+####################
+Import gestartet:
+	13.02.2017 14:58:24
+####################
+# Quelle:          #
+####################
+	Datei:V0000001.001_20170113101247.Plus.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2028436
+	Gesellschaft: Progros Testimport
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten: Allgemeine Informationen
+####################
+# Ergebnis:         #
+####################
+Import gestartet:
+	13.02.2017 14:59:56
+####################
+# Quelle:          #
+####################
+	Datei:U0000001.001_20170113100503.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten: Allgemeine Informationen
+####################
+# Ergebnis:         #
+####################
+Import gestartet:
+	13.02.2017 15:00:27
+####################
+# Quelle:          #
+####################
+	Datei:U0000001.001_20170113100503.Plus.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten: Allgemeine Informationen
+####################
+# Ergebnis:         #
+####################
+Import gestartet:
+	13.02.2017 15:00:48
+####################
+# Quelle:          #
+####################
+	Datei:V0000001.001_20170113101247.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten: Allgemeine Informationen
+####################
+# Ergebnis:         #
+####################
+Import gestartet:
+	13.02.2017 15:01:35
+####################
+# Quelle:          #
+####################
+	Datei:V0000001.001_20170113101247.Plus.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2026692
+	Gesellschaft: Datenmigration Test
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten: Allgemeine Informationen
+####################
+# Ergebnis:         #
+####################
