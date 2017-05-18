@@ -28,7 +28,7 @@ public class WriteContactPropertyToScopevisio implements IService{
 	private MessageFactory mf;
 	private SOAPMessage request;
 	private SOAPBody body;
-	private  SOAPElement requestElement, authnElement, configElement, req;
+	private SOAPElement requestElement, authnElement, configElement, req;
 	private PostResult result;
 	private List<ContactProperty> properties;
 	private String data = "";

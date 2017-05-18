@@ -58,7 +58,7 @@ public class ReadContactFromCSV {
 		            }
 		            
 		            this.contacts.add(k);
-		            LOGGER.debug(z + ". Kontakt hinzugefügt");
+//		            LOGGER.debug(z + ". Kontakt hinzugefügt");
 		            z++;
 		            current = reader.readLine();
 	            }

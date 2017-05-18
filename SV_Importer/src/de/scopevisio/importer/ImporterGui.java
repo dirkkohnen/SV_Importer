@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Properties;
 
 import javax.swing.JFrame;
@@ -29,6 +30,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.CharacterData;
 import org.xml.sax.InputSource;
+
+import de.scopevisio.importer.data.Contact;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -532,8 +535,9 @@ public class ImporterGui implements ActionListener {
     		JTextField passwortTextField = new JTextField(this.prop.getProperty("pass"));
     		JTextField spracheTextField = new JTextField(this.prop.getProperty("language"));
     		JTextField gesellschaftTextField = new JTextField(this.prop.getProperty("organisation"));
+    		JTextField packageSizeTextField = new JTextField(this.prop.getProperty("packagesize"));
             
-    		Object[] message = {"Kundennummer", kundennummerTextField, "Benutzername", benutzernameTextField, "Passwort", passwortTextField, "Sprache", spracheTextField, "Gesellschaft", gesellschaftTextField};
+    		Object[] message = {"Kundennummer", kundennummerTextField, "Benutzername", benutzernameTextField, "Passwort", passwortTextField, "Sprache", spracheTextField, "Gesellschaft", gesellschaftTextField, "Packetgröße", packageSizeTextField};
 
             JOptionPane pane = new JOptionPane( message, JOptionPane.PLAIN_MESSAGE, JOptionPane.OK_CANCEL_OPTION);
             pane.createDialog(null, "Einstellungen").setVisible(true);
@@ -553,6 +557,7 @@ public class ImporterGui implements ActionListener {
             	this.prop.setProperty("pass", passwortTextField.getText());
             	this.prop.setProperty("language", spracheTextField.getText());
             	this.prop.setProperty("organisation", gesellschaftTextField.getText());
+            	this.prop.setProperty("packagesize", packageSizeTextField.getText());
             	FileOutputStream out;
 				try {
 					out = new FileOutputStream("config.properties");
@@ -586,10 +591,30 @@ public class ImporterGui implements ActionListener {
         		switch (this.art){
         			case KONTAKT:
 		        		ReadContactFromCSV rcfc = new ReadContactFromCSV(this.fileCSV);
-		        		WriteContactToScopevisio wcts = new WriteContactToScopevisio(this.prop);
-		        		wcts.setContacts(rcfc.getContacts());
-		        		reply = wcts.postSoap();
-		                System.out.println(reply);
+		        		List<Contact> contacts = rcfc.getContacts();
+		        		int countContacts = contacts.size(); 
+		        		int packageSize = Integer.parseInt(this.prop.getProperty("packagesize"));
+		        		int packages = (countContacts / packageSize) + 1;
+		        		System.out.println(countContacts);
+		        		System.out.println(packageSize);
+		        		System.out.println(packages);
+		        		WriteContactToScopevisio wcts;
+		        		for (int i = 0 ; i < packages ; i++){
+			        		wcts = new WriteContactToScopevisio(this.prop);
+		        			int start = i * packageSize;
+		        			int end = (i + 1) * packageSize;
+	        				List<Contact> subList;
+		        			if (end <= countContacts){
+		        				subList = contacts.subList(start, end-1);
+				        		System.out.println("1: " + start + ", " + (end-1));
+		        			} else {
+		        				subList = contacts.subList(start, countContacts);
+				        		System.out.println("2: " + start + ", " + (countContacts));
+		        			}
+		        			wcts.setContacts(subList);
+		        			reply = wcts.postSoap();
+//		        			System.out.println(reply);
+		        		}
 		        		break;
         			case KONTAKTBEZIEHUNG:
 		        		ReadContactRelationFromCSV rcrfc = new ReadContactRelationFromCSV(this.fileCSV);
