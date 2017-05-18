@@ -53,7 +53,7 @@ public class ReadContactFromCSV {
 		            Contact k = new Contact();
 	
 		            for ( int i = 0; i < fields.length ; i++) {
-		            	LOGGER.debug(cols.get(i) + " = " + fields[i]);
+		            	//LOGGER.debug(cols.get(i) + " = " + fields[i]);
 		                k.setAttribute(cols.get(i),fields[i]);
 		            }
 		            

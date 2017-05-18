@@ -1,0 +1,27 @@
+Import gestartet:
+	04.05.2017 12:58:29
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_1.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: DW Beteiligungs GmbH neu
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################

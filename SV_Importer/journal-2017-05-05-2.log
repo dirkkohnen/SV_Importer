@@ -1,0 +1,763 @@
+Import gestartet:
+	05.05.2017 08:54:27
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: Test Kontaktimport DuB
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	997
+Anzahl aktuallisierten Kontakte:	8440
+Anzahl Fehler:	219
+Fehler 0 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 115813, 115812 Record: 1027
+Fehler 1 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 115813, 115812 Record: 1028
+Fehler 2 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 115831, 115832 Record: 1046
+Fehler 3 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 115831, 115832 Record: 1047
+Fehler 4 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 115840, 115835 Record: 1050
+Fehler 5 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 115840, 115835 Record: 1055
+Fehler 6 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 115901, 115900 Record: 1115
+Fehler 7 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 115901, 115900 Record: 1116
+Fehler 8 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 115937, 115938 Record: 1152
+Fehler 9 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 115937, 115938 Record: 1153
+Fehler 10 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 115941, 115943, 115942 Record: 1156
+Fehler 11 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 115941, 115943, 115942 Record: 1157
+Fehler 12 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 115941, 115943, 115942 Record: 1158
+Fehler 13 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116003, 116013 Record: 1218
+Fehler 14 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116003, 116013 Record: 1228
+Fehler 15 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116071, 116072 Record: 1286
+Fehler 16 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116071, 116072 Record: 1287
+Fehler 17 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116183, 116184 Record: 1400
+Fehler 18 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116183, 116184 Record: 1401
+Fehler 19 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116363, 116362 Record: 1581
+Fehler 20 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116363, 116362 Record: 1582
+Fehler 21 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116457, 116458 Record: 1676
+Fehler 22 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116457, 116458 Record: 1677
+Fehler 23 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 116516, 116509, 116510 Record: 1728
+Fehler 24 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 116516, 116509, 116510 Record: 1729
+Fehler 25 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 116516, 116509, 116510 Record: 1735
+Fehler 26 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116756, 116750 Record: 1969
+Fehler 27 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116756, 116750 Record: 1975
+Fehler 28 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116765, 116767 Record: 1984
+Fehler 29 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116765, 116767 Record: 1986
+Fehler 30 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116870, 116860 Record: 2074
+Fehler 31 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116873, 116862 Record: 2076
+Fehler 32 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116869, 116868 Record: 2082
+Fehler 33 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116869, 116868 Record: 2083
+Fehler 34 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116870, 116860 Record: 2084
+Fehler 35 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116873, 116862 Record: 2087
+Fehler 36 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116909, 116910 Record: 2123
+Fehler 37 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116909, 116910 Record: 2124
+Fehler 38 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 117057, 117055 Record: 2270
+Fehler 39 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 117057, 117055 Record: 2272
+Fehler 40 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 117065, 117067, 117069 Record: 2280
+Fehler 41 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 117065, 117067, 117069 Record: 2282
+Fehler 42 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 117065, 117067, 117069 Record: 2284
+Fehler 43 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 117095, 117094, 117097, 117096, 117098 Record: 2309
+Fehler 44 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 117095, 117094, 117097, 117096, 117098 Record: 2310
+Fehler 45 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 117095, 117094, 117097, 117096, 117098 Record: 2311
+Fehler 46 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 117095, 117094, 117097, 117096, 117098 Record: 2312
+Fehler 47 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 117095, 117094, 117097, 117096, 117098 Record: 2313
+Fehler 48 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 117101, 117102 Record: 2316
+Fehler 49 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 117101, 117102 Record: 2317
+Fehler 50 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 117132, 117134 Record: 2347
+Fehler 51 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 117132, 117134 Record: 2349
+Fehler 52 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 117489, 117486 Record: 2702
+Fehler 53 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 117489, 117486 Record: 2705
+Fehler 54 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 117729, 117730 Record: 2945
+Fehler 55 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 117729, 117730 Record: 2946
+Fehler 56 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 117765, 117766 Record: 2982
+Fehler 57 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 117765, 117766 Record: 2983
+Fehler 58 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 118011, 118013 Record: 3222
+Fehler 59 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 118011, 118013 Record: 3224
+Fehler 60 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 118163, 118162 Record: 3374
+Fehler 61 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 118163, 118162 Record: 3375
+Fehler 62 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 118264, 118255 Record: 3468
+Fehler 63 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 118264, 118255 Record: 3477
+Fehler 64 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 118400, 118399 Record: 3613
+Fehler 65 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 118400, 118399 Record: 3614
+Fehler 66 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 118420, 118423, 118422, 118424 Record: 3634
+Fehler 67 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 118420, 118423, 118422, 118424 Record: 3636
+Fehler 68 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 118420, 118423, 118422, 118424 Record: 3637
+Fehler 69 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 118420, 118423, 118422, 118424 Record: 3638
+Fehler 70 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120835, 120834 Record: 3768
+Fehler 71 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120835, 120834 Record: 3769
+Fehler 72 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120854, 120856 Record: 3788
+Fehler 73 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120854, 120856 Record: 3790
+Fehler 74 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120859, 120858 Record: 3792
+Fehler 75 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120859, 120858 Record: 3793
+Fehler 76 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120871, 120870 Record: 3804
+Fehler 77 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120871, 120870 Record: 3805
+Fehler 78 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120923, 120922 Record: 3856
+Fehler 79 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120923, 120922 Record: 3857
+Fehler 80 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120960, 120959 Record: 3893
+Fehler 81 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120960, 120959 Record: 3894
+Fehler 82 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 119795, 119796 Record: 4018
+Fehler 83 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 119795, 119796 Record: 4019
+Fehler 84 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 119947, 119946 Record: 4169
+Fehler 85 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 119947, 119946 Record: 4170
+Fehler 86 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 119999, 119998 Record: 4222
+Fehler 87 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 119999, 119998 Record: 4223
+Fehler 88 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120053, 120052 Record: 4277
+Fehler 89 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120053, 120052 Record: 4278
+Fehler 90 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 120067, 120066, 120062 Record: 4287
+Fehler 91 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 120067, 120066, 120062 Record: 4291
+Fehler 92 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 120067, 120066, 120062 Record: 4292
+Fehler 93 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116003, 116013 Record: 4494
+Fehler 94 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120281, 120280 Record: 4505
+Fehler 95 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120281, 120280 Record: 4506
+Fehler 96 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120295, 120296 Record: 4520
+Fehler 97 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120295, 120296 Record: 4521
+Fehler 98 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120365, 120364 Record: 4589
+Fehler 99 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120365, 120364 Record: 4590
+Fehler 100 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120385, 120386 Record: 4610
+Fehler 101 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120385, 120386 Record: 4611
+Fehler 102 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120389, 120388 Record: 4613
+Fehler 103 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120389, 120388 Record: 4614
+Fehler 104 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120471, 120470 Record: 4696
+Fehler 105 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120471, 120470 Record: 4697
+Fehler 106 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120533, 120532 Record: 4758
+Fehler 107 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120533, 120532 Record: 4759
+Fehler 108 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120635, 120634 Record: 4860
+Fehler 109 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 120635, 120634 Record: 4861
+Fehler 110 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 121921, 121920, 121919 Record: 5121
+Fehler 111 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 121921, 121920, 121919 Record: 5122
+Fehler 112 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 121921, 121920, 121919 Record: 5123
+Fehler 113 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 122061, 122060 Record: 5264
+Fehler 114 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 122061, 122060 Record: 5265
+Fehler 115 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 122100, 122094 Record: 5298
+Fehler 116 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 122100, 122094 Record: 5304
+Fehler 117 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 122119, 122118 Record: 5322
+Fehler 118 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 122119, 122118 Record: 5323
+Fehler 119 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 122601, 122600 Record: 5816
+Fehler 120 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 122601, 122600 Record: 5817
+Fehler 121 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 122655, 122654 Record: 5870
+Fehler 122 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 122655, 122654 Record: 5871
+Fehler 123 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 122665, 122666 Record: 5881
+Fehler 124 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 122665, 122666 Record: 5882
+Fehler 125 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 122727, 122726 Record: 5942
+Fehler 126 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 122727, 122726 Record: 5943
+Fehler 127 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 122897, 122898 Record: 6098
+Fehler 128 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 122897, 122898 Record: 6099
+Fehler 129 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 123025, 123026 Record: 6226
+Fehler 130 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 123025, 123026 Record: 6227
+Fehler 131 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 123141, 123143, 123142 Record: 6342
+Fehler 132 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 123141, 123143, 123142 Record: 6343
+Fehler 133 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 123141, 123143, 123142 Record: 6344
+Fehler 134 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 123231, 123230 Record: 6431
+Fehler 135 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 123231, 123230 Record: 6432
+Fehler 136 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 123280, 123279 Record: 6480
+Fehler 137 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 123280, 123279 Record: 6481
+Fehler 138 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 123289, 123290 Record: 6490
+Fehler 139 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 123289, 123290 Record: 6491
+Fehler 140 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 123605, 123606 Record: 6807
+Fehler 141 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 123605, 123606 Record: 6808
+Fehler 142 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 123767, 123766, 123769 Record: 6969
+Fehler 143 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 123767, 123766, 123769 Record: 6970
+Fehler 144 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 123767, 123766, 123769 Record: 6972
+Fehler 145 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 123801, 123802 Record: 6997
+Fehler 146 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 123801, 123802 Record: 6998
+Fehler 147 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 123895, 123897 Record: 7094
+Fehler 148 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 123895, 123897 Record: 7096
+Fehler 149 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 123965, 123964 Record: 7163
+Fehler 150 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 123965, 123964 Record: 7164
+Fehler 151 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 124042, 124044 Record: 7241
+Fehler 152 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 124042, 124044 Record: 7243
+Fehler 153 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 124119, 124118 Record: 7317
+Fehler 154 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 124119, 124118 Record: 7318
+Fehler 155 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 124288, 124287 Record: 7490
+Fehler 156 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 124288, 124287 Record: 7491
+Fehler 157 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 124385, 124384, 124379, 124378, 124383 Record: 7583
+Fehler 158 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 124385, 124384, 124379, 124378, 124383 Record: 7584
+Fehler 159 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 124385, 124384, 124379, 124378, 124383 Record: 7588
+Fehler 160 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 124385, 124384, 124379, 124378, 124383 Record: 7589
+Fehler 161 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 124385, 124384, 124379, 124378, 124383 Record: 7590
+Fehler 162 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 124803, 124804 Record: 7997
+Fehler 163 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 124803, 124804 Record: 7998
+Fehler 164 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 124851, 124850 Record: 8045
+Fehler 165 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 124851, 124850 Record: 8046
+Fehler 166 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 124896, 124895 Record: 8090
+Fehler 167 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 124896, 124895 Record: 8091
+Fehler 168 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 124897, 124898 Record: 8092
+Fehler 169 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 124897, 124898 Record: 8093
+Fehler 170 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 124993, 124994 Record: 8189
+Fehler 171 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 124993, 124994 Record: 8190
+Fehler 172 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125047, 125048 Record: 8245
+Fehler 173 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125047, 125048 Record: 8246
+Fehler 174 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125105, 125104 Record: 8302
+Fehler 175 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125105, 125104 Record: 8303
+Fehler 176 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125107, 125106 Record: 8304
+Fehler 177 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125107, 125106 Record: 8305
+Fehler 178 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125115, 125118 Record: 8313
+Fehler 179 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125115, 125118 Record: 8316
+Fehler 180 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125152, 125154 Record: 8350
+Fehler 181 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125152, 125154 Record: 8352
+Fehler 182 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125267, 125266 Record: 8465
+Fehler 183 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125267, 125266 Record: 8466
+Fehler 184 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125367, 125369 Record: 8567
+Fehler 185 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125367, 125369 Record: 8569
+Fehler 186 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125387, 125386 Record: 8586
+Fehler 187 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125387, 125386 Record: 8587
+Fehler 188 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125392, 125390 Record: 8590
+Fehler 189 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125392, 125390 Record: 8592
+Fehler 190 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125469, 125468 Record: 8668
+Fehler 191 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125469, 125468 Record: 8669
+Fehler 192 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125509, 125508 Record: 8708
+Fehler 193 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125509, 125508 Record: 8709
+Fehler 194 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125367, 125369 Record: 8817
+Fehler 195 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125627, 125628 Record: 8827
+Fehler 196 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125627, 125628 Record: 8828
+Fehler 197 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125627, 125628 Record: 8831
+Fehler 198 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125725, 125724 Record: 8925
+Fehler 199 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125725, 125724 Record: 8926
+Fehler 200 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 125741, 125740, 125742 Record: 8941
+Fehler 201 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 125741, 125740, 125742 Record: 8942
+Fehler 202 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 125741, 125740, 125742 Record: 8943
+Fehler 203 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125877, 125876 Record: 9077
+Fehler 204 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125877, 125876 Record: 9078
+Fehler 205 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125925, 125926 Record: 9126
+Fehler 206 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125925, 125926 Record: 9127
+Fehler 207 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125957, 125956 Record: 9158
+Fehler 208 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125957, 125956 Record: 9159
+Fehler 209 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125972, 125966 Record: 9168
+Fehler 210 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125972, 125966 Record: 9174
+Fehler 211 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 126281, 126282 Record: 9488
+Fehler 212 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 126281, 126282 Record: 9489
+Fehler 213 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 126289, 126288, 126291, 126293 Record: 9495
+Fehler 214 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 126289, 126288, 126291, 126293 Record: 9496
+Fehler 215 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 126289, 126288, 126291, 126293 Record: 9498
+Fehler 216 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 126289, 126288, 126291, 126293 Record: 9500
+Fehler 217 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 126307, 126306 Record: 9513
+Fehler 218 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 126307, 126306 Record: 9514
+Import gestartet:
+	05.05.2017 09:07:39
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: DW Beteiligungs GmbH neu
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Import gestartet:
+	05.05.2017 09:55:49
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_1.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: DW Beteiligungs GmbH neu
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	275
+Anzahl aktuallisierten Kontakte:	701
+Anzahl Fehler:	22
+Fehler 0 :	Zu diesem Kontakt existieren 7 potentielle Duplikate mit den Master IDs: 71570, 77239, 77238, 77243, 77242, 77245, 77244 Record: 25
+Fehler 1 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71619, 71620 Record: 88
+Fehler 2 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71619, 71620 Record: 89
+Fehler 3 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71641, 71643 Record: 120
+Fehler 4 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71641, 71643 Record: 122
+Fehler 5 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71705, 73208 Record: 212
+Fehler 6 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71713, 72520 Record: 225
+Fehler 7 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71768, 73051 Record: 309
+Fehler 8 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71808, 71807 Record: 361
+Fehler 9 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71808, 71807 Record: 362
+Fehler 10 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71869, 71870 Record: 459
+Fehler 11 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71869, 71870 Record: 460
+Fehler 12 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 71889, 71887, 71886 Record: 482
+Fehler 13 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 71889, 71887, 71886 Record: 483
+Fehler 14 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 71889, 71887, 71886 Record: 485
+Fehler 15 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71912, 75388 Record: 518
+Fehler 16 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71977, 71978 Record: 606
+Fehler 17 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71977, 71978 Record: 607
+Fehler 18 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72017, 74952 Record: 662
+Fehler 19 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72106, 72685 Record: 783
+Fehler 20 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74680, 72206 Record: 911
+Fehler 21 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 72224, 73716, 76046 Record: 935
+Import gestartet:
+	05.05.2017 10:12:54
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_2.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: DW Beteiligungs GmbH neu
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	268
+Anzahl aktuallisierten Kontakte:	696
+Anzahl Fehler:	34
+Fehler 0 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72297, 72298 Record: 29
+Fehler 1 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72297, 72298 Record: 30
+Fehler 2 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72312, 72316 Record: 52
+Fehler 3 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72312, 72316 Record: 57
+Fehler 4 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72357, 72356 Record: 117
+Fehler 5 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72357, 72356 Record: 118
+Fehler 6 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72381, 72382 Record: 154
+Fehler 7 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72381, 72382 Record: 155
+Fehler 8 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 72385, 72387, 72386 Record: 158
+Fehler 9 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 72385, 72387, 72386 Record: 159
+Fehler 10 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 72385, 72387, 72386 Record: 160
+Fehler 11 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72458, 72490 Record: 267
+Fehler 12 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72471, 72472 Record: 288
+Fehler 13 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72471, 72472 Record: 289
+Fehler 14 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72458, 72490 Record: 311
+Fehler 15 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71713, 72520 Record: 352
+Fehler 16 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75273, 72523 Record: 356
+Fehler 17 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72557, 72556 Record: 402
+Fehler 18 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72557, 72556 Record: 403
+Fehler 19 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72593, 72594 Record: 450
+Fehler 20 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72593, 72594 Record: 452
+Fehler 21 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72106, 72685 Record: 577
+Fehler 22 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72691, 72690 Record: 583
+Fehler 23 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72691, 72690 Record: 584
+Fehler 24 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72763, 72764 Record: 678
+Fehler 25 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72763, 72764 Record: 679
+Fehler 26 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 72805, 72804, 72810 Record: 730
+Fehler 27 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 72805, 72804, 72810 Record: 731
+Fehler 28 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 72805, 72804, 72810 Record: 737
+Fehler 29 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72976, 72982 Record: 971
+Fehler 30 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72977, 74639 Record: 972
+Fehler 31 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72976, 72982 Record: 977
+Fehler 32 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72992, 72990 Record: 986
+Fehler 33 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72992, 72990 Record: 988
+Import gestartet:
+	05.05.2017 10:31:14
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_3.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: DW Beteiligungs GmbH neu
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	272
+Anzahl aktuallisierten Kontakte:	685
+Anzahl Fehler:	41
+Fehler 0 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71768, 73051 Record: 72
+Fehler 1 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 71515, 71467, 73055 Record: 76
+Fehler 2 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73057, 73067 Record: 78
+Fehler 3 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 73059, 71470, 71518, 73070 Record: 80
+Fehler 4 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 71472, 71520, 73060 Record: 81
+Fehler 5 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 73065, 73066, 71517, 71469 Record: 86
+Fehler 6 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 73065, 73066, 71517, 71469 Record: 87
+Fehler 7 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73057, 73067 Record: 88
+Fehler 8 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 73059, 71470, 71518, 73070 Record: 91
+Fehler 9 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73095, 73096 Record: 127
+Fehler 10 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73095, 73096 Record: 128
+Fehler 11 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73105, 73299 Record: 142
+Fehler 12 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73120, 75677 Record: 159
+Fehler 13 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71705, 73208 Record: 272
+Fehler 14 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73210, 73212 Record: 274
+Fehler 15 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73210, 73212 Record: 276
+Fehler 16 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 73218, 73220, 73222 Record: 284
+Fehler 17 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 73218, 73220, 73222 Record: 286
+Fehler 18 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 73218, 73220, 73222 Record: 288
+Fehler 19 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 73243, 73242, 73245, 73244, 73246 Record: 313
+Fehler 20 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 73243, 73242, 73245, 73244, 73246 Record: 314
+Fehler 21 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 73243, 73242, 73245, 73244, 73246 Record: 315
+Fehler 22 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 73243, 73242, 73245, 73244, 73246 Record: 316
+Fehler 23 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 73243, 73242, 73245, 73244, 73246 Record: 317
+Fehler 24 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73249, 73250 Record: 320
+Fehler 25 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73249, 73250 Record: 321
+Fehler 26 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73271, 73273 Record: 351
+Fehler 27 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73271, 73273 Record: 353
+Fehler 28 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73105, 73299 Record: 393
+Fehler 29 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 77072, 73320 Record: 423
+Fehler 30 :	Zu diesem Kontakt existieren 12 potentielle Duplikate mit den Master IDs: 75537, 75536, 75395, 75539, 75541, 75540, 78180, 75543, 75542, 73401, 75535, 75534 Record: 570
+Fehler 31 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73506, 73509 Record: 706
+Fehler 32 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73506, 73509 Record: 709
+Fehler 33 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 77057, 73543 Record: 756
+Fehler 34 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73578, 77597 Record: 808
+Fehler 35 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73689, 73688 Record: 949
+Fehler 36 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73689, 73688 Record: 950
+Fehler 37 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73697, 78449 Record: 960
+Fehler 38 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 72224, 73716, 76046 Record: 984
+Fehler 39 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73719, 73718 Record: 986
+Fehler 40 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73719, 73718 Record: 987
+Import gestartet:
+	05.05.2017 10:49:23
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_4.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: DW Beteiligungs GmbH neu
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	244
+Anzahl aktuallisierten Kontakte:	730
+Anzahl Fehler:	24
+Fehler 0 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73851, 74142 Record: 184
+Fehler 1 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73882, 73884 Record: 228
+Fehler 2 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73882, 73884 Record: 230
+Fehler 3 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73997, 73998 Record: 380
+Fehler 4 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73997, 73998 Record: 381
+Fehler 5 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74005, 76446 Record: 389
+Fehler 6 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73851, 74142 Record: 590
+Fehler 7 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 71476, 71524, 74157 Record: 610
+Fehler 8 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 74177, 74179, 74181, 74180 Record: 640
+Fehler 9 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 74177, 74179, 74181, 74180 Record: 642
+Fehler 10 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 74177, 74179, 74181, 74180 Record: 643
+Fehler 11 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 74177, 74179, 74181, 74180 Record: 644
+Fehler 12 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74283, 74282 Record: 774
+Fehler 13 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74283, 74282 Record: 775
+Fehler 14 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74299, 74301 Record: 794
+Fehler 15 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74299, 74301 Record: 796
+Fehler 16 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74303, 74302 Record: 798
+Fehler 17 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74303, 74302 Record: 799
+Fehler 18 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74311, 74310 Record: 810
+Fehler 19 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74311, 74310 Record: 811
+Fehler 20 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74361, 74362 Record: 862
+Fehler 21 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74361, 74362 Record: 863
+Fehler 22 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74468, 74475 Record: 984
+Fehler 23 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74468, 74475 Record: 995
+Import gestartet:
+	05.05.2017 11:09:32
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_5.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: DW Beteiligungs GmbH neu
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	233
+Anzahl aktuallisierten Kontakte:	740
+Anzahl Fehler:	25
+Fehler 0 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74468, 74475 Record: 3
+Fehler 1 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72977, 74639 Record: 198
+Fehler 2 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74669, 74670 Record: 236
+Fehler 3 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74669, 74670 Record: 237
+Fehler 4 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74677, 78713 Record: 246
+Fehler 5 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74680, 72206 Record: 251
+Fehler 6 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74709, 74710 Record: 291
+Fehler 7 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74709, 74710 Record: 292
+Fehler 8 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 74721, 74722, 74717 Record: 301
+Fehler 9 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 74721, 74722, 74717 Record: 305
+Fehler 10 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 74721, 74722, 74717 Record: 306
+Fehler 11 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 130865, 130871 Record: 508
+Fehler 12 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74879, 74878 Record: 534
+Fehler 13 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74879, 74878 Record: 535
+Fehler 14 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74928, 74927 Record: 603
+Fehler 15 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74928, 74927 Record: 604
+Fehler 16 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 72017, 74952 Record: 634
+Fehler 17 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75009, 75010 Record: 710
+Fehler 18 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75009, 75010 Record: 711
+Fehler 19 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75055, 75054 Record: 772
+Fehler 20 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75055, 75054 Record: 773
+Fehler 21 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75133, 75132 Record: 874
+Fehler 22 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75133, 75132 Record: 875
+Fehler 23 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75160, 78364 Record: 912
+Fehler 24 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75206, 77678 Record: 968
+Import gestartet:
+	05.05.2017 11:31:09
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_6.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: DW Beteiligungs GmbH neu
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	243
+Anzahl aktuallisierten Kontakte:	723
+Anzahl Fehler:	32
+Fehler 0 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 77521, 75241 Record: 18
+Fehler 1 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75273, 72523 Record: 59
+Fehler 2 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 75331, 75330, 75332 Record: 137
+Fehler 3 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 75331, 75330, 75332 Record: 138
+Fehler 4 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 75331, 75330, 75332 Record: 139
+Fehler 5 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 75529, 77065, 75358 Record: 175
+Fehler 6 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 75380, 71484, 71532 Record: 200
+Fehler 7 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 71912, 75388 Record: 211
+Fehler 8 :	Zu diesem Kontakt existieren 12 potentielle Duplikate mit den Master IDs: 75537, 75536, 75395, 75539, 75541, 75540, 78180, 75543, 75542, 73401, 75535, 75534 Record: 219
+Fehler 9 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75489, 75490 Record: 338
+Fehler 10 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75489, 75490 Record: 339
+Fehler 11 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 75529, 77065, 75358 Record: 388
+Fehler 12 :	Zu diesem Kontakt existieren 12 potentielle Duplikate mit den Master IDs: 75537, 75536, 75395, 75539, 75541, 75540, 78180, 75543, 75542, 73401, 75535, 75534 Record: 394
+Fehler 13 :	Zu diesem Kontakt existieren 12 potentielle Duplikate mit den Master IDs: 75537, 75536, 75395, 75539, 75541, 75540, 78180, 75543, 75542, 73401, 75535, 75534 Record: 395
+Fehler 14 :	Zu diesem Kontakt existieren 12 potentielle Duplikate mit den Master IDs: 75537, 75536, 75395, 75539, 75541, 75540, 78180, 75543, 75542, 73401, 75535, 75534 Record: 396
+Fehler 15 :	Zu diesem Kontakt existieren 12 potentielle Duplikate mit den Master IDs: 75537, 75536, 75395, 75539, 75541, 75540, 78180, 75543, 75542, 73401, 75535, 75534 Record: 397
+Fehler 16 :	Zu diesem Kontakt existieren 12 potentielle Duplikate mit den Master IDs: 75537, 75536, 75395, 75539, 75541, 75540, 78180, 75543, 75542, 73401, 75535, 75534 Record: 399
+Fehler 17 :	Zu diesem Kontakt existieren 12 potentielle Duplikate mit den Master IDs: 75537, 75536, 75395, 75539, 75541, 75540, 78180, 75543, 75542, 73401, 75535, 75534 Record: 400
+Fehler 18 :	Zu diesem Kontakt existieren 12 potentielle Duplikate mit den Master IDs: 75537, 75536, 75395, 75539, 75541, 75540, 78180, 75543, 75542, 73401, 75535, 75534 Record: 401
+Fehler 19 :	Zu diesem Kontakt existieren 12 potentielle Duplikate mit den Master IDs: 75537, 75536, 75395, 75539, 75541, 75540, 78180, 75543, 75542, 73401, 75535, 75534 Record: 402
+Fehler 20 :	Zu diesem Kontakt existieren 12 potentielle Duplikate mit den Master IDs: 75537, 75536, 75395, 75539, 75541, 75540, 78180, 75543, 75542, 73401, 75535, 75534 Record: 403
+Fehler 21 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 73120, 75677 Record: 580
+Fehler 22 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 77457, 75770 Record: 709
+Fehler 23 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75857, 75858 Record: 832
+Fehler 24 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75857, 75858 Record: 833
+Fehler 25 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75904, 75903 Record: 886
+Fehler 26 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75904, 75903 Record: 887
+Fehler 27 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75913, 75914 Record: 897
+Fehler 28 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75913, 75914 Record: 898
+Fehler 29 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75953, 75954 Record: 958
+Fehler 30 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75953, 75954 Record: 959
+Fehler 31 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75984, 75981 Record: 996
+Import gestartet:
+	05.05.2017 11:50:33
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_7.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: DW Beteiligungs GmbH neu
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	248
+Anzahl aktuallisierten Kontakte:	734
+Anzahl Fehler:	16
+Fehler 0 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 75984, 75981 Record: 1
+Fehler 1 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 72224, 73716, 76046 Record: 87
+Fehler 2 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 76257, 76256, 76258 Record: 360
+Fehler 3 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 76257, 76256, 76258 Record: 361
+Fehler 4 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 76257, 76256, 76258 Record: 362
+Fehler 5 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 76319, 76318 Record: 449
+Fehler 6 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 76319, 76318 Record: 450
+Fehler 7 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 76365, 76364 Record: 508
+Fehler 8 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 76365, 76364 Record: 509
+Fehler 9 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 74005, 76446 Record: 625
+Fehler 10 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 76597, 76598 Record: 825
+Fehler 11 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 76597, 76598 Record: 826
+Fehler 12 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 76748, 76607 Record: 838
+Fehler 13 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 76720, 76717, 76718 Record: 987
+Fehler 14 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 76720, 76717, 76718 Record: 988
+Fehler 15 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 76720, 76717, 76718 Record: 990
+Import gestartet:
+	05.05.2017 12:10:04
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_8.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: DW Beteiligungs GmbH neu
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	240
+Anzahl aktuallisierten Kontakte:	729
+Anzahl Fehler:	29
+Fehler 0 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 76741, 76742 Record: 17
+Fehler 1 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 76741, 76742 Record: 18
+Fehler 2 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 76748, 76607 Record: 28
+Fehler 3 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 76869, 76870 Record: 183
+Fehler 4 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 76869, 76870 Record: 184
+Fehler 5 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 77057, 73543 Record: 447
+Fehler 6 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 75529, 77065, 75358 Record: 455
+Fehler 7 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 77072, 73320 Record: 464
+Fehler 8 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 77109, 77108 Record: 510
+Fehler 9 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 77109, 77108 Record: 511
+Fehler 10 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 77659, 77150 Record: 560
+Fehler 11 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 77181, 77183, 77182 Record: 600
+Fehler 12 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 77181, 77183, 77182 Record: 601
+Fehler 13 :	Zu diesem Kontakt existieren 3 potentielle Duplikate mit den Master IDs: 77181, 77183, 77182 Record: 602
+Fehler 14 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 77185, 77184, 77189, 77191, 77190 Record: 603
+Fehler 15 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 77185, 77184, 77189, 77191, 77190 Record: 604
+Fehler 16 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 77185, 77184, 77189, 77191, 77190 Record: 608
+Fehler 17 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 77185, 77184, 77189, 77191, 77190 Record: 609
+Fehler 18 :	Zu diesem Kontakt existieren 5 potentielle Duplikate mit den Master IDs: 77185, 77184, 77189, 77191, 77190 Record: 610
+Fehler 19 :	Zu diesem Kontakt existieren 7 potentielle Duplikate mit den Master IDs: 71570, 77239, 77238, 77243, 77242, 77245, 77244 Record: 677
+Fehler 20 :	Zu diesem Kontakt existieren 7 potentielle Duplikate mit den Master IDs: 71570, 77239, 77238, 77243, 77242, 77245, 77244 Record: 680
+Fehler 21 :	Zu diesem Kontakt existieren 7 potentielle Duplikate mit den Master IDs: 71570, 77239, 77238, 77243, 77242, 77245, 77244 Record: 683
+Fehler 22 :	Zu diesem Kontakt existieren 7 potentielle Duplikate mit den Master IDs: 71570, 77239, 77238, 77243, 77242, 77245, 77244 Record: 684
+Fehler 23 :	Zu diesem Kontakt existieren 7 potentielle Duplikate mit den Master IDs: 71570, 77239, 77238, 77243, 77242, 77245, 77244 Record: 685
+Fehler 24 :	Zu diesem Kontakt existieren 7 potentielle Duplikate mit den Master IDs: 71570, 77239, 77238, 77243, 77242, 77245, 77244 Record: 686
+Fehler 25 :	Zu diesem Kontakt existieren 7 potentielle Duplikate mit den Master IDs: 71570, 77239, 77238, 77243, 77242, 77245, 77244 Record: 687
+Fehler 26 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 77290, 77292 Record: 750
+Fehler 27 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 77290, 77292 Record: 753
+Fehler 28 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 77457, 75770 Record: 969
+Import gestartet:
+	05.05.2017 12:34:16
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_9.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: DW Beteiligungs GmbH neu
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen

@@ -1,0 +1,345 @@
+Import gestartet:
+	05.05.2017 08:05:09
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_1.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: Test Kontaktimport DuB
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	997
+Anzahl aktuallisierten Kontakte:	1
+Anzahl Fehler:	0
+Import gestartet:
+	05.05.2017 08:07:36
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_2.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: Test Kontaktimport DuB
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	993
+Anzahl aktuallisierten Kontakte:	5
+Anzahl Fehler:	0
+Import gestartet:
+	05.05.2017 08:09:54
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_3.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: Test Kontaktimport DuB
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	993
+Anzahl aktuallisierten Kontakte:	5
+Anzahl Fehler:	0
+Import gestartet:
+	05.05.2017 08:13:21
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_4.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: Test Kontaktimport DuB
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	732
+Anzahl aktuallisierten Kontakte:	4
+Anzahl Fehler:	0
+Import gestartet:
+	05.05.2017 08:14:39
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_5.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: Test Kontaktimport DuB
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	21
+Anzahl aktuallisierten Kontakte:	0
+Anzahl Fehler:	0
+Import gestartet:
+	05.05.2017 08:18:20
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_5.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: Test Kontaktimport DuB
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	973
+Anzahl aktuallisierten Kontakte:	24
+Anzahl Fehler:	1
+Fehler 0 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 116003, 116013 Record: 508
+Import gestartet:
+	05.05.2017 08:20:11
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_4.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: Test Kontaktimport DuB
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	255
+Anzahl aktuallisierten Kontakte:	731
+Anzahl Fehler:	12
+Fehler 0 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 118011, 118013 Record: 228
+Fehler 1 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 118011, 118013 Record: 230
+Fehler 2 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 118163, 118162 Record: 380
+Fehler 3 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 118163, 118162 Record: 381
+Fehler 4 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 118264, 118255 Record: 474
+Fehler 5 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 118264, 118255 Record: 483
+Fehler 6 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 118400, 118399 Record: 619
+Fehler 7 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 118400, 118399 Record: 620
+Fehler 8 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 118420, 118423, 118422, 118424 Record: 640
+Fehler 9 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 118420, 118423, 118422, 118424 Record: 642
+Fehler 10 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 118420, 118423, 118422, 118424 Record: 643
+Fehler 11 :	Zu diesem Kontakt existieren 4 potentielle Duplikate mit den Master IDs: 118420, 118423, 118422, 118424 Record: 644
+Import gestartet:
+	05.05.2017 08:21:39
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_6.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: Test Kontaktimport DuB
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	982
+Anzahl aktuallisierten Kontakte:	16
+Anzahl Fehler:	0
+Import gestartet:
+	05.05.2017 08:23:15
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_7.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: Test Kontaktimport DuB
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	993
+Anzahl aktuallisierten Kontakte:	5
+Anzahl Fehler:	0
+Import gestartet:
+	05.05.2017 08:25:11
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_8.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: Test Kontaktimport DuB
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	980
+Anzahl aktuallisierten Kontakte:	18
+Anzahl Fehler:	0
+Import gestartet:
+	05.05.2017 08:26:32
+####################
+# Quelle:          #
+####################
+	Datei:DuB_Lieferanten_9.csv
+
+####################
+# Ziel             #
+####################
+	Kundennummer: 2027416
+	Gesellschaft: Test Kontaktimport DuB
+	Benutzername: dirk.kohnen@scopevisio.com
+
+####################
+# Einstellungen    #
+####################
+Art der importierten Daten:
+
+	Kontakte
+Duplikatserkannung durch:
+	Name
+Verhalten bei Duplikaten:
+	Auffüllen
+####################
+# Ergebnis:         #
+####################
+Anzahl Importierter Kontakte:	1659
+Anzahl aktuallisierten Kontakte:	17
+Anzahl Fehler:	2
+Fehler 0 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125367, 125369 Record: 839
+Fehler 1 :	Zu diesem Kontakt existieren 2 potentielle Duplikate mit den Master IDs: 125627, 125628 Record: 853
