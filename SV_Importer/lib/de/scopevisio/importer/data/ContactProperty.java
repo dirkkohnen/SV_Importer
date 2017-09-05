@@ -62,7 +62,6 @@ public class ContactProperty {
 
 	
 	public String getJSON(){
-		// 27722\"type\":\"Informationen zum Kontakt\",\"subtype\":\"a\",\"description\":\"abc\",\"validfrom\":\"23.05.2016\",\"spheres\":\"Kontakt\",\"employerids\":\"1009,1723\",\"employeedomain\":true},
 		String jsonString = "{";
 		if (this.attributesList[this.attributesNameList.indexOf("id")] != null) jsonString = jsonString + "\"id\":\"" + this.attributesList[this.attributesNameList.indexOf("id")] + "\",";
 		if (this.attributesList[this.attributesNameList.indexOf("contactid")] != null) jsonString = jsonString + "\"contactid\":\"" + this.attributesList[this.attributesNameList.indexOf("contactid")] + "\",";
