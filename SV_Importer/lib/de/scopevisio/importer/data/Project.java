@@ -26,8 +26,13 @@ public class Project {
 	 * @return void
 	 */
 	private void initalize() {
+		this.attributesNameList.add("number");
 		this.attributesNameList.add("name");
 		this.attributesNameList.add("contactId");
+		this.attributesNameList.add("initiatorContactId");
+		this.attributesNameList.add("contactPerson");
+		this.attributesNameList.add("ownerUid");
+		this.attributesNameList.add("workdays");
 		this.attributesNameList.add("description");
 		this.attributesNameList.add("type");
 		this.attributesNameList.add("language");
@@ -35,6 +40,8 @@ public class Project {
 		this.attributesNameList.add("startTs");
 		this.attributesNameList.add("endTs");
 		this.attributesNameList.add("decisionTs");
+		this.attributesNameList.add("estimatedHoursMode");
+		this.attributesNameList.add("estimatedHours");
 		this.attributesNameList.add("billable");
 		this.attributesNameList.add("timeRecordable");
 		this.attributesNameList.add("timeRecordType");
@@ -86,7 +93,7 @@ public class Project {
 	}
 
 	
-	public String getJSON(){
+	public String getJSONSOAP(){
 		String jsonString = "{";
 		if (this.attributesList[this.attributesNameList.indexOf("name")] != null) jsonString = jsonString + "\"name\":\"" + this.attributesList[this.attributesNameList.indexOf("name")] + "\",";
 		if (this.attributesList[this.attributesNameList.indexOf("contactId")] != null) jsonString = jsonString + "\"contactId\":\"" + this.attributesList[this.attributesNameList.indexOf("contactId")] + "\",";
@@ -143,6 +150,73 @@ public class Project {
 		if (this.attributesList[this.attributesNameList.indexOf("customfield_id_29")] != null) jsonString = jsonString + "\"customfield_id_29\":\"" + this.attributesList[this.attributesNameList.indexOf("customfield_id_29")] + "\",";
 		if (this.attributesList[this.attributesNameList.indexOf("customfield_id_30")] != null) jsonString = jsonString + "\"customfield_id_30\":\"" + this.attributesList[this.attributesNameList.indexOf("customfield_id_30")] + "\",";
 		jsonString = jsonString.substring(0, jsonString.length()-1);
+		jsonString = jsonString +"}";
+		return jsonString;
+	}
+	
+	public String getJSONRest(){
+		String jsonString = "{";
+		if (this.attributesList[this.attributesNameList.indexOf("number")] != null) jsonString = jsonString + "\"number\":\"" + this.attributesList[this.attributesNameList.indexOf("number")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("name")] != null) jsonString = jsonString + "\"name\":\"" + this.attributesList[this.attributesNameList.indexOf("name")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("category")] != null) jsonString = jsonString + "\"category\":\"" + this.attributesList[this.attributesNameList.indexOf("category")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("type")] != null) jsonString = jsonString + "\"type\":\"" + this.attributesList[this.attributesNameList.indexOf("type")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("type2")] != null) jsonString = jsonString + "\"type2\":\"" + this.attributesList[this.attributesNameList.indexOf("type2")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("description")] != null) jsonString = jsonString + "\"description\":\"" + this.attributesList[this.attributesNameList.indexOf("description")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("contactId")] != null) jsonString = jsonString + "\"contactId\":\"" + this.attributesList[this.attributesNameList.indexOf("contactId")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("initiatorContactId")] != null) jsonString = jsonString + "\"initiatorContactId\":\"" + this.attributesList[this.attributesNameList.indexOf("initiatorContactId")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("contactPerson")] != null) jsonString = jsonString + "\"contactPerson\":\"" + this.attributesList[this.attributesNameList.indexOf("contactPerson")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("ownerUid")] != null) jsonString = jsonString + "\"ownerUid\":\"" + this.attributesList[this.attributesNameList.indexOf("ownerUid")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("workdays")] != null) jsonString = jsonString + "\"workdays\":\"" + this.attributesList[this.attributesNameList.indexOf("workdays")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("startTs")] != null) jsonString = jsonString + "\"startTs\":\"" + this.attributesList[this.attributesNameList.indexOf("startTs")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("endTs")] != null) jsonString = jsonString + "\"endTs\":\"" + this.attributesList[this.attributesNameList.indexOf("endTs")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("decisionTs")] != null) jsonString = jsonString + " decisionTs\":\"" + this.attributesList[this.attributesNameList.indexOf("decisionTs")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("estimatedHoursMode")] != null) jsonString = jsonString + " estimatedHoursMode\":\"" + this.attributesList[this.attributesNameList.indexOf("estimatedHoursMode")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("estimatedHours")] != null) jsonString = jsonString + " estimatedHours\":\"" + this.attributesList[this.attributesNameList.indexOf("estimatedHours")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("dimensionNumber")] != null) jsonString = jsonString + "\"dimensionNumber\":\"" + this.attributesList[this.attributesNameList.indexOf("dimensionNumber")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("dimensionName")] != null) jsonString = jsonString + "\"dimensionName\":\"" + this.attributesList[this.attributesNameList.indexOf("dimensionName")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("phase")] != null) jsonString = jsonString + "\"phase\":\"" + this.attributesList[this.attributesNameList.indexOf("phase")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("status")] != null) jsonString = jsonString + "\"status\":\"" + this.attributesList[this.attributesNameList.indexOf("status")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("priority")] != null) jsonString = jsonString + "\"priority\":\"" + this.attributesList[this.attributesNameList.indexOf("priority")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("risk")] != null) jsonString = jsonString + " risk\":\"" + this.attributesList[this.attributesNameList.indexOf("risk")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("riskDescription")] != null) jsonString = jsonString + "\"riskDescription\":\"" + this.attributesList[this.attributesNameList.indexOf("riskDescription")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("billable")] != null) jsonString = jsonString + "\"billable\":\"" + this.attributesList[this.attributesNameList.indexOf("billable")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("timeRecordable")] != null) jsonString = jsonString + "\"timeRecordable\":\"" + this.attributesList[this.attributesNameList.indexOf("timeRecordable")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("timeRecordType")] != null) jsonString = jsonString + "\"timeRecordType\":\"" + this.attributesList[this.attributesNameList.indexOf("timeRecordType")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("hoursPerDay")] != null) jsonString = jsonString + "\"hoursPerDay\":\"" + this.attributesList[this.attributesNameList.indexOf("hoursPerDay")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("mail")] != null) jsonString = jsonString + "\"mail\":\"" + this.attributesList[this.attributesNameList.indexOf("mail")] + "\",";
+		if (this.attributesList[this.attributesNameList.indexOf("customFields")] != null) jsonString = jsonString + "\"customFields\": [";
+		if (this.attributesList[this.attributesNameList.indexOf("customText1")] != null) jsonString = jsonString + "{\"customText1\":\"" + this.attributesList[this.attributesNameList.indexOf("customText1")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText2")] != null) jsonString = jsonString + "{\"customText2\":\"" + this.attributesList[this.attributesNameList.indexOf("customText2")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText3")] != null) jsonString = jsonString + "{\"customText3\":\"" + this.attributesList[this.attributesNameList.indexOf("customText3")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText4")] != null) jsonString = jsonString + "{\"customText4\":\"" + this.attributesList[this.attributesNameList.indexOf("customText4")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText5")] != null) jsonString = jsonString + "{\"customText5\":\"" + this.attributesList[this.attributesNameList.indexOf("customText5")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText6")] != null) jsonString = jsonString + "{\"customText6\":\"" + this.attributesList[this.attributesNameList.indexOf("customText6")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText7")] != null) jsonString = jsonString + "{\"customText7\":\"" + this.attributesList[this.attributesNameList.indexOf("customText7")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText8")] != null) jsonString = jsonString + "{\"customText8\":\"" + this.attributesList[this.attributesNameList.indexOf("customText8")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText9")] != null) jsonString = jsonString + "{\"customText9\":\"" + this.attributesList[this.attributesNameList.indexOf("customText9")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText10")] != null) jsonString = jsonString + "{\"customText10\":\"" + this.attributesList[this.attributesNameList.indexOf("customText10")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText11")] != null) jsonString = jsonString + "{\"customText11\":\"" + this.attributesList[this.attributesNameList.indexOf("customText11")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText12")] != null) jsonString = jsonString + "{\"customText12\":\"" + this.attributesList[this.attributesNameList.indexOf("customText12")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText13")] != null) jsonString = jsonString + "{\"customText13\":\"" + this.attributesList[this.attributesNameList.indexOf("customText13")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText14")] != null) jsonString = jsonString + "{\"customText14\":\"" + this.attributesList[this.attributesNameList.indexOf("customText14")] + "\"},}";
+		if (this.attributesList[this.attributesNameList.indexOf("customText15")] != null) jsonString = jsonString + "{\"customText15\":\"" + this.attributesList[this.attributesNameList.indexOf("customText15")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText16")] != null) jsonString = jsonString + "{\"customText16\":\"" + this.attributesList[this.attributesNameList.indexOf("customText16")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText17")] != null) jsonString = jsonString + "{\"customText17\":\"" + this.attributesList[this.attributesNameList.indexOf("customText17")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText18")] != null) jsonString = jsonString + "{\"customText18\":\"" + this.attributesList[this.attributesNameList.indexOf("customText18")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText19")] != null) jsonString = jsonString + "{\"customText19\":\"" + this.attributesList[this.attributesNameList.indexOf("customText19")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText20")] != null) jsonString = jsonString + "{\"customText20\":\"" + this.attributesList[this.attributesNameList.indexOf("customText20")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText21")] != null) jsonString = jsonString + "{\"customText21\":\"" + this.attributesList[this.attributesNameList.indexOf("customText21")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText22")] != null) jsonString = jsonString + "{\"customText22\":\"" + this.attributesList[this.attributesNameList.indexOf("customText22")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText23")] != null) jsonString = jsonString + "{\"customText23\":\"" + this.attributesList[this.attributesNameList.indexOf("customText23")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText24")] != null) jsonString = jsonString + "{\"customText24\":\"" + this.attributesList[this.attributesNameList.indexOf("customText24")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText25")] != null) jsonString = jsonString + "{\"customText25\":\"" + this.attributesList[this.attributesNameList.indexOf("customText25")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText26")] != null) jsonString = jsonString + "{\"customText26\":\"" + this.attributesList[this.attributesNameList.indexOf("customText26")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText27")] != null) jsonString = jsonString + "{\"customText27\":\"" + this.attributesList[this.attributesNameList.indexOf("customText27")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText28")] != null) jsonString = jsonString + "{\"customText28\":\"" + this.attributesList[this.attributesNameList.indexOf("customText28")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText29")] != null) jsonString = jsonString + "{\"customText29\":\"" + this.attributesList[this.attributesNameList.indexOf("customText29")] + "\"},";
+		if (this.attributesList[this.attributesNameList.indexOf("customText30")] != null) jsonString = jsonString + "{\"customText30\":\"" + this.attributesList[this.attributesNameList.indexOf("customText30")] + "\"},";
+		jsonString = jsonString.substring(0, jsonString.length()-1);
+		jsonString = jsonString +"]";
 		jsonString = jsonString +"}";
 		return jsonString;
 	}

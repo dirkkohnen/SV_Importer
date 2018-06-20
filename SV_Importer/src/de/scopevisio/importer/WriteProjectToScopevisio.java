@@ -73,7 +73,7 @@ public class WriteProjectToScopevisio implements IService{
 		this.projects = p;
 		this.data = "[";
         for (Project pr : this.projects){
-        	this.data = this.data + pr.getJSON() + "," + newline;
+        	this.data = this.data + pr.getJSONSOAP() + "," + newline;
         }
         this.data = this.data.substring(0, this.data.length()-2);
 		this.data = this.data + "]";

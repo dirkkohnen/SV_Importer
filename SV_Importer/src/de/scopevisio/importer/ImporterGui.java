@@ -47,6 +47,7 @@ public class ImporterGui implements ActionListener {
 
     private static final Logger LOGGER = LogManager.getLogger(SV_Importer.class.getName());
     private Importart art = Importart.KONTAKT;
+    private APIart api = APIart.REST;
 	static private final String newline = "\n";
 	public JFrame frmScopevisioImporter;
 	private JTextField textField;
@@ -298,8 +299,16 @@ public class ImporterGui implements ActionListener {
         	JCheckBox journalCheckBox = new JCheckBox("Protokoll");
         	if (this.prop.getProperty("protokoll").compareTo("true") == 0)  journalCheckBox.setSelected(true);
 
+        	ButtonGroup group2 = new ButtonGroup();
+        	JRadioButton restRadioButton = new JRadioButton("REST");
+        	if (this.api == APIart.REST)  restRadioButton.setSelected(true);
+        	group2.add(restRadioButton);
+        	JRadioButton soapRadioButton = new JRadioButton("SOAP");
+        	if (this.api == APIart.SOAP)  soapRadioButton.setSelected(true);
+        	group2.add(soapRadioButton);
         	
-    		Object[] message = {"Zu importierende Daten ...", contactRadioButton, contactRelationRadioButton, contactPropertyRadioButton, projectRadioButton, "Protokollierung ...", journalCheckBox};
+        	
+    		Object[] message = {"Zu importierende Daten ...", contactRadioButton, contactRelationRadioButton, contactPropertyRadioButton, projectRadioButton, "Protokollierung ...", journalCheckBox,"API",restRadioButton, soapRadioButton};
 
             JOptionPane pane = new JOptionPane( message, JOptionPane.PLAIN_MESSAGE, JOptionPane.OK_CANCEL_OPTION);
             pane.createDialog(null, "Einstellungen").setVisible(true);
@@ -330,6 +339,11 @@ public class ImporterGui implements ActionListener {
             		this.prop.setProperty("protokoll", "false");
             	}
             	
+            	if (restRadioButton.isSelected()){
+            		this.api = APIart.REST;
+            	} else if (soapRadioButton.isSelected()){
+            		this.api = APIart.SOAP;
+            	}
             } 
 
         }
