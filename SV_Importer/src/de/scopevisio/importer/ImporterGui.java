@@ -656,7 +656,7 @@ public class ImporterGui implements ActionListener {
 		        		break;
         			case PROJEKT:
 		        		ReadProjectFromCSV rpfc = new ReadProjectFromCSV(this.fileCSV);
-		        		WriteProjectToScopevisio wpts = new WriteProjectToScopevisio(this.prop);
+		        		WriteProjectSOAP wpts = new WriteProjectSOAP(this.prop);
 		        		wpts.setProject(rpfc.getProjects());
 		        		reply = wpts.postSoap();
 		        		System.out.println(reply);
