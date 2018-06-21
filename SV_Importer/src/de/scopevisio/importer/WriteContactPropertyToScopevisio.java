@@ -20,7 +20,7 @@ import de.scopevisio.importer.data.ContactProperty;
  * @author dirk.kohnen
  *
  */
-public class WriteContactPropertyToScopevisio implements IService{
+public class WriteContactPropertyToScopevisio implements IServiceSOAP{
 
     static private final String newline = "\n";
 	private final String url = "https://appload.scopevisio.com/api/soap/accounting/ContactProperty.create";

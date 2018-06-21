@@ -20,7 +20,7 @@ import de.scopevisio.importer.data.Project;
  * @author dirk.kohnen
  *
  */
-public class WriteProjectSOAP implements IService{
+public class WriteProjectSOAP implements IServiceSOAP{
 
     static private final String newline = "\n";
 	private final String url = "https://appload.scopevisio.com/api/soap/accounting/Project.write";

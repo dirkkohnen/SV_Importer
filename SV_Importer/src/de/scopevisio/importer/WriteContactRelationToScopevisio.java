@@ -21,7 +21,7 @@ import de.scopevisio.importer.data.ContactRelation;
  * @author dirk.kohnen
  *
  */
-public class WriteContactRelationToScopevisio implements IService{
+public class WriteContactRelationToScopevisio implements IServiceSOAP{
 
     static private final String newline = "\n";
 	private final String url = "https://appload.scopevisio.com/api/soap/contact/Contact.importRelation";

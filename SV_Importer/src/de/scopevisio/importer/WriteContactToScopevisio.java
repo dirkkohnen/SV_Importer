@@ -20,7 +20,7 @@ import de.scopevisio.importer.data.Contact;
  * @author dirk.kohnen
  *
  */
-public class WriteContactToScopevisio implements IService{
+public class WriteContactToScopevisio implements IServiceSOAP{
 
     static private final String newline = "\n";
 	private final String url = "https://appload.scopevisio.com/api/soap/contact/Contact.importExtendedCSV";

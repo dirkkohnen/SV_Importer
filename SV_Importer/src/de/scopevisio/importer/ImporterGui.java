@@ -32,6 +32,7 @@ import org.w3c.dom.CharacterData;
 import org.xml.sax.InputSource;
 
 import de.scopevisio.importer.data.Contact;
+import de.scopevisio.importer.data.Project;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -656,9 +657,13 @@ public class ImporterGui implements ActionListener {
 		        		break;
         			case PROJEKT:
 		        		ReadProjectFromCSV rpfc = new ReadProjectFromCSV(this.fileCSV);
-		        		WriteProjectSOAP wpts = new WriteProjectSOAP(this.prop);
-		        		wpts.setProject(rpfc.getProjects());
-		        		reply = wpts.postSoap();
+		        		if (this.api == APIart.REST) {
+			        		WriteProjectREST wpts = new WriteProjectREST();
+			        		List<Project> projects = rpfc.getProjects();
+			                for (Project pr : projects){
+			                	reply = wpts.postREST(pr);
+			                }
+		        		}
 		        		System.out.println(reply);
 		        		break;
 					default:
