@@ -23,8 +23,8 @@ public class WriteProjectREST implements IServiceREST {
 		conn.setRequestProperty("Accept", "application/json");
 		conn.setRequestProperty("Content-Type", "application/json");
 //		conn.setRequestProperty("authorization", "Bearer 93f9ab00-7e9d7822-5a5c-44ee-8ce8-543c3a060b01");	// Token Artur
-		conn.setRequestProperty("authorization", "Bearer afb95da4-62cf1acf-5f8e-43a5-aee8-dea6862a861e");	// Token Test
-//		conn.setRequestProperty("authorization", "Bearer fa0fbbb2-0704a637-ba21-4548-9f9e-3d20aa72872e");	// Token P3
+//		conn.setRequestProperty("authorization", "Bearer afb95da4-62cf1acf-5f8e-43a5-aee8-dea6862a861e");	// Token Test
+		conn.setRequestProperty("authorization", "Bearer fa0fbbb2-0704a637-ba21-4548-9f9e-3d20aa72872e");	// Token P3
 		return conn;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

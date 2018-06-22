@@ -58,6 +58,13 @@ public class Project {
 		this.attributesNameList.add("dimensionNumber");
 		this.attributesNameList.add("dimensionName");
 		this.attributesNameList.add("mail");
+		this.attributesNameList.add("Projektkoordinator");
+		this.attributesNameList.add("Führungskraft");
+		this.attributesNameList.add("Projektboxen");
+		this.attributesNameList.add("Themenfeld");
+		this.attributesNameList.add("Betriebsstätte");
+		this.attributesNameList.add("Fremdleistung?");
+		this.attributesNameList.add("Firmenname der Fremdfirma");
 		this.attributesNameList.add("customfield_id_1");
 		this.attributesNameList.add("customfield_id_2");
 		this.attributesNameList.add("customfield_id_3");
@@ -185,38 +192,37 @@ public class Project {
 		if (this.attributesList[this.attributesNameList.indexOf("timeRecordType")] != null) jsonString = jsonString + "\"timeRecordType\":\"" + this.attributesList[this.attributesNameList.indexOf("timeRecordType")] + "\",";
 		if (this.attributesList[this.attributesNameList.indexOf("hoursPerDay")] != null) jsonString = jsonString + "\"hoursPerDay\":\"" + this.attributesList[this.attributesNameList.indexOf("hoursPerDay")] + "\",";
 		if (this.attributesList[this.attributesNameList.indexOf("mail")] != null) jsonString = jsonString + "\"mail\":\"" + this.attributesList[this.attributesNameList.indexOf("mail")] + "\",";
-/*		if (this.attributesList[this.attributesNameList.indexOf("customFields")] != null) jsonString = jsonString + "\"customFields\": [";
-		if (this.attributesList[this.attributesNameList.indexOf("customText1")] != null) jsonString = jsonString + "{\"customText1\":\"" + this.attributesList[this.attributesNameList.indexOf("customText1")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText2")] != null) jsonString = jsonString + "{\"customText2\":\"" + this.attributesList[this.attributesNameList.indexOf("customText2")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText3")] != null) jsonString = jsonString + "{\"customText3\":\"" + this.attributesList[this.attributesNameList.indexOf("customText3")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText4")] != null) jsonString = jsonString + "{\"customText4\":\"" + this.attributesList[this.attributesNameList.indexOf("customText4")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText5")] != null) jsonString = jsonString + "{\"customText5\":\"" + this.attributesList[this.attributesNameList.indexOf("customText5")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText6")] != null) jsonString = jsonString + "{\"customText6\":\"" + this.attributesList[this.attributesNameList.indexOf("customText6")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText7")] != null) jsonString = jsonString + "{\"customText7\":\"" + this.attributesList[this.attributesNameList.indexOf("customText7")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText8")] != null) jsonString = jsonString + "{\"customText8\":\"" + this.attributesList[this.attributesNameList.indexOf("customText8")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText9")] != null) jsonString = jsonString + "{\"customText9\":\"" + this.attributesList[this.attributesNameList.indexOf("customText9")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText10")] != null) jsonString = jsonString + "{\"customText10\":\"" + this.attributesList[this.attributesNameList.indexOf("customText10")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText11")] != null) jsonString = jsonString + "{\"customText11\":\"" + this.attributesList[this.attributesNameList.indexOf("customText11")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText12")] != null) jsonString = jsonString + "{\"customText12\":\"" + this.attributesList[this.attributesNameList.indexOf("customText12")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText13")] != null) jsonString = jsonString + "{\"customText13\":\"" + this.attributesList[this.attributesNameList.indexOf("customText13")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText14")] != null) jsonString = jsonString + "{\"customText14\":\"" + this.attributesList[this.attributesNameList.indexOf("customText14")] + "\"},}";
-		if (this.attributesList[this.attributesNameList.indexOf("customText15")] != null) jsonString = jsonString + "{\"customText15\":\"" + this.attributesList[this.attributesNameList.indexOf("customText15")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText16")] != null) jsonString = jsonString + "{\"customText16\":\"" + this.attributesList[this.attributesNameList.indexOf("customText16")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText17")] != null) jsonString = jsonString + "{\"customText17\":\"" + this.attributesList[this.attributesNameList.indexOf("customText17")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText18")] != null) jsonString = jsonString + "{\"customText18\":\"" + this.attributesList[this.attributesNameList.indexOf("customText18")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText19")] != null) jsonString = jsonString + "{\"customText19\":\"" + this.attributesList[this.attributesNameList.indexOf("customText19")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText20")] != null) jsonString = jsonString + "{\"customText20\":\"" + this.attributesList[this.attributesNameList.indexOf("customText20")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText21")] != null) jsonString = jsonString + "{\"customText21\":\"" + this.attributesList[this.attributesNameList.indexOf("customText21")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText22")] != null) jsonString = jsonString + "{\"customText22\":\"" + this.attributesList[this.attributesNameList.indexOf("customText22")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText23")] != null) jsonString = jsonString + "{\"customText23\":\"" + this.attributesList[this.attributesNameList.indexOf("customText23")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText24")] != null) jsonString = jsonString + "{\"customText24\":\"" + this.attributesList[this.attributesNameList.indexOf("customText24")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText25")] != null) jsonString = jsonString + "{\"customText25\":\"" + this.attributesList[this.attributesNameList.indexOf("customText25")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText26")] != null) jsonString = jsonString + "{\"customText26\":\"" + this.attributesList[this.attributesNameList.indexOf("customText26")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText27")] != null) jsonString = jsonString + "{\"customText27\":\"" + this.attributesList[this.attributesNameList.indexOf("customText27")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText28")] != null) jsonString = jsonString + "{\"customText28\":\"" + this.attributesList[this.attributesNameList.indexOf("customText28")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText29")] != null) jsonString = jsonString + "{\"customText29\":\"" + this.attributesList[this.attributesNameList.indexOf("customText29")] + "\"},";
-		if (this.attributesList[this.attributesNameList.indexOf("customText30")] != null) jsonString = jsonString + "{\"customText30\":\"" + this.attributesList[this.attributesNameList.indexOf("customText30")] + "\"},";
-		jsonString = jsonString +"]";*/
+		jsonString = jsonString + "\"customFields\": [";
+		if (this.attributesList[this.attributesNameList.indexOf("Projektkoordinator")] != null) {
+			jsonString = jsonString + "{\"customFieldName\":\"customText2\",";
+			jsonString = jsonString + "\"customFieldValue\":\"" + this.attributesList[this.attributesNameList.indexOf("Projektkoordinator")] + "\"},";
+		}
+		if (this.attributesList[this.attributesNameList.indexOf("Führungskraft")] != null) {
+			jsonString = jsonString + "{\"customFieldName\":\"customText1\",";
+			jsonString = jsonString + "\"customFieldValue\":\"" + this.attributesList[this.attributesNameList.indexOf("Führungskraft")] + "\"},";
+		}
+		if (this.attributesList[this.attributesNameList.indexOf("Projektboxen")] != null) {
+			jsonString = jsonString + "{\"customFieldName\":\"customText3\",";
+			jsonString = jsonString + "\"customFieldValue\":\"" + this.attributesList[this.attributesNameList.indexOf("Projektboxen")] + "\"},";
+		}
+		if (this.attributesList[this.attributesNameList.indexOf("Themenfeld")] != null) {
+			jsonString = jsonString + "{\"customFieldName\":\"customText4\",";
+			jsonString = jsonString + "\"customFieldValue\":\"" + this.attributesList[this.attributesNameList.indexOf("Themenfeld")] + "\"},";
+		}
+		if (this.attributesList[this.attributesNameList.indexOf("Betriebsstätte")] != null) {
+			jsonString = jsonString + "{\"customFieldName\":\"customText5\",";
+			jsonString = jsonString + "\"customFieldValue\":\"" + this.attributesList[this.attributesNameList.indexOf("Betriebsstätte")] + "\"},";
+		}
+		if (this.attributesList[this.attributesNameList.indexOf("Fremdleistung?")] != null) {
+			jsonString = jsonString + "{\"customFieldName\":\"customText17\",";
+			jsonString = jsonString + "\"customFieldValue\":\"" + this.attributesList[this.attributesNameList.indexOf("Fremdleistung?")] + "\"},";
+		}
+		if (this.attributesList[this.attributesNameList.indexOf("Firmenname der Fremdfirma")] != null) {
+			jsonString = jsonString + "{\"customFieldName\":\"customText16\",";
+			jsonString = jsonString + "\"customFieldValue\":\"" + this.attributesList[this.attributesNameList.indexOf("Firmenname der Fremdfirma")] + "\"},";
+		}
+		jsonString = jsonString.substring(0, jsonString.length()-1);
+		jsonString = jsonString +"],";
 		jsonString = jsonString.substring(0, jsonString.length()-1);
 		jsonString = jsonString +"}";
 		return jsonString;
