@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * @author dirk.kohnen
- *
+ * @author artur.koenig
  */
 public class SV_Importer{
 	/*
