@@ -9,6 +9,7 @@ import java.io.StringReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 import javax.swing.JFrame;
@@ -31,6 +32,11 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.CharacterData;
 import org.xml.sax.InputSource;
 
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import de.scopevisio.importer.data.Contact;
 import de.scopevisio.importer.data.Project;
 
@@ -46,10 +52,10 @@ import javax.swing.JTextArea;
 
 public class ImporterGui implements ActionListener {
 
-    private static final Logger LOGGER = LogManager.getLogger(SV_Importer.class.getName());
+    public static final Logger LOGGER = LogManager.getLogger(SV_Importer.class.getName());
     private Importart art = Importart.KONTAKT;
     private APIart api = APIart.REST;
-	static private final String newline = "\n";
+	private static final String newline = "\n";
 	public JFrame frmScopevisioImporter;
 	private JTextField textField;
 	private JMenuBar menuBar;
@@ -69,12 +75,21 @@ public class ImporterGui implements ActionListener {
 	private JMenuItem propertiesGeneralMenuItem;
 	private JMenuItem propertiesContactPropertyMenuItem;
 	private JMenuItem propertiesProjectMenuItem;
-
+	static final String BASE_URL = "https://appload.scopevisio.com/rest";
+    private ObjectMapper objectMapper;
+    private ConnectionData connectionData;
+    private String accessToken;
+	
+	
 	/**
 	 * Create the application.
 	 */
 	public ImporterGui() {
 		initialize();
+        this.objectMapper = new ObjectMapper();
+        this.objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+        this.objectMapper.setSerializationInclusion(Include.NON_ABSENT);
+        this.objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 	}
 
 	/**
@@ -240,7 +255,7 @@ public class ImporterGui implements ActionListener {
 		    InputSource is = new InputSource();
 		    is.setCharacterStream(new StringReader(reply));
 
-		    Document doc = db.parse(is);
+/*		    Document doc = db.parse(is);
 		    
 		    // get Insertcount
 		    NodeList nodes = doc.getElementsByTagName("insertCount");
@@ -258,7 +273,7 @@ public class ImporterGui implements ActionListener {
 	        for (int i = 0; i < nodes.getLength(); i++) {
 	        	element = (Element) nodes.item(i);
 				LOGGER.log(Level.forName("JOURNAL", 50), "Fehler " + i + " :\t" + getCharacterDataFromElement(element));
-	        }
+	        }*/
 	    }
 	    catch (Exception e) {
 	        e.printStackTrace();
@@ -600,11 +615,21 @@ public class ImporterGui implements ActionListener {
         }
         //Handle Connect button action.
         else if (e.getSource() == this.connectMenuItem || e.getSource() == this.connectToolbarButton){
+        	if (this.api == APIart.SOAP) {
         		PingPong p = new PingPong(this.prop);
         		reply = p.postSoap();
         		if(reply.contains("pong")){
 		        	this.log.append("Connect erfolgreich" + newline);
 		        }
+        	} else {
+                try {
+					this.accessToken = getAccessToken();
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+        		
+        	}
         }
         //Handle Start button action.
         else if (e.getSource() == this.startMenuItem || e.getSource() == this.startToolbarButton){
@@ -658,10 +683,16 @@ public class ImporterGui implements ActionListener {
         			case PROJEKT:
 		        		ReadProjectFromCSV rpfc = new ReadProjectFromCSV(this.fileCSV);
 		        		if (this.api == APIart.REST) {
+		        			try {
+		        				this.accessToken = this.getAccessToken();
+							} catch (Exception e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
 			        		WriteProjectREST wpts = new WriteProjectREST();
 			        		List<Project> projects = rpfc.getProjects();
 			                for (Project pr : projects){
-			                	reply = wpts.postREST(pr);
+			                	reply = wpts.postREST(pr, this.accessToken, this, this.objectMapper);
 			                }
 		        		}
 		        		System.out.println(reply);
@@ -675,6 +706,73 @@ public class ImporterGui implements ActionListener {
         	this.printJournalFooter(reply);
         }
 	}
+
+
+    /**
+     * Returns an access token with OAuth2 password grant flow
+     * @return an access token with OAuth2 password grant flow
+     * @see https://appload.scopevisio.com/static/swagger/index.html#/Authorization/token
+     * @throws Exception
+     */
+    private String getAccessToken() throws Exception {
+        this.log.append("Retrieving access token with OAuth2 password grant flow");
+        
+        byte[] formData = HttpUtil.makeFormData(
+                new String[][] {
+                    { "customer", this.prop.getProperty("customer") },
+                    { "organisation", this.prop.getProperty("organisation") },
+                    { "username", this.prop.getProperty("user") },
+                    { "password", this.prop.getProperty("pass") },
+                    { "grant_type", "password" },
+                });
+        
+        HttpResult result = HttpUtil.httpCall(BASE_URL + "/token", 
+                new String[][] {
+                    { "Content-Type", "application/x-www-form-urlencoded" }
+                },
+                formData
+                );
+        
+        request(new String(formData, "UTF-8"), result);
+        
+        JsonNode json = result.getData() != null ? objectMapper.readValue(result.getData(), JsonNode.class) : null;
+        response(json != null ? objectMapper.writeValueAsString(json) : null, result);
+        
+        if (result.getCode() == 200 && json != null) {
+            JsonNode accessToken = json.get("access_token");
+            if (accessToken != null)
+                return accessToken.asText();
+        }
+        throw new Exception("Failed to get access token.");
+    }
+	
+	public void request(String requestBody, HttpResult result) {
+        StringBuilder sb = new StringBuilder("\n");
+        sb.append(result.getRequestMethod()).append(" ").append(result.getUrl()).append("\n");
+        for (Map.Entry<String, List<String>> entry : result.getRequestProperties().entrySet()) {
+            for (String v : entry.getValue()) {
+                sb.append("\t").append(entry.getKey()).append(": ").append(v).append("\n");
+            }
+        }
+        sb.append("\n");
+        if (requestBody != null)
+            sb.append(requestBody).append("\n");
+        this.log.append(sb.toString());
+	}
+	
+    public void response(String responseBody, HttpResult result) {
+        StringBuilder sb = new StringBuilder("\n");
+        sb.append("Status Code: ").append(result.getCode()).append("\n");
+        for (Map.Entry<String, List<String>> entry : result.getHeaderFields().entrySet()) {
+            for (String v : entry.getValue()) {
+                sb.append("\t").append(entry.getKey()).append(": ").append(v).append("\n");
+            }
+        }
+        sb.append("\n");
+        if (responseBody != null)
+            sb.append(responseBody).append("\n");
+        this.log.append(sb.toString());
+    }
 
 	
 	  public static String getCharacterDataFromElement(Element e) {

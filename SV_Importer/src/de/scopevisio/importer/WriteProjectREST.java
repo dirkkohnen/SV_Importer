@@ -6,12 +6,24 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
+import java.util.Map;
+
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import de.scopevisio.importer.data.Project;
 
 public class WriteProjectREST implements IServiceREST {
 	HttpURLConnection conn;
 	String output;
 	String msg;
+	private ObjectMapper objectMapper;
 	
 	
 	private HttpURLConnection getConnection(){
@@ -36,7 +48,44 @@ public class WriteProjectREST implements IServiceREST {
 	public WriteProjectREST(){
 	}
 
-	public String postREST(Project p) {
+	public String postREST(Project p, String accessToken, ImporterGui ig, ObjectMapper objectMapper) {
+        try {
+        this.objectMapper = objectMapper;
+
+        HttpResult result = HttpUtil.httpCall(ImporterGui.BASE_URL + "/project/new", 
+                new String[][] {
+                    { "Content-Type", "application/json" },
+                    { "Authorization", "Bearer " + accessToken }
+                },
+                objectMapper.writeValueAsBytes(p.getJSONRest())
+                );
+
+/*		ig.request(objectMapper.writeValueAsString(p.getJSONRest()), result);
+        
+        JsonNode json = result.getData() != null ? objectMapper.readValue(result.getData(), JsonNode.class) : null;
+        ig.response(json != null ? objectMapper.writeValueAsString(json) : null, result);
+*/        
+        if (result.getCode() == 200 && result.getData() != null) {
+				return "erfolgreich";
+        }
+
+        return "erfolgreich";
+        } catch (JsonParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JsonMappingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		
+		/*
 		String input = p.getJSONRest();
 		conn = getConnection();
 
@@ -45,9 +94,15 @@ public class WriteProjectREST implements IServiceREST {
 			OutputStream os = conn.getOutputStream();
 			os.write(input.getBytes());
 			os.flush();
-
+			
 			if (conn.getResponseCode() != HttpURLConnection.HTTP_CREATED) {
-				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+				System.out.println(conn.getHeaderFields().toString());
+				System.out.println(conn.getInputStream().toString());
+				System.out.println(conn.getResponseMessage());
+				System.out.println(conn.getResponseCode());
+				System.out.println(conn.getErrorStream().toString());
+				conn.disconnect();
+				throw new RuntimeException("Failed : HTTP error code : ");
 			}
 
 			BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
@@ -63,8 +118,9 @@ public class WriteProjectREST implements IServiceREST {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		}*/
 		return "Fehler";
+		
 	}
 
 	@Override
