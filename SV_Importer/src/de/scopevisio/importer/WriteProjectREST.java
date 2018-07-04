@@ -52,24 +52,25 @@ public class WriteProjectREST implements IServiceREST {
         try {
         this.objectMapper = objectMapper;
 
+        JsonNode projectNode = objectMapper.readTree(p.getJSONRest());
+        
         HttpResult result = HttpUtil.httpCall(ImporterGui.BASE_URL + "/project/new", 
                 new String[][] {
                     { "Content-Type", "application/json" },
                     { "Authorization", "Bearer " + accessToken }
                 },
-                objectMapper.writeValueAsBytes(p.getJSONRest())
+                objectMapper.writeValueAsBytes(projectNode)
                 );
 
-/*		ig.request(objectMapper.writeValueAsString(p.getJSONRest()), result);
+		ig.request(objectMapper.writeValueAsString(p.getJSONRest()), result);
         
         JsonNode json = result.getData() != null ? objectMapper.readValue(result.getData(), JsonNode.class) : null;
         ig.response(json != null ? objectMapper.writeValueAsString(json) : null, result);
-*/        
+        
         if (result.getCode() == 200 && result.getData() != null) {
 				return "erfolgreich";
         }
 
-        return "erfolgreich";
         } catch (JsonParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

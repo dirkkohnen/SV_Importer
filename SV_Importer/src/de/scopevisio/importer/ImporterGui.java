@@ -53,7 +53,7 @@ import javax.swing.JTextArea;
 public class ImporterGui implements ActionListener {
 
     public static final Logger LOGGER = LogManager.getLogger(SV_Importer.class.getName());
-    private Importart art = Importart.KONTAKT;
+    private Importart art = Importart.PROJEKT;
     private APIart api = APIart.REST;
 	private static final String newline = "\n";
 	public JFrame frmScopevisioImporter;
@@ -693,9 +693,9 @@ public class ImporterGui implements ActionListener {
 			        		List<Project> projects = rpfc.getProjects();
 			                for (Project pr : projects){
 			                	reply = wpts.postREST(pr, this.accessToken, this, this.objectMapper);
+				        		System.out.println(reply);
 			                }
 		        		}
-		        		System.out.println(reply);
 		        		break;
 					default:
 						break;
