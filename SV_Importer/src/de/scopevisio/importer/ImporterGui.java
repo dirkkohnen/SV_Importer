@@ -224,9 +224,9 @@ public class ImporterGui implements ActionListener {
 				if (this.prop.getProperty("conflictDetectionByType").compareTo("true") == 0)  LOGGER.log(Level.forName("JOURNAL", 50), "\tTyp");
 				if (this.prop.getProperty("conflictDetectionByLegacyId").compareTo("true") == 0)  LOGGER.log(Level.forName("JOURNAL", 50), "\tVorsystem-ID");
 				LOGGER.log(Level.forName("JOURNAL", 50), "Verhalten bei Duplikaten:");
-	        	if (this.prop.getProperty("conflictAction").compareTo("overwrite") == 0) LOGGER.log(Level.forName("JOURNAL", 50), "\tÜberschreiben");
-	        	if (this.prop.getProperty("conflictAction").compareTo("fillin") == 0) LOGGER.log(Level.forName("JOURNAL", 50), "\tAuffüllen");
-	        	if (this.prop.getProperty("conflictAction").compareTo("skip") == 0) LOGGER.log(Level.forName("JOURNAL", 50), "\tÜberspringen");
+	        	if (this.prop.getProperty("conflictAction").compareTo("overwrite") == 0) LOGGER.log(Level.forName("JOURNAL", 50), "\tï¿½berschreiben");
+	        	if (this.prop.getProperty("conflictAction").compareTo("fillin") == 0) LOGGER.log(Level.forName("JOURNAL", 50), "\tAuffï¿½llen");
+	        	if (this.prop.getProperty("conflictAction").compareTo("skip") == 0) LOGGER.log(Level.forName("JOURNAL", 50), "\tï¿½berspringen");
 				if (this.prop.getProperty("columns").length()>0){
 		        	LOGGER.log(Level.forName("JOURNAL", 50), "Spaltenkonfiguration:");
 					LOGGER.log(Level.forName("JOURNAL", 50), "\t" + this.prop.getProperty("columns"));
@@ -374,13 +374,13 @@ public class ImporterGui implements ActionListener {
         	JCheckBox detectLegacyIDCheckBox = new JCheckBox("Vorsystem-ID");
         	if (this.prop.getProperty("conflictDetectionByLegacyId").compareTo("true") == 0)  detectLegacyIDCheckBox.setSelected(true);
         	ButtonGroup group = new ButtonGroup();
-        	JRadioButton overwriteRadioButton = new JRadioButton("Überschreiben");
+        	JRadioButton overwriteRadioButton = new JRadioButton("ï¿½berschreiben");
         	if (this.prop.getProperty("conflictAction").compareTo("overwrite") == 0)  overwriteRadioButton.setSelected(true);
         	group.add(overwriteRadioButton);
-        	JRadioButton fillRadioButton = new JRadioButton("Auffüllen");
+        	JRadioButton fillRadioButton = new JRadioButton("Auffï¿½llen");
         	if (this.prop.getProperty("conflictAction").compareTo("fillin") == 0)  fillRadioButton.setSelected(true);
         	group.add(fillRadioButton);
-        	JRadioButton skipRadioButton = new JRadioButton("Überspringen");
+        	JRadioButton skipRadioButton = new JRadioButton("ï¿½berspringen");
         	if (this.prop.getProperty("conflictAction").compareTo("skip") == 0)  skipRadioButton.setSelected(true);
         	group.add(skipRadioButton);
        		JTextField columnsTextField = new JTextField(this.prop.getProperty("columns"));
@@ -577,7 +577,7 @@ public class ImporterGui implements ActionListener {
     		JTextField gesellschaftTextField = new JTextField(this.prop.getProperty("organisation"));
     		JTextField packageSizeTextField = new JTextField(this.prop.getProperty("packagesize"));
             
-    		Object[] message = {"Kundennummer", kundennummerTextField, "Benutzername", benutzernameTextField, "Passwort", passwortTextField, "Sprache", spracheTextField, "Gesellschaft", gesellschaftTextField, "Packetgröße", packageSizeTextField};
+    		Object[] message = {"Kundennummer", kundennummerTextField, "Benutzername", benutzernameTextField, "Passwort", passwortTextField, "Sprache", spracheTextField, "Gesellschaft", gesellschaftTextField, "Packetgrï¿½ï¿½e", packageSizeTextField};
 
             JOptionPane pane = new JOptionPane( message, JOptionPane.PLAIN_MESSAGE, JOptionPane.OK_CANCEL_OPTION);
             pane.createDialog(null, "Einstellungen").setVisible(true);
@@ -634,7 +634,7 @@ public class ImporterGui implements ActionListener {
         //Handle Start button action.
         else if (e.getSource() == this.startMenuItem || e.getSource() == this.startToolbarButton){
         	if (this.fileCSV == null){
-	        	this.log.append("Fehler: Keine CSV-Datei ausgewählt" + newline);
+	        	this.log.append("Fehler: Keine CSV-Datei ausgewï¿½hlt" + newline);
         		return;
         	} else {
         		if (this.prop.getProperty("protokoll").compareTo("true") == 0) this.printJournalHeader();
@@ -691,6 +691,7 @@ public class ImporterGui implements ActionListener {
 							}
 			        		WriteProjectREST wpts = new WriteProjectREST();
 			        		List<Project> projects = rpfc.getProjects();
+			        		System.out.println("Angekommen: " + projects.size());
 			                for (Project pr : projects){
 			                	reply = wpts.postREST(pr, this.accessToken, this, this.objectMapper);
 				        		System.out.println(reply);

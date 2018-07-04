@@ -48,7 +48,7 @@ public class WriteProjectREST implements IServiceREST {
 	public String postREST(Project p, String accessToken, ImporterGui ig, ObjectMapper objectMapper) {
         try {
         this.objectMapper = objectMapper;
-
+        System.out.println("Angekommen; postREST: " + p.getJSONRest()); 
         JsonNode projectNode = objectMapper.readTree(p.getJSONRest());
         
         HttpResult result = HttpUtil.httpCall(ImporterGui.BASE_URL + "/project/new", 

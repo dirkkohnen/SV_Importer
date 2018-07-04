@@ -7,5 +7,8 @@
 	<classpathentry kind="lib" path="log4j-api-2.7.jar"/>
 	<classpathentry kind="lib" path="log4j-core-2.7.jar"/>
 	<classpathentry kind="lib" path="jwizard.jar"/>
+	<classpathentry kind="lib" path="/Volumes/Daten/OneDrive - Scopevisio AG/Privat/jackson-annotations-2.9.0.jar"/>
+	<classpathentry kind="lib" path="/Volumes/Daten/OneDrive - Scopevisio AG/Privat/jackson-core-2.9.6.jar"/>
+	<classpathentry kind="lib" path="/Volumes/Daten/OneDrive - Scopevisio AG/Privat/jackson-databind-2.9.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
