@@ -5,22 +5,21 @@ import java.util.List;
 
 public class Project {
 
-	// {{  Variablen
+	/**
+	 *  Variablen
+	 */
 	private List<Object> attributesNameList = new ArrayList<Object>();
 	private String[] attributesList;
-// }}
+
 	
-	// {{ Konstruktor
 	/**
 	 * Kontruktor
 	 */
 	public Project() {
 		this.initalize();
 	}
-	// }}
 
 	
-	// {{ Methoden
 	/**
 	 * Methode zur Initialisierung der Klasse. Wird im Konstruktor aufgerufen
 	 * @return void

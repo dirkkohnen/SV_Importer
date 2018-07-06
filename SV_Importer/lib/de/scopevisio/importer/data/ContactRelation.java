@@ -20,27 +20,21 @@ import java.util.List;
  */
 public class ContactRelation {
 
-	// {{  Variablen
+	/**
+	 * Variablen
+	 */
 	private List<Object> attributesNameList = new ArrayList<Object>();
 	private String[] attributesList;
-// }}
 	
 	
-	// {{ Konstruktor
 	/**
 	 * Kontruktor
 	 */
 	public ContactRelation() {
 		this.initalize();
 	}
-	// }}
 
 	
-	// Getter und Setter
-
-
-	
-	// {{ Methoden
 	/**
 	 * Methode zur Initialisierung der Klasse. Wird im Konstruktor aufgerufen
 	 * @return void
@@ -80,6 +74,4 @@ public class ContactRelation {
 			this.attributesList[this.attributesNameList.indexOf(attr)] = value;
 		}
 	}
-	// }}
-
 }
